@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行情列表-Eth Global</title>
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.1/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/css/market.css">
+    <link rel="stylesheet" href="../static/css/comment.css">
+    <link rel="stylesheet" href="../static/css/iconfont.css">
+    <script src="../static/js/auto-size.js"></script>
+</head>
+
+<body>
+    <header>
+        <img alt="ETH Global" src="/static/images/logo.png">
+        <button class="">
+            <i class="mobile_icon_search"></i>
+        </button>
+    </header>
+    <main>
+        <section class="symbol-section" id="symbol-section">
+            <button class="">自选</button>
+            <button class="active">全部</button>
+            <button class="">主板</button>
+            <button class="">创业板</button>
+        </section>
+        <section class="search-box " style="">
+            <input autocomplate="off" id="search" placeholder="搜索币种">
+            <button>取消</button>
+        </section>
+        
+        <section class="symbol-list">
+            <!-- <div>
+                <dl class="l">
+                    <dt class="upper">btc<span>/usdt</span></dt>
+                    <dd growing-ignore="true">24HVol 46239</dd>
+                </dl>
+                <dl class="m">
+                    <dt growing-ignore="true">9277.92</dt>
+                    <dd growing-ignore="true">¥64620.71</dd>
+                </dl><em class="r down" growing-ignore="true">-0.30%</em>
+            </div>
+            <div>
+                <dl class="l">
+                    <dt class="upper">eth<span>/usdt</span></dt>
+                    <dd growing-ignore="true">24HVol 975121</dd>
+                </dl>
+                <dl class="m">
+                    <dt growing-ignore="true">238.79</dt>
+                    <dd growing-ignore="true">¥1663.17</dd>
+                </dl><em class="r down" growing-ignore="true">-0.01%</em>
+            </div>
+            <div>
+                <dl class="l">
+                    <dt class="upper">ht<span>/usdt</span></dt>
+                    <dd growing-ignore="true">24HVol 6361033</dd>
+                </dl>
+                <dl class="m">
+                    <dt growing-ignore="true">4.2381</dt>
+                    <dd growing-ignore="true">¥29.51</dd>
+                </dl><em class="r up" growing-ignore="true">+0.36%</em>
+            </div>
+            <div>
+                <dl class="l">
+                    <dt class="upper">xrp<span>/usdt</span></dt>
+                    <dd growing-ignore="true">24HVol 129730752</dd>
+                </dl>
+                <dl class="m">
+                    <dt growing-ignore="true">0.18774</dt>
+                    <dd growing-ignore="true">¥1.30</dd>
+                </dl><em class="r up" growing-ignore="true">+0.07%</em>
+            </div>
+            <div>
+                <dl class="l">
+                    <dt class="upper">ltc<span>/usdt</span></dt>
+                    <dd growing-ignore="true">24HVol 784805</dd>
+                </dl>
+                <dl class="m">
+                    <dt growing-ignore="true">43.73</dt>
+                    <dd growing-ignore="true">¥304.57</dd>
+                </dl><em class="r down" growing-ignore="true">-0.43%</em>
+            </div>
+            <div>
+                <dl class="l">
+                    <dt class="upper">bch<span>/usdt</span></dt>
+                    <dd growing-ignore="true">24HVol 235231</dd>
+                </dl>
+                <dl class="m">
+                    <dt growing-ignore="true">239.17</dt>
+                    <dd growing-ignore="true">¥1665.81</dd>
+                </dl><em class="r down" growing-ignore="true">-0.13%</em>
+            </div>
+            <div>
+                <dl class="l">
+                    <dt class="upper">eos<span>/usdt</span></dt>
+                    <dd growing-ignore="true">24HVol 23834955</dd>
+                </dl>
+                <dl class="m">
+                    <dt growing-ignore="true">2.5704</dt>
+                    <dd growing-ignore="true">¥17.90</dd>
+                </dl><em class="r down" growing-ignore="true">-0.88%</em>
+            </div>
+            <div>
+                <dl class="l">
+                    <dt class="upper">etc<span>/usdt</span></dt>
+                    <dd growing-ignore="true">24HVol 2241385</dd>
+                </dl>
+                <dl class="m">
+                    <dt growing-ignore="true">6.0544</dt>
+                    <dd growing-ignore="true">¥42.16</dd>
+                </dl><em class="r up" growing-ignore="true">+1.77%</em>
+            </div>
+            <div>
+                <dl class="l">
+                    <dt class="upper">ada<span>/usdt</span></dt>
+                    <dd growing-ignore="true">24HVol 281306306</dd>
+                </dl>
+                <dl class="m">
+                    <dt growing-ignore="true">0.103929</dt>
+                    <dd growing-ignore="true">¥0.72</dd>
+                </dl><em class="r up" growing-ignore="true">+5.13%</em>
+            </div>
+            <div>
+                <dl class="l">
+                    <dt class="upper">bsv<span>/usdt</span></dt>
+                    <dd growing-ignore="true">24HVol 760199</dd>
+                </dl>
+                <dl class="m">
+                    <dt growing-ignore="true">186.7168</dt>
+                    <dd growing-ignore="true">¥1300.48</dd>
+                </dl><em class="r down" growing-ignore="true">-2.97%</em>
+            </div>
+            <div>
+                <dl class="l">
+                    <dt class="upper">trx<span>/usdt</span></dt>
+                    <dd growing-ignore="true">24HVol 1123383314</dd>
+                </dl>
+                <dl class="m">
+                    <dt growing-ignore="true">0.017688</dt>
+                    <dd growing-ignore="true">¥0.12</dd>
+                </dl><em class="r down" growing-ignore="true">-2.17%</em>
+            </div>
+            <div>
+                <dl class="l">
+                    <dt class="upper">zec<span>/usdt</span></dt>
+                    <dd growing-ignore="true">24HVol 276810</dd>
+                </dl>
+                <dl class="m">
+                    <dt growing-ignore="true">54.50</dt>
+                    <dd growing-ignore="true">¥379.59</dd>
+                </dl><em class="r down" growing-ignore="true">-0.83%</em>
+            </div>
+            <div>
+                <dl class="l">
+                    <dt class="upper">dash<span>/usdt</span></dt>
+                    <dd growing-ignore="true">24HVol 60984</dd>
+                </dl>
+                <dl class="m">
+                    <dt growing-ignore="true">70.05</dt>
+                    <dd growing-ignore="true">¥487.89</dd>
+                </dl><em class="r up" growing-ignore="true">+0.50%</em>
+            </div> -->
+            <dl class="no-data" style="display:none" id="no-data1">
+                <dt><img alt="no data"
+                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTM2cHgiIGhlaWdodD0iMTcwcHgiIHZpZXdCb3g9IjAgMCAxMzYgMTcwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA1My4xICg3MjYzMSkgLSBodHRwczovL3NrZXRjaGFwcC5jb20gLS0+CiAgICA8dGl0bGU+R3JvdXAgNzwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iNTAlIiB5MT0iMTA0LjE4Mzk3NSUiIHgyPSI1MCUiIHkyPSIzLjA2MTYxN2UtMTUlIiBpZD0ibGluZWFyR3JhZGllbnQtMSI+CiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMCUiPjwvc3RvcD4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0VGRjVGOSIgb2Zmc2V0PSIxMDAlIj48L3N0b3A+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGlkPSLooYzmg4UiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSLooYzmg4Ut5YWo6YOoLWNvcHktMjAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMDcuMDAwMDAwLCAtNTM2LjAwMDAwMCkiPgogICAgICAgICAgICA8ZyBpZD0iR3JvdXAtNyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjkwLjAwMDAwMCwgNTM2LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlJlY3RhbmdsZS01IiBmaWxsLXJ1bGU9Im5vbnplcm8iIHBvaW50cz0iMCAwIDE3MCAwIDE3MCAxNzAgMCAxNzAiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxnIGlkPSLliIbnu4QtMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTcuMDAwMDAwLCAwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSLliIbnu4QiPgogICAgICAgICAgICAgICAgICAgICAgICA8ZyBpZD0i5pyq5qCH6aKYLTIiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwLTMiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik02LjQyNTE5Njg1LDExLjQyMDI3NzggTDEyOC45Mjc1NzYsMTEuNDIwMjc3OCBDMTMyLjQ3NjExNSwxMS40MjAyNzc4IDEzNS4zNTI3NzMsMTQuMjk2OTM2NSAxMzUuMzUyNzczLDE3Ljg0NTQ3NDcgTDEzNS4zNTI3NzMsMTYyLjk3NTU5MSBDMTM1LjM1Mjc3MywxNjYuNTI0MTI5IDEzMi40NzYxMTUsMTY5LjQwMDc4OCAxMjguOTI3NTc2LDE2OS40MDA3ODggTDYuNDI1MTk2ODUsMTY5LjQwMDc4OCBDMi44NzY2NTg2MiwxNjkuNDAwNzg4IC00Ljg5NDQ5OTkyZS0xNSwxNjYuNTI0MTI5IC01LjMyOTA3MDUyZS0xNSwxNjIuOTc1NTkxIEwwLDE3Ljg0NTQ3NDcgQy00LjM0NTcwNTk5ZS0xNiwxNC4yOTY5MzY1IDIuODc2NjU4NjIsMTEuNDIwMjc3OCA2LjQyNTE5Njg1LDExLjQyMDI3NzggWiIgaWQ9IuefqeW9oiIgZmlsbD0idXJsKCNsaW5lYXJHcmFkaWVudC0xKSI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMC45MTQyOTQ0LDIwLjkzNzE3NiBMMTIyLjQ5MjUxNSwyMC45MzcxNzYgQzEyMy44MDQyOTMsMjAuOTM3MTc2IDEyNC44Njc2OTksMjIuMDM5ODE0MyAxMjQuODY3Njk5LDIzLjM5OTk4NzYgTDEyNC44Njc2OTksMTUyLjI3MDM3MSBMOC41Nzg2OTY4OSwxNTIuMjcwMzcxIEw4LjU3ODY5Njg5LDIzLjM5OTk4NzYgQzguNTc4NTE2ODIsMjIuMDU1Njg0MiA5LjYxODAwMTgzLDIwLjk1OTU4MTEgMTAuOTE0Mjk0NCwyMC45MzcxNzYgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iI0ZGRkZGRiI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxyZWN0IGlkPSLnn6nlvaIiIGZpbGw9IiNGMEY1RjkiIHg9IjI1IiB5PSI4NSIgd2lkdGg9IjgzLjc1ODgxNzkiIGhlaWdodD0iMTAuMTcwMzA5NyI+PC9yZWN0PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxwb2x5Z29uIGlkPSLnn6nlvaIiIGZpbGw9IiNGMEY1RjkiIHBvaW50cz0iMjUuMjU3MTQyOSAxMDYuODU3MTQzIDEwOS4wMTU5NjEgMTA2Ljg1NzE0MyAxMDkuMDE1OTYxIDExNy4wMjc0NTMgMjUuMjU3MTQyOSAxMTcuMDI3NDUzIj48L3BvbHlnb24+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IuefqeW9oiIgZmlsbD0iI0YwRjVGOSIgcG9pbnRzPSIyNS4yNTcxNDI5IDEzMC4xNzE0MjkgMTA5LjAxNTk2MSAxMzAuMTcxNDI5IDEwOS4wMTU5NjEgMTQwLjM0MTczOCAyNS4yNTcxNDI5IDE0MC4zNDE3MzgiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOTUuMTMyODYxMiw4LjU3MjcwNjQxIEw4Mi4wNjc5NzAyLDguNTcyNzA2NDEgTDgyLjA2Nzk3MDIsMy42MzE2NjUyNSBDODIuMDcwMTY5MiwyLjg3NTMwNDAzIDgxLjc3MDIwNTksMi4xNDkyODg0OSA4MS4yMzQ1MzMyLDEuNjE0NDU4MDggQzgwLjY5ODg2MDYsMS4wNzk2Mjc2NyA3OS45NzE3MDE3LDAuNzgwMTM1OTcgNzkuMjE0MTQ5NCwwLjc4MjMzMTUxNyBMNTYuMjUxNjEzOCwwLjc4MjMzMTUxNyBDNTUuNDk0MDYxNCwwLjc4MDEzNTk3IDU0Ljc2NjkwMjYsMS4wNzk2Mjc2NyA1NC4yMzEyMjk5LDEuNjE0NDU4MDggQzUzLjY5NTU1NzIsMi4xNDkyODg0OSA1My4zOTU1OTM5LDIuODc1MzA0MDMgNTMuMzk3NzkyOSwzLjYzMTY2NTI1IEw1My4zOTc3OTI5LDguNTcyNzA2NDEgTDQwLjMyNDY1MzksOC41NzI3MDY0MSBDMzguNzQ4NTMyMiw4LjU3MjcwNjQxIDM3LjQ3MDgzMyw5Ljg0ODM5NjU4IDM3LjQ3MDgzMywxMS40MjIwNDAxIEwzNy40NzA4MzMsMjYuNzgwNDQzMSBMOTcuOTk0OTMwMSwyNi43ODA0NDMxIEw5Ny45OTQ5MzAxLDExLjQyMjA0MDEgQzk3Ljk5NDkzMzMsMTAuNjY0OTIwOSA5Ny42OTMxMzE4LDkuOTM4OTMwODkgOTcuMTU2MTUxMyw5LjQwNDMzOTgxIEM5Ni42MTkxNzA4LDguODY5NzQ4NzIgOTUuODkxMTY5Niw4LjU3MDUxODIgOTUuMTMyODYxMiw4LjU3MjcwNjQxIFoiIGlkPSLot6/lvoQiIGZpbGw9IiNFNUVBRjIiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMjUuMjU3MTQyOSw0Mi43NDI4NTcxIEwzNi45MTQyODU3LDQyLjc0Mjg1NzEgTDM2LjkxNDI4NTcsNTQuNCBMMjUuMjU3MTQyOSw1NC40IEwyNS4yNTcxNDI5LDQyLjc0Mjg1NzEgWiBNMjUuMjU3MTQyOSw1OS45Mjk2NzAzIEwzNi45MTQyODU3LDU5LjkyOTY3MDMgTDM2LjkxNDI4NTcsNzEuNTg2ODEzMiBMMjUuMjU3MTQyOSw3MS41ODY4MTMyIEwyNS4yNTcxNDI5LDU5LjkyOTY3MDMgWiBNNDIuNDQzOTU2LDQyLjc0Mjg1NzEgTDU0LjEwMTA5ODksNDIuNzQyODU3MSBMNTQuMTAxMDk4OSw1NC40IEw0Mi40NDM5NTYsNTQuNCBMNDIuNDQzOTU2LDQyLjc0Mjg1NzEgWiBNNDIuNDQzOTU2LDU5LjkyOTY3MDMgTDU0LjEwMTA5ODksNTkuOTI5NjcwMyBMNTQuMTAxMDk4OSw3MS41ODY4MTMyIEw0Mi40NDM5NTYsNzEuNTg2ODEzMiBMNDIuNDQzOTU2LDU5LjkyOTY3MDMgWiIgaWQ9IuWQiOW5tuW9oueKti1jb3B5IiBmaWxsPSIjMTg4MkQ0IiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+">
+                </dt>
+                <dd>暂无记录</dd>
+            </dl>
+            <dl class="no-data" style="display:none">
+                <dt><img alt="no fav"
+                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTYwcHgiIGhlaWdodD0iMTIwcHgiIHZpZXdCb3g9IjAgMCAxNjAgMTIwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA1My4xICg3MjYzMSkgLSBodHRwczovL3NrZXRjaGFwcC5jb20gLS0+CiAgICA8dGl0bGU+R3JvdXAgNTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iNTAlIiB5MT0iMjguNTAyNDU3OCUiIHgyPSI1MCUiIHkyPSIzLjA2MTYxN2UtMTUlIiBpZD0ibGluZWFyR3JhZGllbnQtMSI+CiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMCUiPjwvc3RvcD4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0YxRjZGQSIgb2Zmc2V0PSIxMDAlIj48L3N0b3A+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgICAgICA8bGluZWFyR3JhZGllbnQgeDE9IjUwJSIgeTE9IjEwNC4xODM5NzUlIiB4Mj0iNTAlIiB5Mj0iMy4wNjE2MTdlLTE1JSIgaWQ9ImxpbmVhckdyYWRpZW50LTIiPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRkZGRkZGIiBvZmZzZXQ9IjAlIj48L3N0b3A+CiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNFRkY1RjkiIG9mZnNldD0iMTAwJSI+PC9zdG9wPgogICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8L2RlZnM+CiAgICA8ZyBpZD0i6KGM5oOFIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0i6KGM5oOFLea3u+WKoOiHqumAiS1jb3B5LTUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yOTUuMDAwMDAwLCAtNTY1LjAwMDAwMCkiPgogICAgICAgICAgICA8ZyBpZD0iR3JvdXAtNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjkwLjAwMDAwMCwgNTM2LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlJlY3RhbmdsZS01IiBmaWxsLXJ1bGU9Im5vbnplcm8iIHBvaW50cz0iMCAwIDE3MCAwIDE3MCAxNzAgMCAxNzAiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxnIGlkPSLliIbnu4QtNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNS4wMDAwMDAsIDI5LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSLliIbnu4QiPgogICAgICAgICAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iRmlsbC0xIiBmaWxsPSJ1cmwoI2xpbmVhckdyYWRpZW50LTEpIiBwb2ludHM9IjUwLjQ5Nzg5NyA2LjY0NTc4NDQ0IDQzLjY3NjI0MDYgMC4zNTMzNTAzMTQgOC4wMzI3MzM1MyAwLjM1MzM1MDMxNCA4LjAzMjczMzUzIDYuNjQ1Nzg0NDQgOC4wMzI3MzM1MyA4NS42NzY0OTczIDguMDMyNzMzNTMgOTAuMjA3NTA3MiAxNTQuNDY2NjIxIDkwLjIwNzUwNzIgMTU0LjQ2NjYyMSA2LjY0NTc4NDQ0Ij48L3BvbHlnb24+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xNDUuNTg2MzY3LDExNSBDMTQ2LjU0Mjc1MiwxMTEuMzQ0OTY5IDE0Ny4wNTIwMjMsMTA3LjUwODMzMiAxNDcuMDUyMDIzLDEwMy41NTI0MTkgQzE0Ny4wNTIwMjMsNzguNzEwNzQwNCAxMjYuOTY5NTM2LDU4LjU3MjU4MDYgMTAyLjE5NjUzMiw1OC41NzI1ODA2IEM3Ny40MjM1MjgsNTguNTcyNTgwNiA1Ny4zNDEwNDA1LDc4LjcxMDc0MDQgNTcuMzQxMDQwNSwxMDMuNTUyNDE5IEM1Ny4zNDEwNDA1LDEwNy41MDgzMzIgNTcuODUwMzExNywxMTEuMzQ0OTY5IDU4LjgwNjY5NjgsMTE1IEw5Ljk0NzU5ODNlLTE0LDExNSBMOS45NDc1OTgzZS0xNCwyMC45ODgxMDE4IEwxNTkuODYzMjQ4LDIwLjk4ODEwMTggTDE1OS44NjMyNDgsMTE1IEwxNDUuNTg2MzY3LDExNSBaIiBpZD0i5ZCI5bm25b2i54q2IiBmaWxsPSJ1cmwoI2xpbmVhckdyYWRpZW50LTIpIj48L3BhdGg+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSLliIbnu4QiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDgxLjQ2MjQyOCwgODAuMTIwOTY4KSIgZmlsbD0iIzE4ODJENCI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0yMy41NzE1OTA2LDEuNzE3MDU1NCBMMjcuNjE1NjYxOSw5LjkwOTc5MTgzIEMyOC4wNjQ1MzEyLDEwLjgxODc1ODcgMjguOTMxODI1OSwxMS40NDk1MTM3IDI5LjkzNTA1NTgsMTEuNTk1MzQ0OSBMMzguOTc3NTc2NywxMi45MDg1MzMgQzQxLjUwNDQxMzMsMTMuMjc1OTQyNSA0Mi41MTMzMDcxLDE2LjM4MDE2MzUgNDAuNjg0NTU0MywxOC4xNjI3MDEzIEwzNC4xNDEyNTgxLDI0LjUzOTYyNzcgQzMzLjQxNTU2MjYsMjUuMjQ3NTQ1OSAzMy4wODQyMjA2LDI2LjI2Njk0OCAzMy4yNTU1NTU1LDI3LjI2NTgyMDQgTDM0LjgwMDQwMjEsMzYuMjcxMjQ2OSBDMzUuMjMxNTcxNSwzOC43ODcxODc5IDMyLjU5MDc0NzYsNDAuNzA2MzUzOSAzMC4zMzA4MjU0LDM5LjUxODQ2NzMgTDIyLjI0MjY4MjcsMzUuMjY2NzExIEMyMS4zNDQ5NDQxLDM0Ljc5NTIzNzYgMjAuMjczMDM4NywzNC43OTUyMzc2IDE5LjM3NjAwODEsMzUuMjY2NzExIEwxMS4yODc4NjU0LDM5LjUxODQ2NzMgQzkuMDI3OTQzMjEsNDAuNzA2MzUzOSA2LjM4NjQxMTMyLDM4Ljc4NzE4NzkgNi44MTgyODg2OCwzNi4yNzEyNDY5IEw4LjM2MzEzNTI3LDI3LjI2NTgyMDQgQzguNTM0NDcwMjIsMjYuMjY2OTQ4IDguMjAzMTI4MjQsMjUuMjQ3NTQ1OSA3LjQ3NjcyNDY3LDI0LjUzOTYyNzcgTDAuOTMzNDI4NTUzLDE4LjE2MjcwMTMgQy0wLjg5NDYxNjMwNSwxNi4zODAxNjM1IDAuMTE0Mjc3NTQ2LDEzLjI3NTk0MjUgMi42NDExMTQxNCwxMi45MDg1MzMgTDExLjY4MzYzNSwxMS41OTUzNDQ5IEMxMi42ODY4NjQ5LDExLjQ0OTUxMzcgMTMuNTU0MTU5NiwxMC44MTg3NTg3IDE0LjAwMzAyODksOS45MDk3OTE4MyBMMTguMDQ3MTAwMiwxLjcxNzA1NTQgQzE5LjE3NjM1MzQsLTAuNTcyMzUxODAyIDIyLjQ0MTYyOTUsLTAuNTcyMzUxODAyIDIzLjU3MTU5MDYsMS43MTcwNTU0IiBpZD0iRmlsbC0zIj48L3BhdGg+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=">
+                </dt>
+                <dd>暂无自选</dd>
+            </dl>
+        </section>
+    </main>
+    <div class="nav">
+        <a href="../index.html" data-cur>
+            <i class="mobile_icon_home"></i>首页
+        </a>
+        <a href="./market.html" data-cur="market" class="cur">
+            <i class="mobile_icon_market"></i>行情
+        </a>
+        <a href="./trade.html" data-cur="trade">
+            <i class="mobile_icon_trade"></i>币币交易
+        </a>
+        <a href="./finance.html" data-cur="finance">
+            <i class="mobile_icon_finance"></i>资产
+        </a>
+    </div>
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+    <script src="../static/js/request.js"></script>
+    <script>
+        let data = {
+            category: 0,
+            tocname: "USDT"
+        }; //默认条件
+        (function () {
+            setInterval(function(){
+                listDetile(data);
+            },1000)
+        })(jQuery);
+        $("#symbol-section button").click(function () {
+            $(this).addClass("active").siblings().removeClass("active");
+            let index = $(this).index();
+            switch (index) {
+                case 0:
+                    data.category = -1;
+                    //如果没有登录 跳转专有登录界面
+                    if (localStorage.getItem("user")) {
+                        listDetile(data);
+                    } else {
+                        console.log("跳转登录");
+                    }
+                    break;
+                case 1:
+                    data.category = 0;
+                    listDetile(data);
+                    break;
+                case 2:
+                    data.category = 1;
+                    listDetile(data);
+                    break;
+                case 3:
+                    data.category = 2;
+                    listDetile(data);
+                    break;
+            }
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active");
+        });
+        $("#quote-tabs span").click(function () {
+            $(this).addClass("active").siblings().removeClass("active");
+            let index = $(this).index();
+            switch (index) {
+                case 0:
+                    data.tocname = "USDT";
+                    listDetile(data);
+                    break;
+                case 1:
+                    data.tocname = "HUSD";
+                    listDetile(data);
+                    break;
+            }
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active");
+        });
+
+        function listDetile(data) {
+            let excGetExcpairsResult = ajaxMethod('excGetExcpairs', data);
+            detileInfo(excGetExcpairsResult.return);
+        }
+
+        function detileInfo(listData) {
+
+            let huilv = getHuilv();
+            if (listData.length == 0) {
+                let noHtml =
+                    "<dl class='no-data' id='no-data1'><dt><img alt='no data' src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTM2cHgiIGhlaWdodD0iMTcwcHgiIHZpZXdCb3g9IjAgMCAxMzYgMTcwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA1My4xICg3MjYzMSkgLSBodHRwczovL3NrZXRjaGFwcC5jb20gLS0+CiAgICA8dGl0bGU+R3JvdXAgNzwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iNTAlIiB5MT0iMTA0LjE4Mzk3NSUiIHgyPSI1MCUiIHkyPSIzLjA2MTYxN2UtMTUlIiBpZD0ibGluZWFyR3JhZGllbnQtMSI+CiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMCUiPjwvc3RvcD4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0VGRjVGOSIgb2Zmc2V0PSIxMDAlIj48L3N0b3A+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGlkPSLooYzmg4UiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSLooYzmg4Ut5YWo6YOoLWNvcHktMjAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMDcuMDAwMDAwLCAtNTM2LjAwMDAwMCkiPgogICAgICAgICAgICA8ZyBpZD0iR3JvdXAtNyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjkwLjAwMDAwMCwgNTM2LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlJlY3RhbmdsZS01IiBmaWxsLXJ1bGU9Im5vbnplcm8iIHBvaW50cz0iMCAwIDE3MCAwIDE3MCAxNzAgMCAxNzAiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxnIGlkPSLliIbnu4QtMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTcuMDAwMDAwLCAwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSLliIbnu4QiPgogICAgICAgICAgICAgICAgICAgICAgICA8ZyBpZD0i5pyq5qCH6aKYLTIiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwLTMiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik02LjQyNTE5Njg1LDExLjQyMDI3NzggTDEyOC45Mjc1NzYsMTEuNDIwMjc3OCBDMTMyLjQ3NjExNSwxMS40MjAyNzc4IDEzNS4zNTI3NzMsMTQuMjk2OTM2NSAxMzUuMzUyNzczLDE3Ljg0NTQ3NDcgTDEzNS4zNTI3NzMsMTYyLjk3NTU5MSBDMTM1LjM1Mjc3MywxNjYuNTI0MTI5IDEzMi40NzYxMTUsMTY5LjQwMDc4OCAxMjguOTI3NTc2LDE2OS40MDA3ODggTDYuNDI1MTk2ODUsMTY5LjQwMDc4OCBDMi44NzY2NTg2MiwxNjkuNDAwNzg4IC00Ljg5NDQ5OTkyZS0xNSwxNjYuNTI0MTI5IC01LjMyOTA3MDUyZS0xNSwxNjIuOTc1NTkxIEwwLDE3Ljg0NTQ3NDcgQy00LjM0NTcwNTk5ZS0xNiwxNC4yOTY5MzY1IDIuODc2NjU4NjIsMTEuNDIwMjc3OCA2LjQyNTE5Njg1LDExLjQyMDI3NzggWiIgaWQ9IuefqeW9oiIgZmlsbD0idXJsKCNsaW5lYXJHcmFkaWVudC0xKSI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMC45MTQyOTQ0LDIwLjkzNzE3NiBMMTIyLjQ5MjUxNSwyMC45MzcxNzYgQzEyMy44MDQyOTMsMjAuOTM3MTc2IDEyNC44Njc2OTksMjIuMDM5ODE0MyAxMjQuODY3Njk5LDIzLjM5OTk4NzYgTDEyNC44Njc2OTksMTUyLjI3MDM3MSBMOC41Nzg2OTY4OSwxNTIuMjcwMzcxIEw4LjU3ODY5Njg5LDIzLjM5OTk4NzYgQzguNTc4NTE2ODIsMjIuMDU1Njg0MiA5LjYxODAwMTgzLDIwLjk1OTU4MTEgMTAuOTE0Mjk0NCwyMC45MzcxNzYgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iI0ZGRkZGRiI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxyZWN0IGlkPSLnn6nlvaIiIGZpbGw9IiNGMEY1RjkiIHg9IjI1IiB5PSI4NSIgd2lkdGg9IjgzLjc1ODgxNzkiIGhlaWdodD0iMTAuMTcwMzA5NyI+PC9yZWN0PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxwb2x5Z29uIGlkPSLnn6nlvaIiIGZpbGw9IiNGMEY1RjkiIHBvaW50cz0iMjUuMjU3MTQyOSAxMDYuODU3MTQzIDEwOS4wMTU5NjEgMTA2Ljg1NzE0MyAxMDkuMDE1OTYxIDExNy4wMjc0NTMgMjUuMjU3MTQyOSAxMTcuMDI3NDUzIj48L3BvbHlnb24+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IuefqeW9oiIgZmlsbD0iI0YwRjVGOSIgcG9pbnRzPSIyNS4yNTcxNDI5IDEzMC4xNzE0MjkgMTA5LjAxNTk2MSAxMzAuMTcxNDI5IDEwOS4wMTU5NjEgMTQwLjM0MTczOCAyNS4yNTcxNDI5IDE0MC4zNDE3MzgiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOTUuMTMyODYxMiw4LjU3MjcwNjQxIEw4Mi4wNjc5NzAyLDguNTcyNzA2NDEgTDgyLjA2Nzk3MDIsMy42MzE2NjUyNSBDODIuMDcwMTY5MiwyLjg3NTMwNDAzIDgxLjc3MDIwNTksMi4xNDkyODg0OSA4MS4yMzQ1MzMyLDEuNjE0NDU4MDggQzgwLjY5ODg2MDYsMS4wNzk2Mjc2NyA3OS45NzE3MDE3LDAuNzgwMTM1OTcgNzkuMjE0MTQ5NCwwLjc4MjMzMTUxNyBMNTYuMjUxNjEzOCwwLjc4MjMzMTUxNyBDNTUuNDk0MDYxNCwwLjc4MDEzNTk3IDU0Ljc2NjkwMjYsMS4wNzk2Mjc2NyA1NC4yMzEyMjk5LDEuNjE0NDU4MDggQzUzLjY5NTU1NzIsMi4xNDkyODg0OSA1My4zOTU1OTM5LDIuODc1MzA0MDMgNTMuMzk3NzkyOSwzLjYzMTY2NTI1IEw1My4zOTc3OTI5LDguNTcyNzA2NDEgTDQwLjMyNDY1MzksOC41NzI3MDY0MSBDMzguNzQ4NTMyMiw4LjU3MjcwNjQxIDM3LjQ3MDgzMyw5Ljg0ODM5NjU4IDM3LjQ3MDgzMywxMS40MjIwNDAxIEwzNy40NzA4MzMsMjYuNzgwNDQzMSBMOTcuOTk0OTMwMSwyNi43ODA0NDMxIEw5Ny45OTQ5MzAxLDExLjQyMjA0MDEgQzk3Ljk5NDkzMzMsMTAuNjY0OTIwOSA5Ny42OTMxMzE4LDkuOTM4OTMwODkgOTcuMTU2MTUxMyw5LjQwNDMzOTgxIEM5Ni42MTkxNzA4LDguODY5NzQ4NzIgOTUuODkxMTY5Niw4LjU3MDUxODIgOTUuMTMyODYxMiw4LjU3MjcwNjQxIFoiIGlkPSLot6/lvoQiIGZpbGw9IiNFNUVBRjIiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMjUuMjU3MTQyOSw0Mi43NDI4NTcxIEwzNi45MTQyODU3LDQyLjc0Mjg1NzEgTDM2LjkxNDI4NTcsNTQuNCBMMjUuMjU3MTQyOSw1NC40IEwyNS4yNTcxNDI5LDQyLjc0Mjg1NzEgWiBNMjUuMjU3MTQyOSw1OS45Mjk2NzAzIEwzNi45MTQyODU3LDU5LjkyOTY3MDMgTDM2LjkxNDI4NTcsNzEuNTg2ODEzMiBMMjUuMjU3MTQyOSw3MS41ODY4MTMyIEwyNS4yNTcxNDI5LDU5LjkyOTY3MDMgWiBNNDIuNDQzOTU2LDQyLjc0Mjg1NzEgTDU0LjEwMTA5ODksNDIuNzQyODU3MSBMNTQuMTAxMDk4OSw1NC40IEw0Mi40NDM5NTYsNTQuNCBMNDIuNDQzOTU2LDQyLjc0Mjg1NzEgWiBNNDIuNDQzOTU2LDU5LjkyOTY3MDMgTDU0LjEwMTA5ODksNTkuOTI5NjcwMyBMNTQuMTAxMDk4OSw3MS41ODY4MTMyIEw0Mi40NDM5NTYsNzEuNTg2ODEzMiBMNDIuNDQzOTU2LDU5LjkyOTY3MDMgWiIgaWQ9IuWQiOW5tuW9oueKti1jb3B5IiBmaWxsPSIjMTg4MkQ0IiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+'></dt><dd>暂无记录</dd></dl>"
+                $(".symbol-list").html(noHtml);
+            } else {
+                let htmlInfo = '';
+                for (let i = 0; i < listData.length; i++) {
+                    htmlInfo += "<div class='symbol' data-id='"+listData[i].id+"'><dl class='l'> <dt class='upper'>" + listData[i].fromcname + "<span>/" + listData[
+                            i]
+                        .tocname + "</span></dt><dd growing-ignore='true'>24H量 " + (!listData[i].quotation ? "0" : listData[i].quotation.amount || "0")+
+                        "</dd></dl><dl class='m'><dt growing-ignore='true'>" + (!listData[i].quotation ? "0.000000" : listData[i].quotation.high || "0.000000") +
+                        "</dt><dd growing-ignore='true'>￥" + ((!listData[i].quotation ? "0.000000" : listData[i].quotation.high || "0.000000")* huilv).toFixed(6) +
+                        "</dd></dl><em class='r "+(listData[i].quotation.rate<0 ? 'down':'up')+"' growing-ignore='true'>" + (listData[i].quotation.rate>0 ? '+':'')+(!listData[i].quotation ? "0.000000" : listData[i].quotation.rate || "0.00")+"%" + "</em></div>"
+                }
+                $(".symbol-list").html(htmlInfo);
+            }
+        }
+
+        function getHuilv() {
+            let getHuilvResult = ajaxMethod('getHuilv',{});
+            return getHuilvResult['return'];
+        }
+
+        $(".symbol-list").on('click', '.symbol', function () {
+            console.log(1111);
+            let info_id = $(this)[0].dataset.id;
+            location.href = "./chart.html?excpairs="+info_id;
+        });
+    </script>
+    <script>
+        // --------------------------新加代码片段开始位置 2020-08-09------------------------------
+        //语言选中
+        $("#language").change(function(){
+            var multer=$(this).val();          //获取下拉选中值
+            console.log("multer",multer)
+            switch(multer)
+            {   //选择中文
+                case "zh-cn":localStorage.setItem("yuyan_type","zh-cn");location.reload();//刷新页面//存储页面缓存
+                    break;
+                //选择English
+                case "en-us":localStorage.setItem("yuyan_type","en-us");location.reload();//刷新页面//存储页面缓存
+                    break;
+                //选择한국어
+                case "ko-kr":localStorage.setItem("yuyan_type","ko-kr");location.reload();//刷新页面//存储页面缓存
+                    break;
+                default:localStorage.setItem("yuyan_type","zh-cn");location.reload();//刷新页面//存储页面缓存
+            }
+        })
+        // --------------------------新加代码片段结束位置------------------------------
+
+        $(function () {
+
+            // --------------------------新加代码片段开始位置 2020-08-09------------------------------
+            //获取选中的语言类型
+            var yuyan_type=localStorage.getItem("yuyan_type");
+            //设置下拉框语言的选中状态
+            var language=$("#language option");
+            for(var i=0;i<language.length;i++){
+                var values=language.eq(i).val();
+                if(values==yuyan_type){language.eq(i).prop("selected","selected")}
+            }
+            // 不同语言分段处理数据
+            if(yuyan_type=="zh-cn"){
+                //中文的数据
+                var China_data=["自选","全部","主板","创业板","首页","行情","币币交易","资产"]
+                versionKey(China_data);//翻译数据
+            }
+            if(yuyan_type=="en-us"){
+                //英文的数据
+                var English_data=["Favorites","All","Main","Next","Home","Markets","Exchange","Balances"]
+                versionKey(English_data);//翻译数据
+            }
+            if(yuyan_type=="ko-kr"){
+                //韩语的数据
+                var han_data=["스스로","전부","메인보드","창업 하 다","홈","시장","코인간 마켓","자산"]
+                versionKey(han_data);//翻译数据
+            }
+            // 需要翻译的公用方法  自助添加
+            function versionKey(datas){
+                // 自选
+                $(".symbol-section button").eq(0).html(datas[0]);
+                $(".symbol-section button").eq(1).html(datas[1]);
+                $(".symbol-section button").eq(2).html(datas[2]);
+                $(".symbol-section button").eq(3).html(datas[3]);
+                //首页最底层栏目
+                $(".nav a").eq(0).html("<i class=\"mobile_icon_home\"></i>"+datas[4])
+                $(".nav a").eq(1).html("<i class=\"mobile_icon_market\"></i>"+datas[5])
+                $(".nav a").eq(2).html("<i class=\"mobile_icon_trade\"></i>"+datas[6])
+                $(".nav a").eq(3).html("<i class=\"mobile_icon_finance\"></i>"+datas[7])
+            }
+            // --------------------------新加代码片段结束位置------------------------------
+        })
+    </script>
+</body>
+
+</html>

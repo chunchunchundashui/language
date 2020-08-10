@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>选择国家/地区-Eth Global</title>
+        <link rel="stylesheet" href="../static/css/reset.css">
+        <link rel="stylesheet" href="../static/css/country.css">
+        <link rel="stylesheet" href="../static/css/comment.css">
+        <link rel="stylesheet" href="../static/css/iconfont.css">
+        <script src="../static/js/auto-size.js"></script>
+</head>
+
+<body>
+        <div class="page-country">
+                <div class="country-search-box" id="search-box"><i class="mobile_icon_search"></i>
+                        <input growing-ignore="true" id="search-input" placeholder="国家/地区">
+                        <button class="search-clear" data-action="clear" style="opacity:0">
+                                <i class="mobile_icon_clear"></i>
+                        </button>
+                        <a href="javascript:history.go(-1)">取消</a>
+                </div>
+                <div class="country-list" id="list">
+                        <!-- <div class="country-list-cap"> 常用 </div>
+                        <div class="country-list-item" data-id="37" data-code="0086" data-contry='中国'>
+                                <span class="country-name">China(中国)</span>
+                                <span class="country-code">+86</span>
+                        </div>
+                        <div class="country-list-item" data-id="71" data-code="00852" data-contry='中国香港'>
+                                <span class="country-name">
+                                        HongKong(China)(中国香港)
+                                </span>
+                                <span class="country-code">+852</span>
+                        </div>
+                        <div class="country-list-item" data-id="169" data-code="00886" data-contry='中国台湾'>
+                                <span class="country-name">
+                                        Taiwan(China)(中国台湾)
+                                </span>
+                                <span class="country-code">+886</span>
+                        </div>
+                        <div class="country-list-item" data-id="88" data-code="0082" data-contry='韩国'>
+                                <span class="country-name">Korea(韩国)</span>
+                                <span class="country-code">+82</span>
+                        </div>
+                        <div class="country-list-item" data-id="182" data-code="0044" data-contry='英国'>
+                                <span class="country-name">United Kingdom(英国)</span>
+                                <span class="country-code">+44</span>
+                        </div>
+                        <div class="country-list-item" data-id="60" data-code="0049" data-contry='德国'>
+                                <span class="country-name">Germany(德国)</span>
+                                <span class="country-code">+49</span>
+                        </div>
+                        <div class="country-list-item" data-id="32" data-code="001" data-contry='加拿大'>
+                                <span class="country-name">Canada(加拿大)</span>
+                                <span class="country-code">+1</span>
+                        </div> -->
+                        <div class="country-list-cap upper">A</div>
+                        <div class="country-list-item" data-id="3" data-code="00355" data-contry='阿尔巴尼亚'>
+                                <span class="country-name">Albania(阿尔巴尼亚)</span>
+                                <span class="country-code">+355</span>
+                        </div>
+                        <div class="country-list-item" data-id="4" data-code="00213" data-contry='阿尔及利亚'>
+                                <span class="country-name">Algeria(阿尔及利亚)</span>
+                                <span class="country-code">+213</span>
+                        </div>
+                        <div class="country-list-item" data-id="5" data-code="00376" data-contry='安道尔共和国'>
+                                <span class="country-name">Andorra(安道尔共和国)</span>
+                                <span class="country-code">+376</span>
+                        </div>
+                        <div class="country-list-item" data-id="1" data-code="00244" data-contry='安哥拉'>
+                                <span class="country-name">Angola(安哥拉)</span>
+                                <span class="country-code">+244</span>
+                        </div>
+                        <div class="country-list-item" data-id="6" data-code="001264" data-contry='安圭拉岛'>
+                                <span class="country-name">Anguilla(安圭拉岛)</span>
+                                <span class="country-code">+1264</span>
+                        </div>
+                        <div class="country-list-item" data-id="7" data-code="001268" data-contry='安提瓜和巴布达'>
+                                <span class="country-name">
+                                        Antigua andBarbuda(安提瓜和巴布达)</span>
+                                <span class="country-code">+1268</span>
+                        </div>
+                        <div class="country-list-item" data-id="8" data-code="0054" data-contry='阿根廷'>
+                                <span class="country-name">Argentina(阿根廷)</span>
+                                <span class="country-code">+54</span>
+                        </div>
+                        <div class="country-list-item" data-id="9" data-code="00374" data-contry='亚美尼亚'>
+                                <span class="country-name">Armenia(亚美尼亚)</span>
+                                <span class="country-code">+374</span>
+                        </div>
+                        <div class="country-list-item" data-id="194" data-code="00297" data-contry='阿鲁巴'>
+                                <span class="country-name">Aruba(阿鲁巴)</span>
+                                <span class="country-code">+297</span>
+                        </div>
+                        <div class="country-list-item" data-id="10" data-code="00247" data-contry='阿森松'>
+                                <span class="country-name">Ascension(阿森松)</span>
+                                <span class="country-code">+247</span>
+                        </div>
+                        <div class="country-list-item" data-id="11" data-code="0061" data-contry='澳大利亚'>
+                                <span class="country-name">Australia(澳大利亚)</span>
+                                <span class="country-code">+61</span>
+                        </div>
+                        <div class="country-list-item" data-id="195" data-code="00672" data-contry='澳大利亚海外领地'>
+                                <span class="country-name">Australian
+                                        overseas territories(澳大利亚海外领地)</span>
+                                <span class="country-code">+672</span>
+                        </div>
+                        <div class="country-list-item" data-id="12" data-code="0043" data-contry='奥地利'>
+                                <span class="country-name">Austria(奥地利)</span>
+                                <span class="country-code">+43</span>
+                        </div>
+                        <div class="country-list-item" data-id="13" data-code="00994" data-contry='阿塞拜疆'>
+                                <span class="country-name">Azerbaijan(阿塞拜疆)</span>
+                                <span class="country-code">+994</span>
+                        </div>
+                        <div class="country-list-cap upper">B</div>
+                        <div class="country-list-item" data-id="14" data-code="001242" data-contry='巴哈马'>
+                                <span class="country-name">Bahamas(巴哈马)</span>
+                                <span class="country-code">+1242</span>
+                        </div>
+                        <div class="country-list-item" data-id="15" data-code="00973" data-contry='巴林'>
+                                <span class="country-name">Bahrain(巴林)</span>
+                                <span class="country-code">+973</span>
+                        </div>
+                        <div class="country-list-item" data-id="17" data-code="001246" data-contry='巴巴多斯'>
+                                <span class="country-name">Barbados(巴巴多斯)</span>
+                                <span class="country-code">+1246</span>
+                        </div>
+                        <div class="country-list-item" data-id="19" data-code="0032" data-contry='比利时'>
+                                <span class="country-name">Belgium(比利时)</span>
+                                <span class="country-code">+32</span>
+                        </div>
+                        <div class="country-list-item" data-id="20" data-code="00501" data-contry='伯利兹'>
+                                <span class="country-name">Belize(伯利兹)</span>
+                                <span class="country-code">+501</span>
+                        </div>
+                        <div class="country-list-item" data-id="21" data-code="00229" data-contry='贝宁'>
+                                <span class="country-name">Benin(贝宁)</span>
+                                <span class="country-code">+229</span>
+                        </div>
+                        <div class="country-list-item" data-id="22" data-code="001441" data-contry='百慕大群岛'>
+                                <span class="country-name">Bermuda(百慕大群岛)</span>
+                                <span class="country-code">+1441</span>
+                        </div>
+                        <div class="country-list-item" data-id="196" data-code="00975" data-contry='不丹'>
+                                <span class="country-name">Bhutan(不丹)</span>
+                                <span class="country-code">+975</span>
+                        </div>
+                        <div class="country-list-item" data-id="197" data-code="00387" data-contry='波斯尼亚和黑塞哥维那'>
+                                <span class="country-name">Bosnia and
+                                        Herzegovina(波斯尼亚和黑塞哥维那)</span>
+                                <span class="country-code">+387</span>
+                        </div>
+                        <div class="country-list-item" data-id="24" data-code="00267" data-contry="博茨瓦纳">
+                                <span class="country-name">Botswana(博茨瓦纳)</span>
+                                <span class="country-code">+267</span>
+                        </div>
+                        <div class="country-list-item" data-id="25" data-code="0055" data-contry="巴西">
+                                <span class="country-name">Brazil(巴西)</span>
+                                <span class="country-code">+55</span>
+                        </div>
+                        <div class="country-list-item" data-id="229" data-code="001284" data-contry="英属维尔京群岛">
+                                <span class="country-name">British Virgin
+                                        Islands(英属维尔京群岛)</span>
+                                <span class="country-code">+1284</span>
+                        </div>
+                        <div class="country-list-item" data-id="26" data-code="00673" data-contry="文莱">
+                                <span class="country-name">Brunei(文莱)</span>
+                                <span class="country-code">+673</span>
+                        </div>
+                        <div class="country-list-item" data-id="27" data-code="00359" data-contry="保加利亚">
+                                <span class="country-name">Bulgaria(保加利亚)</span>
+                                <span class="country-code">+359</span>
+                        </div>
+                        <div class="country-list-item" data-id="28" data-code="00226" data-contry="布基纳法索">
+                                <span class="country-name">Burkina
+                                        Faso(布基纳法索)</span>
+                                <span class="country-code">+226</span>
+                        </div>
+                        <div class="country-list-item" data-id="30" data-code="00257" data-contry="布隆迪">
+                                <span class="country-name">Burundi(布隆迪)</span>
+                                <span class="country-code">+257</span>
+                        </div>
+                        <div class="country-list-cap upper">C</div>
+                        <div class="country-list-item" data-id="85" data-code="00855" data-contry="柬埔寨">
+                                <span class="country-name">Cambodia(柬埔寨)</span>
+                                <span class="country-code">+855</span>
+                        </div>
+                        <div class="country-list-item" data-id="32" data-code="001" data-contry="加拿大">
+                                <span class="country-name">Canada(加拿大)</span>
+                                <span class="country-code">+1</span>
+                        </div>
+                        <div class="country-list-item" data-id="198" data-code="00238" data-contry="佛得角">
+                                <span class="country-name">CapeVerde(佛得角)</span>
+                                <span class="country-code">+238</span>
+                        </div>
+                        <div class="country-list-item" data-id="33" data-code="001345" data-contry="开曼群岛">
+                                <span class="country-name">
+                                        Cayman
+                                        Islands.(开曼群岛)</span>
+                                <span class="country-code">+1345</span>
+                        </div>
+                        <div class="country-list-item" data-id="36" data-code="0056" data-contry="智利">
+                                <span class="country-name">Chile(智利)</span>
+                                <span class="country-code">+56</span>
+                        </div>
+                        <div class="country-list-item" data-id="37" data-code="0086" data-contry="中国">
+                                <span class="country-name">China(中国)</span>
+                                <span class="country-code">+86</span>
+                        </div>
+                        <div class="country-list-item" data-id="38" data-code="0057" data-contry="哥伦比亚">
+                                <span class="country-name">Colombia(哥伦比亚)</span>
+                                <span class="country-code">+57</span>
+                        </div>
+                        <div class="country-list-item" data-id="199" data-code="00269" data-contry="科摩罗群岛">
+                                <span class="country-name">Comoros
+                                        Islands(科摩罗群岛)</span>
+                                <span class="country-code">+269</span>
+                        </div>
+                        <div class="country-list-item" data-id="40" data-code="00682" data-contry="库克群岛">
+                                <span class="country-name">Cook
+                                        Islands.(库克群岛)</span>
+                                <span class="country-code">+682</span>
+                        </div>
+                        <div class="country-list-item" data-id="41" data-code="00506" data-contry="哥斯达黎加">
+                                <span class="country-name">Costa
+                                        Rica(哥斯达黎加)</span>
+                                <span class="country-code">+506</span>
+                        </div>
+                        <div class="country-list-item" data-id="200" data-code="00385" data-contry="克罗地亚">
+                                <span class="country-name">Croatia(克罗地亚)</span>
+                                <span class="country-code">+385</span>
+                        </div>
+                        <div class="country-list-item" data-id="43" data-code="00357" data-contry="塞浦路斯">
+                                <span class="country-name">Cyprus(塞浦路斯)</span>
+                                <span class="country-code">+357</span>
+                        </div>
+                        <div class="country-list-item" data-id="44" data-code="00420" data-contry="捷克">
+                                <span class="country-name">Czech
+                                        Republic(捷克)</span>
+                                <span class="country-code">+420</span>
+                        </div>
+                        <div class="country-list-cap upper">D</div>
+                        <div class="country-list-item" data-id="45" data-code="0045" data-contry="丹麦">
+                                <span class="country-name">Denmark(丹麦)</span>
+                                <span class="country-code">+45</span>
+                        </div>
+                        <div class="country-list-item" data-id="201" data-code="00246" data-contry="迭戈加西亚群岛">
+                                <span class="country-name">Diego
+                                        Garcia(迭戈加西亚群岛)</span>
+                                <span class="country-code">+246</span>
+                        </div>
+                        <div class="country-list-item" data-id="46" data-code="00253" data-contry="吉布提">
+                                <span class="country-name">Djibouti(吉布提)</span>
+                                <span class="country-code">+253</span>
+                        </div>
+                        <div class="country-list-item" data-id="47" data-code="001809" data-contry="多米尼加共和国">
+                                <span class="country-name">Dominican Republic(多米尼加共和国)</span>
+                                <span class="country-code">+1809</span>
+                        </div>
+                        <div class="country-list-cap upper">E</div>
+                        <div class="country-list-item" data-id="202" data-code="00670" data-contry="东帝汶">
+                                <span class="country-name">EastTimor(东帝汶)</span>
+                                <span class="country-code">+670</span>
+                        </div>
+                        <div class="country-list-item" data-id="49" data-code="0020" data-contry="埃及">
+                                <span class="country-name">Egypt(埃及)</span>
+                                <span class="country-code">+20</span>
+                        </div>
+                        <div class="country-list-item" data-id="50" data-code="00503" data-contry="萨尔瓦多">
+                                <span class="country-name">ElSalvador(萨尔瓦多)</span>
+                                <span class="country-code">+503</span>
+                        </div>
+                        <div class="country-list-item" data-id="230" data-code="009714" data-contry="迪拜酋长国">
+                                <span class="country-name">Emirate of Dubai(迪拜酋长国)</span>
+                                <span class="country-code">+9714</span>
+                        </div>
+                        <div class="country-list-item" data-id="203" data-code="00240" data-contry="赤道几内亚">
+                                <span class="country-name">EquatorialGuinea(赤道几内亚)</span>
+                                <span class="country-code">+240</span>
+                        </div>
+                        <div class="country-list-item" data-id="204" data-code="00291" data-contry="厄立特里亚">
+                                <span class="country-name">Eritrea(厄立特里亚)</span>
+                                <span class="country-code">+291</span>
+                        </div>
+                        <div class="country-list-item" data-id="51" data-code="00372" data-contry="爱沙尼亚">
+                                <span class="country-name">Estonia(爱沙尼亚)</span>
+                                <span class="country-code">+372</span>
+                        </div>
+                        <div class="country-list-item" data-id="52" data-code="00251" data-contry="埃塞俄比亚">
+                                <span class="country-name">Ethiopia(埃塞俄比亚)</span>
+                                <span class="country-code">+251</span>
+                        </div>
+                        <div class="country-list-cap upper">F</div>
+                        <div class="country-list-item" data-id="205" data-code="00500" data-contry="福克兰群岛">
+                                <span class="country-name">FalklandIslands(福克兰群岛)</span>
+                                <span class="country-code">+500</span>
+                        </div>
+                        <div class="country-list-item" data-id="206" data-code="00298" data-contry="法罗群岛">
+                                <span class="country-name">FaroeIslands(法罗群岛)</span>
+                                <span class="country-code">+298</span>
+                        </div>
+                        <div class="country-list-item" data-id="53" data-code="00679" data-contry="斐济">
+                                <span class="country-name">Fiji(斐济)</span>
+                                <span class="country-code">+679</span>
+                        </div>
+                        <div class="country-list-item" data-id="54" data-code="00358" data-contry="芬兰">
+                                <span class="country-name">Finland(芬兰)</span>
+                                <span class="country-code">+358</span>
+                        </div>
+                        <div class="country-list-item" data-id="55" data-code="0033" data-contry="法国">
+                                <span class="country-name">France(法国)</span>
+                                <span class="country-code">+33</span>
+                        </div>
+                        <div class="country-list-item" data-id="56" data-code="00594" data-contry="法属圭亚那">
+                                <span class="country-name">FrenchGuiana(法属圭亚那)</span>
+                                <span class="country-code">+594</span>
+                        </div>
+                        <div class="country-list-item" data-id="136" data-code="00689" data-contry="法属玻利尼西亚">
+                                <span class="country-name">FrenchPolynesia(法属玻利尼西亚)</span>
+                                <span class="country-code">+689</span>
+                        </div>
+                        <div class="country-list-cap upper">G</div>
+                        <div class="country-list-item" data-id="57" data-code="00241" data-contry="加蓬">
+                                <span class="country-name">Gabon(加蓬)</span>
+                                <span class="country-code">+241</span>
+                        </div>
+                        <div class="country-list-item" data-id="58" data-code="00220" data-contry="冈比亚">
+                                <span class="country-name">Gambia(冈比亚)</span>
+                                <span class="country-code">+220</span>
+                        </div>
+                        <div class="country-list-item" data-id="59" data-code="00995" data-contry="格鲁吉亚">
+                                <span class="country-name">Georgia(格鲁吉亚)</span>
+                                <span class="country-code">+995</span>
+                        </div>
+                        <div class="country-list-item" data-id="60" data-code="0049" data-contry="德国">
+                                <span class="country-name">Germany(德国)</span>
+                                <span class="country-code">+49</span>
+                        </div>
+                        <div class="country-list-item" data-id="61" data-code="00233" data-contry="加纳">
+                                <span class="country-name">Ghana(加纳)</span>
+                                <span class="country-code">+233</span>
+                        </div>
+                        <div class="country-list-item" data-id="62" data-code="00350" data-contry="直布罗陀">
+                                <span class="country-name">Gibraltar(直布罗陀)</span>
+                                <span class="country-code">+350</span>
+                        </div>
+                        <div class="country-list-item" data-id="63" data-code="0030" data-contry="希腊">
+                                <span class="country-name">Greece(希腊)</span>
+                                <span class="country-code">+30</span>
+                        </div>
+                        <div class="country-list-item" data-id="207" data-code="00299" data-contry="格陵兰岛">
+                                <span class="country-name">Greenland(格陵兰岛)</span>
+                                <span class="country-code">+299</span>
+                        </div>
+                        <div class="country-list-item" data-id="64" data-code="001473" data-contry="格林纳达">
+                                <span class="country-name">Grenada(格林纳达)</span>
+                                <span class="country-code">+1473</span>
+                        </div>
+                        <div class="country-list-item" data-id="208" data-code="00590" data-contry="瓜德罗普">
+                                <span class="country-name">Guadeloupe(瓜德罗普)</span>
+                                <span class="country-code">+590</span>
+                        </div>
+                        <div class="country-list-item" data-id="65" data-code="001671" data-contry="关岛">
+                                <span class="country-name">Guam(关岛)</span>
+                                <span class="country-code">+1671</span>
+                        </div>
+                        <div class="country-list-item" data-id="66" data-code="00502" data-contry="危地马拉">
+                                <span class="country-name">Guatemala(危地马拉)</span>
+                                <span class="country-code">+502</span>
+                        </div>
+                        <div class="country-list-item" data-id="209" data-code="00245" data-contry="几内亚比绍">
+                                <span class="country-name">Guinea-Bissau(几内亚比绍)</span>
+                                <span class="country-code">+245</span>
+                        </div>
+                        <div class="country-list-item" data-id="68" data-code="00592" data-contry="圭亚那">
+                                <span class="country-name">Guyana(圭亚那)</span>
+                                <span class="country-code">+592</span>
+                        </div>
+                        <div class="country-list-cap upper">H</div>
+                        <div class="country-list-item" data-id="69" data-code="00509" data-contry="海地">
+                                <span class="country-name">Haiti(海地)</span>
+                                <span class="country-code">+509</span>
+                        </div>
+                        <div class="country-list-item" data-id="70" data-code="00504" data-contry="洪都拉斯">
+                                <span class="country-name">Honduras(洪都拉斯)</span>
+                                <span class="country-code">+504</span>
+                        </div>
+                        <div class="country-list-item" data-id="71" data-code="00852" data-contry="中国香港">
+                                <span class="country-name">HongKong(China)(中国香港)</span>
+                                <span class="country-code">+852</span>
+                        </div>
+                        <div class="country-list-item" data-id="72" data-code="0036" data-contry="匈牙利">
+                                <span class="country-name">Hungary(匈牙利)</span>
+                                <span class="country-code">+36</span>
+                        </div>
+                        <div class="country-list-cap upper">I</div>
+                        <div class="country-list-item" data-id="73" data-code="00354" data-contry="冰岛">
+                                <span class="country-name">Iceland(冰岛)</span>
+                                <span class="country-code">+354</span>
+                        </div>
+                        <div class="country-list-item" data-id="74" data-code="0091" data-contry="印度">
+                                <span class="country-name">India(印度)</span>
+                                <span class="country-code">+91</span>
+                        </div>
+                        <div class="country-list-item" data-id="75" data-code="0062" data-contry="印度尼西亚">
+                                <span class="country-name">Indonesia(印度尼西亚)</span>
+                                <span class="country-code">+62</span>
+                        </div>
+                        <div class="country-list-item" data-id="78" data-code="00353" data-contry="爱尔兰">
+                                <span class="country-name">Ireland(爱尔兰)</span>
+                                <span class="country-code">+353</span>
+                        </div>
+                        <div class="country-list-item" data-id="79" data-code="00972" data-contry="以色列">
+                                <span class="country-name">Israel(以色列)</span>
+                                <span class="country-code">+972</span>
+                        </div>
+                        <div class="country-list-item" data-id="80" data-code="0039" data-contry="意大利">
+                                <span class="country-name">Italy(意大利)</span>
+                                <span class="country-code">+39</span>
+                        </div>
+                        <div class="country-list-cap upper">J</div>
+                        <div class="country-list-item" data-id="82" data-code="001876" data-contry="牙买加">
+                                <span class="country-name">Jamaica(牙买加)</span>
+                                ] <span class="country-code">+1876</span>
+                        </div>
+                        <div class="country-list-item" data-id="84" data-code="00962" data-contry="约旦">
+                                <span class="country-name">Jordan(约旦)</span>
+                                <span class="country-code">+962</span>
+                        </div>
+                        <div class="country-list-cap upper">K</div>
+                        <div class="country-list-item" data-id="86" data-code="007" data-contry="哈萨克斯坦">
+                                <span class="country-name">Kazakhstan(哈萨克斯坦)</span>
+                                <span class="country-code">+7</span>
+                        </div>
+                        <div class="country-list-item" data-id="87" data-code="00254" data-contry="肯尼亚">
+                                <span class="country-name">Kenya(肯尼亚)</span>
+                                <span class="country-code">+254</span>
+                        </div>
+                        <div class="country-list-item" data-id="210" data-code="00686" data-contry="基里巴斯">
+                                <span class="country-name">Kiribati(基里巴斯)</span>
+                                <span class="country-code">+686</span>
+                        </div>
+                        <div class="country-list-item" data-id="88" data-code="0082" data-contry="韩国">
+                                <span class="country-name">Korea(韩国)</span>
+                                <span class="country-code">+82</span>
+                        </div>
+                        <div class="country-list-item" data-id="89" data-code="00965" data-contry="科威特">
+                                <span class="country-name">Kuwait(科威特)</span>
+                                <span class="country-code">+965</span>
+                        </div>
+                        <div class="country-list-item" data-id="90" data-code="00996" data-contry="吉尔吉斯坦">
+                                <span class="country-name">Kyrgyzstan(吉尔吉斯坦)</span>
+                                <span class="country-code">+996</span>
+                        </div>
+                        <div class="country-list-cap upper">L</div>
+                        <div class="country-list-item" data-id="91" data-code="00856" data-contry="老挝">
+                                <span class="country-name">Laos(老挝)</span>
+                                <span class="country-code">+856</span>
+                        </div>
+                        <div class="country-list-item" data-id="92" data-code="00371" data-contry="拉脱维亚">
+                                <span class="country-name">Latvia(拉脱维亚)</span>
+                                <span class="country-code">+371</span>
+                        </div>
+                        <div class="country-list-item" data-id="94" data-code="00266" data-contry="莱索托">
+                                <span class="country-name">Lesotho(莱索托)</span>
+                                <span class="country-code">+266</span>
+                        </div>
+                        <div class="country-list-item" data-id="97" data-code="00423" data-contry="列支敦士登">
+                                <span class="country-name">Liechtenstein(列支敦士登)</span>
+                                <span class="country-code">+423</span>
+                        </div>
+                        <div class="country-list-item" data-id="98" data-code="00370" data-contry="立陶宛">
+                                <span class="country-name">Lithuania(立陶宛)</span>
+                                <span class="country-code">+370</span>
+                        </div>
+                        <div class="country-list-item" data-id="99" data-code="00352" data-contry="卢森堡">
+                                <span class="country-name">Luxembourg(卢森堡)</span>
+                                <span class="country-code">+352</span>
+                        </div>
+                        <div class="country-list-cap upper">M</div>
+                        <div class="country-list-item" data-id="211" data-code="00389" data-contry="马其顿">
+                                <span class="country-name">Macedonia(马其顿)</span>
+                                <span class="country-code">+389</span>
+                        </div>
+                        <div class="country-list-item" data-id="101" data-code="00261" data-contry="马达加斯加">
+                                <span class="country-name">Madagascar(马达加斯加)</span>
+                                ]<span class="country-code">+261</span>
+                        </div>
+                        <div class="country-list-item" data-id="102" data-code="00265" data-contry="马拉维">
+                                <span class="country-name">Malawi(马拉维)</span>
+                                <span class="country-code">+265</span>
+                        </div>
+                        <div class="country-list-item" data-id="103" data-code="0060" data-contry="马来西亚">
+                                <span class="country-name">Malaysia(马来西亚)</span>
+                                <span class="country-code">+60</span>
+                        </div>
+                        <div class="country-list-item" data-id="104" data-code="00960" data-contry="马尔代夫">
+                                <span class="country-name">Maldives(马尔代夫)</span>
+                                <span class="country-code">+960</span>
+                        </div>
+                        <div class="country-list-item" data-id="105" data-code="00223" data-contry="马里">
+                                <span class="country-name">Mali(马里)</span>
+                                <span class="country-code">+223</span>
+                        </div>
+                        <div class="country-list-item" data-id="106" data-code="00356" data-contry="马耳他">
+                                <span class="country-name">Malta(马耳他)</span>
+                                <span class="country-code">+356</span>
+                        </div>
+                        <div class="country-list-item" data-id="107" data-code="00223" data-contry="马里亚那群岛">
+                                <span class="country-name">MarianaIslands(马里亚那群岛)</span>
+                                <span class="country-code">+223</span>
+                        </div>
+                        <div class="country-list-item" data-id="212" data-code="00692" data-contry="Marshall">
+                                <span class="country-name">MarshallIslands(马绍尔群岛)</span>
+                                <span class="country-code">+692</span>
+                        </div>
+                        <div class="country-list-item" data-id="108" data-code="00596" data-contry="马提尼克">
+                                <span class="country-name">Martinique(马提尼克)</span>
+                                <span class="country-code">+596</span>
+                        </div>
+                        <div class="country-list-item" data-id="213" data-code="00222" data-contry="毛里塔尼亚">
+                                <span class="country-name">Mauritania(毛里塔尼亚)</span>
+                                <span class="country-code">+222</span>
+                        </div>
+                        <div class="country-list-item" data-id="109" data-code="00230" data-contry="毛里求斯">
+                                <span class="country-name">Mauritius(毛里求斯)</span>
+                                <span class="country-code">+230</span>
+                        </div>
+                        <div class="country-list-item" data-id="110" data-code="0052" data-contry="墨西哥">
+                                <span class="country-name">Mexico(墨西哥)</span>
+                                <span class="country-code">+52</span>
+                        </div>
+                        <div class="country-list-item" data-id="214" data-code="00691" data-contry="密克罗尼西亚">
+                                <span class="country-name">Micronesia(密克罗尼西亚)</span>
+                                <span class="country-code">+691</span>
+                        </div>
+                        <div class="country-list-item" data-id="111" data-code="00373" data-contry="摩尔多瓦">
+                                <span class="country-name">Moldova(摩尔多瓦)</span>
+                                <span class="country-code">+373</span>
+                        </div>
+                        <div class="country-list-item" data-id="112" data-code="00377" data-contry="摩纳哥">
+                                <span class="country-name">Monaco(摩纳哥)</span>
+                                <span class="country-code">+377</span>
+                        </div>
+                        <div class="country-list-item" data-id="113" data-code="00976" data-contry="蒙古">
+                                <span class="country-name">Mongolia(蒙古)</span>
+                                <span class="country-code">+976</span>
+                        </div>
+                        <div class="country-list-item" data-id="215" data-code="00382" data-contry="黑山">
+                                <span class="country-name">Montenegro(黑山)</span>
+                                <span class="country-code">+382</span>
+                        </div>
+                        <div class="country-list-item" data-id="114" data-code="001664" data-contry="蒙特塞拉特岛">
+                                <span class="country-name">Montserrat(蒙特塞拉特岛)</span>
+                                <span class="country-code">+1664</span>
+                        </div>
+                        <div class="country-list-item" data-id="115" data-code="00212" data-contry="摩洛哥">
+                                <span class="country-name">Morocco(摩洛哥)</span>
+                                <span class="country-code">+212</span>
+                        </div>
+                        <div class="country-list-item" data-id="116" data-code="00258" data-contry="莫桑比克">
+                                <span class="country-name">Mozambique(莫桑比克)</span>
+                                <span class="country-code">+258</span>
+                        </div>
+                        <div class="country-list-cap upper">N</div>
+                        <div class="country-list-item" data-id="117" data-code="00264" data-contry="纳米比亚">
+                                <span class="country-name">Namibia(纳米比亚)</span>
+                                <span class="country-code">+264</span>
+                        </div>
+                        <div class="country-list-item" data-id="118" data-code="00674" data-contry="瑙鲁">
+                                <span class="country-name">Nauru(瑙鲁)</span>
+                                <span class="country-code">+674</span>
+                        </div>
+                        <div class="country-list-item" data-id="119" data-code="00977" data-contry="尼泊尔">
+                                <span class="country-name">Nepal(尼泊尔)</span>
+                                <span class="country-code">+977</span>
+                        </div>
+                        <div class="country-list-item" data-id="120" data-code="00599" data-contry="荷属安的列斯">
+                                <span class="country-name">NetheriandsAntilles(荷属安的列斯)</span>
+                                <span class="country-code">+599</span>
+                        </div>
+                        <div class="country-list-item" data-id="121" data-code="0031" data-contry="荷兰">
+                                <span class="country-name">Netherlands(荷兰)</span>
+                                <span class="country-code">+31</span>
+                        </div>
+                        <div class="country-list-item" data-id="216" data-code="00687" data-contry="新喀里多尼亚">
+                                <span class="country-name">NewCaledonia(新喀里多尼亚)</span>
+                                <span class="country-code">+687</span>
+                        </div>
+                        <div class="country-list-item" data-id="122" data-code="0064" data-contry="新西兰">
+                                <span class="country-name">NewZealand(新西兰)</span>
+                                <span class="country-code">+64</span>
+                        </div>
+                        <div class="country-list-item" data-id="123" data-code="00505" data-contry="尼加拉瓜">
+                                <span class="country-name">Nicaragua(尼加拉瓜)</span>
+                                <span class="country-code">+505</span>
+                        </div>
+                        <div class="country-list-item" data-id="124" data-code="00227" data-contry="尼日尔">
+                                <span class="country-name">Niger(尼日尔)</span>
+                                <span class="country-code">+227</span>
+                        </div>
+                        <div class="country-list-item" data-id="125" data-code="00234" data-contry="尼日利亚">
+                                <span class="country-name">Nigeria(尼日利亚)</span>
+                                <span class="country-code">+234</span>
+                        </div>
+                        <div class="country-list-item" data-id="217" data-code="00683" data-contry="纽埃岛">
+                                <span class="country-name">Niue(纽埃岛)</span>
+                                <span class="country-code">+683</span>
+                        </div>
+                        <div class="country-list-item" data-id="127" data-code="0047" data-contry="挪威">
+                                <span class="country-name">Norway(挪威)</span>
+                                <span class="country-code">+47</span>
+                        </div>
+                        <div class="country-list-cap upper">O</div>
+                        <div class="country-list-item" data-id="128" data-code="00968" data-contry="阿曼">
+                                <span class="country-name">Oman(阿曼)</span>
+                                <span class="country-code">+968</span>
+                        </div>
+                        <div class="country-list-cap upper">P</div>
+                        <div class="country-list-item" data-id="218" data-code="00680" data-contry="帕劳">
+                                <span class="country-name">Palau(帕劳)</span>
+                                <span class="country-code">+680</span>
+                        </div>
+                        <div class="country-list-item" data-id="219" data-code="00970" data-contry="巴勒斯坦">
+                                <span class="country-name">Palestine(巴勒斯坦)</span>
+                                <span class="country-code">+970</span>
+                        </div>
+                        <div class="country-list-item" data-id="130" data-code="00507" data-contry="巴拿马">
+                                <span class="country-name">Panama(巴拿马)</span>
+                                <span class="country-code">+507</span>
+                        </div>
+                        <div class="country-list-item" data-id="131" data-code="00675" data-contry="巴布亚新几内亚">
+                                <span class="country-name">PapuaNewGuinea(巴布亚新几内亚)</span>
+                                <span class="country-code">+675</span>
+                        </div>
+                        <div class="country-list-item" data-id="132" data-code="00595" data-contry="巴拉圭">
+                                <span class="country-name">Paraguay(巴拉圭)</span>
+                                <span class="country-code">+595</span>
+                        </div>
+                        <div class="country-list-item" data-id="133" data-code="0051" data-contry="秘鲁">
+                                <span class="country-name">Peru(秘鲁)</span>
+                                <span class="country-code">+51</span>
+                        </div>
+                        <div class="country-list-item" data-id="134" data-code="0063" data-contry="菲律宾">
+                                <span class="country-name">Philippines(菲律宾)</span>
+                                <span class="country-code">+63</span>
+                        </div>
+                        <div class="country-list-item" data-id="135" data-code="0048" data-contry="波兰">
+                                <span class="country-name">Poland(波兰)</span>
+                                <span class="country-code">+48</span>
+                        </div>
+                        <div class="country-list-item" data-id="137" data-code="00351" data-contry="葡萄牙">
+                                <span class="country-name">Portugal(葡萄牙)</span>
+                                <span class="country-code">+351</span>
+                        </div>
+                        <div class="country-list-item" data-id="138" data-code="001" data-contry="波多黎各">
+                                <span class="country-name">PuertoRico(波多黎各)</span>
+                                <span class="country-code">+1</span>
+                        </div>
+                        <div class="country-list-cap upper">Q</div>
+                        <div class="country-list-item" data-id="139" data-code="00974" data-contry="卡塔尔">
+                                <span class="country-name">Qatar(卡塔尔)</span>
+                                <span class="country-code">+974</span>
+                        </div>
+                        <div class="country-list-cap upper">R</div>
+                        <div class="country-list-item" data-id="140" data-code="00262" data-contry="留尼旺">
+                                <span class="country-name">Reunion(留尼旺)</span>
+                                <span class="country-code">+262</span>
+                        </div>
+                        <div class="country-list-item" data-id="141" data-code="0040" data-contry="罗马尼亚">
+                                <span class="country-name">Romania(罗马尼亚)</span>
+                                <span class="country-code">+40</span>
+                        </div>
+                        <div class="country-list-item" data-id="142" data-code="007" data-contry="俄罗斯">
+                                <span class="country-name">Russia(俄罗斯)</span>
+                                <span class="country-code">+7</span>
+                        </div>
+                        <div class="country-list-item" data-id="220" data-code="00250" data-contry="卢旺达">
+                                <span class="country-name">Rwanda(卢旺达)</span>
+                                <span class="country-code">+250</span>
+                        </div>
+                        <div class="country-list-cap upper">S</div>
+                        <div class="country-list-item" data-id="143" data-code="001758" data-contry="圣卢西亚">
+                                <span class="country-name">Saint Lucia(圣卢西亚)</span>
+                                <span class="country-code">+1758</span>
+                        </div>
+                        <div class="country-list-item" data-id="222" data-code="00508" data-contry="圣皮埃尔和密克隆群岛">
+                                <span class="country-name">Saint Pierre andMiquelon(圣皮埃尔和密克隆群岛)</span>
+                                <span class="country-code">+508</span>
+                        </div>
+                        <div class="country-list-item" data-id="144" data-code="001784" data-contry="圣文森特岛">
+                                <span class="country-name">SaintVincent(圣文森特岛)</span>
+                                <span class="country-code">+1784</span>
+                        </div>
+                        <div class="country-list-item" data-id="145" data-code="00684" data-contry="东萨摩亚(美)">
+                                <span class="country-name">SamoaEastern(东萨摩亚(美))</span>
+                                <span class="country-code">+684</span>
+                        </div>
+                        <div class="country-list-item" data-id="146" data-code="00685" data-contry="西萨摩亚">
+                                <span class="country-name">SamoaWestern(西萨摩亚)</span>
+                                <span class="country-code">+685</span>
+                        </div>
+                        <div class="country-list-item" data-id="147" data-code="00378" data-contry="圣马力诺">
+                                <span class="country-name">SanMarino(圣马力诺)</span>
+                                <span class="country-code">+378</span>
+                        </div>
+                        <div class="country-list-item" data-id="148" data-code="00239" data-contry="圣多美和普林西比">
+                                <span class="country-name">SaoTome andPrincipe(圣多美和普林西比)</span>
+                                <span class="country-code">+239</span>
+                        </div>
+                        <div class="country-list-item" data-id="149" data-code="00966" data-contry="沙特阿拉伯">
+                                <span class="country-name">SaudiArabia(沙特阿拉伯)</span>
+                                <span class="country-code">+966</span>
+                        </div>
+                        <div class="country-list-item" data-id="150" data-code="00221" data-contry="塞内加尔">
+                                <span class="country-name">Senegal(塞内加尔)</span>
+                                <span class="country-code">+221</span>
+                        </div>
+                        <div class="country-list-item" data-id="223" data-code="00381" data-contry="塞尔维亚">
+                                <span class="country-name">Serbia(塞尔维亚)</span>
+                                <span class="country-code">+381</span>
+                        </div>
+                        <div class="country-list-item" data-id="151" data-code="00248" data-contry="塞舌尔">
+                                <span class="country-name">Seychelles(塞舌尔)</span>
+                                <span class="country-code">+248</span>
+                        </div>
+                        <div class="country-list-item" data-id="152" data-code="00232" data-contry="塞拉利昂">
+                                <span class="country-name">Sierra Leone(塞拉利昂)</span>
+                                <span class="country-code">+232</span>
+                        </div>
+                        <div class="country-list-item" data-id="153" data-code="0065" data-contry="新加坡">
+                                <span class="country-name">Singapore(新加坡)</span>
+                                <span class="country-code">+65</span>
+                        </div>
+                        <div class="country-list-item" data-id="154" data-code="00421" data-contry="斯洛伐克">
+                                <span class="country-name">Slovakia(斯洛伐克)</span>
+                                <span class="country-code">+421</span>
+                        </div>
+                        <div class="country-list-item" data-id="155" data-code="00386" data-contry="斯洛文尼亚">
+                                <span class="country-name">Slovenia(斯洛文尼亚)</span>
+                                <span class="country-code">+386</span>
+                        </div>
+                        <div class="country-list-item" data-id="156" data-code="00677" data-contry="所罗门群岛">
+                                <span class="country-name">SolomonIslands(所罗门群岛)</span>
+                                <span class="country-code">+677</span>
+                        </div>
+                        <div class="country-list-item" data-id="158" data-code="0027" data-contry="南非">
+                                <span class="country-name">SouthAfrica(南非)</span>
+                                <span class="country-code">+27</span>
+                        </div>
+                        <div class="country-list-item" data-id="159" data-code="0034" data-contry="西班牙">
+                                <span class="country-name">Spain(西班牙)</span>
+                                <span class="country-code">+34</span>
+                        </div>
+                        <div class="country-list-item" data-id="160" data-code="0094" data-contry="斯里兰卡">
+                                <span class="country-name">Sri Lanka(斯里兰卡)</span>
+                                <span class="country-code">+94</span>
+                        </div>
+                        <div class="country-list-item" data-id="221" data-code="00290" data-contry="圣赫勒拿岛">
+                                <span class="country-name">St.Helena(圣赫勒拿岛)</span>
+                                <span class="country-code">+290</span>
+                        </div>
+                        <div class="country-list-item" data-id="161" data-code="001758" data-contry="圣卢西亚">
+                                <span class="country-name">St.Lucia(圣卢西亚)</span>
+                                <span class="country-code">+1758</span>
+                        </div>
+                        <div class="country-list-item" data-id="162" data-code="001784" data-contry="圣文森特">
+                                <span class="country-name">St.Vincent(圣文森特)</span>
+                                <span class="country-code">+1784</span>
+                        </div>
+                        <div class="country-list-item" data-id="164" data-code="00597" data-contry="苏里南">
+                                <span class="country-name">Suriname(苏里南)</span>
+                                <span class="country-code">+597</span>
+                        </div>
+                        <div class="country-list-item" data-id="165" data-code="00268" data-contry="斯威士兰">
+                                <span class="country-name">Swaziland(斯威士兰)</span>
+                                <span class="country-code">+268</span>
+                        </div>
+                        <div class="country-list-item" data-id="166" data-code="0046" data-contry="瑞典">
+                                <span class="country-name">Sweden(瑞典)</span>
+                                <span class="country-code">+46</span>
+                        </div>
+                        <div class="country-list-item" data-id="167" data-code="0041" data-contry="瑞士">
+                                <span class="country-name">Switzerland(瑞士)</span>
+                                <span class="country-code">+41</span>
+                        </div>
+                        <div class="country-list-cap upper">T</div>
+                        <div class="country-list-item" data-id="169" data-code="00886" data-contry="中国台湾">
+                                <span class="country-name">Taiwan(China)(中国台湾)</span>
+                                <span class="country-code">+886</span>
+                        </div>
+                        <div class="country-list-item" data-id="170" data-code="00992" data-contry="塔吉克斯坦">
+                                <span class="country-name">Tajikistan(塔吉克斯坦)</span>
+                                <span class="country-code">+992</span>
+                        </div>
+                        <div class="country-list-item" data-id="171" data-code="00255" data-contry="坦桑尼亚">
+                                <span class="country-name">Tanzania(坦桑尼亚)</span>
+                                <span class="country-code">+255</span>
+                        </div>
+                        <div class="country-list-item" data-id="172" data-code="0066" data-contry="泰国">
+                                <span class="country-name">Thailand(泰国)</span>
+                                <span class="country-code">+66</span>
+                        </div>
+                        <div class="country-list-item" data-id="173" data-code="00228" data-contry="多哥">
+                                <span class="country-name">Togo(多哥)</span>
+                                <span class="country-code">+228</span>
+                        </div>
+                        <div class="country-list-item" data-id="224" data-code="00690" data-contry="托克劳群岛">
+                                <span class="country-name">Tokelau(托克劳群岛)</span>
+                                <span class="country-code">+690</span>
+                        </div>
+                        <div class="country-list-item" data-id="174" data-code="00676" data-contry="汤加">
+                                <span class="country-name">Tonga(汤加)</span>
+                                <span class="country-code">+676</span>
+                        </div>
+                        <div class="country-list-item" data-id="175" data-code="001868" data-contry="特立尼达和多巴哥">
+                                <span class="country-name">Trinidad andTobago(特立尼达和多巴哥)</span>
+                                <span class="country-code">+1868</span>
+                        </div>
+                        <div class="country-list-item" data-id="176" data-code="00216" data-contry="突尼斯">
+                                <span class="country-name">Tunisia(突尼斯)</span>
+                                <span class="country-code">+216</span>
+                        </div>
+                        <div class="country-list-item" data-id="177" data-code="0090" data-contry="土耳其">
+                                <span class="country-name">Turkey(土耳其)</span>
+                                <span class="country-code">+90</span>
+                        </div>
+                        <div class="country-list-item" data-id="178" data-code="00993" data-contry="土库曼斯坦">
+                                <span class="country-name">Turkmenistan(土库曼斯坦)</span>
+                                <span class="country-code">+993</span>
+                        </div>
+                        <div class="country-list-item" data-id="225" data-code="00688" data-contry="图瓦卢">
+                                <span class="country-name">Tuvalu(图瓦卢)</span>
+                                <span class="country-code">+688</span>
+                        </div>
+                        <div class="country-list-cap upper">U</div>
+                        <div class="country-list-item" data-id="179" data-code="00256" data-contry="乌干达">
+                                <span class="country-name">Uganda(乌干达)</span>
+                                <span class="country-code">+256</span>
+                        </div>
+                        <div class="country-list-item" data-id="180" data-code="00380" data-contry="乌克兰">
+                                <span class="country-name">Ukraine(乌克兰)</span>
+                                <span class="country-code">+380</span>
+                        </div>
+                        <div class="country-list-item" data-id="181" data-code="00971" data-contry="阿拉伯联合酋长国">
+                                <span class="country-name">United ArabEmirates(阿拉伯联合酋长国)</span>
+                                <span class="country-code">+971</span>
+                        </div>
+                        <div class="country-list-item" data-id="182" data-code="0044" data-contry="英国">
+                                <span class="country-name">United Kingdom(英国)</span>
+                                <span class="country-code">+44</span>
+                        </div>
+                        <div class="country-list-item" data-id="184" data-code="00598" data-contry="乌拉圭">
+                                <span class="country-name">Uruguay(乌拉圭)</span>
+                                <span class="country-code">+598</span>
+                        </div>
+                        <div class="country-list-item" data-id="185" data-code="00998" data-contry="乌兹别克斯坦">
+                                <span class="country-name">Uzbekistan(乌兹别克斯坦)</span>
+                                <span class="country-code">+998</span>
+                        </div>
+                        <div class="country-list-cap upper">V</div>
+                        <div class="country-list-item" data-id="226" data-code="00678" data-contry="瓦努阿图">
+                                <span class="country-name">Vanuatu(瓦努阿图)</span>
+                                <span class="country-code">+678</span>
+                        </div>
+                        <div class="country-list-item" data-id="227" data-code="00379" data-contry="梵蒂冈城">
+                                <span class="country-name">VaticanCity(梵蒂冈城)</span>
+                                <span class="country-code">+379</span>
+                        </div>
+                        <div class="country-list-item" data-id="186" data-code="0058" data-contry="委内瑞拉">
+                                <span class="country-name">Venezuela(委内瑞拉)</span>
+                                <span class="country-code">+58</span>
+                        </div>
+                        <div class="country-list-item" data-id="187" data-code="0084" data-contry="越南">
+                                <span class="country-name">Vietnam(越南)</span>
+                                <span class="country-code">+84</span>
+                        </div>
+                        <div class="country-list-cap upper">W</div>
+                        <div class="country-list-item" data-id="228" data-code="00681" data-contry="瓦利斯和富图纳">
+                                <span> Futuna(瓦利斯和富图纳)</span>
+                                <span class="country-code">+681</span>
+                        </div>
+                        <div class="country-list-cap upper">Y</div>
+                        <div class="country-list-item" data-id="189" data-code="00338" data-contry="南斯拉夫">
+                                <span class="country-name">Yugoslavia(南斯拉夫)</span>
+                                <span class="country-code">+338</span>
+                        </div>
+                        <div class="country-list-cap upper">Z</div>
+                        <div class="country-list-item" data-id="192" data-code="00243" data-contry="扎伊尔">
+                                <span class="country-name">Zaire(扎伊尔)</span>
+                                <span class="country-code">+243</span>
+                        </div>
+                        <div class="country-list-item" data-id="193" data-code="00260" data-contry="赞比亚">
+                                <span class="country-name">Zambia(赞比亚)</span>
+                                <span class="country-code">+260</span>
+                        </div>
+                </div>
+        </div>
+        <!-- <script src="../static/js/jquery-3.1.1.min.js"></script> -->
+        <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+        <script src="../static/js/request.js"></script>
+        <script src="../static/js/country.js"></script>
+        <script>
+                // --------------------------新加代码片段开始位置 2020-08-09------------------------------
+                //语言选中
+                $("#language").change(function(){
+                        var multer=$(this).val();          //获取下拉选中值
+                        console.log("multer",multer)
+                        switch(multer)
+                        {   //选择中文
+                                case "zh-cn":localStorage.setItem("yuyan_type","zh-cn");location.reload();//刷新页面//存储页面缓存
+                                        break;
+                            //选择English
+                                case "en-us":localStorage.setItem("yuyan_type","en-us");location.reload();//刷新页面//存储页面缓存
+                                        break;
+                            //选择한국어
+                                case "ko-kr":localStorage.setItem("yuyan_type","ko-kr");location.reload();//刷新页面//存储页面缓存
+                                        break;
+                                default:localStorage.setItem("yuyan_type","zh-cn");location.reload();//刷新页面//存储页面缓存
+                        }
+                })
+                // --------------------------新加代码片段结束位置------------------------------
+
+
+
+                $(function () {
+                        // --------------------------新加代码片段开始位置 2020-08-09------------------------------
+                        //获取选中的语言类型
+                        var yuyan_type=localStorage.getItem("yuyan_type");
+                        //设置下拉框语言的选中状态
+                        var language=$("#language option");
+                        for(var i=0;i<language.length;i++){
+                                var values=language.eq(i).val();
+                                if(values==yuyan_type){language.eq(i).prop("selected","selected")}
+                        }
+                        // 不同语言分段处理数据
+                        if(yuyan_type=="zh-cn"){
+                                //中文的数据
+                                var China_data=["国家/地区","取消"]
+                                versionKey(China_data);//翻译数据
+                        }
+                        if(yuyan_type=="en-us"){
+                                //英文的数据
+                                var English_data=["Country/Region","Cancel"]
+                                versionKey(English_data);//翻译数据
+                        }
+                        if(yuyan_type=="ko-kr"){
+                                //韩语的数据
+                                var han_data=["국가/지역","취소"]
+                                versionKey(han_data);//翻译数据
+                        }
+                        // 需要翻译的公用方法  自助添加
+                        function versionKey(datas){
+                                // 搜索输入框邮箱
+                                $(".country-search-box input").attr("placeholder",datas[0]);
+                                // 取消退后一步
+                                $(".country-search-box a").html(datas[1]);
+                        }
+                });
+                // --------------------------新加代码片段结束位置------------------------------
+        </script>
+</body>
+
+</html>

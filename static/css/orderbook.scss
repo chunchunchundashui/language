@@ -1,0 +1,107 @@
+.page-orderbook {
+    padding: 110px 30px 150px;
+    min-height: 100vh;
+    display: flex;
+
+    .page-nav {
+        height: 110px;
+        line-height: 110px;
+        padding: 0 30px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        background: #fff;
+
+        a {
+            color: #8c9fad;
+            font-size: 32px;
+
+            i {
+                padding-right: 10px;
+            }
+
+            em {
+                font-weight: 700;
+            }
+        }
+    }
+    dl.list dd,
+    .page-orderbook dl dt {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    dl {
+        box-sizing: border-box;
+        margin-top: 30px;
+        font-size: 24px;
+        dd {
+            height: 48px;
+            line-height: 48px;
+        }
+        dt {
+            color: #c5cfd5;
+            line-height: 60px;
+            height: 60px;
+        }
+
+        .bids {
+            color: #03ad8f;
+            background: linear-gradient(rgba(3, 173, 143, .2), rgba(3, 173, 143, .2)) no-repeat;
+            background-position: 100%;
+            background-size: 0 0;
+            .amount {
+                color: #8c9fad;
+            }
+
+        }
+        span {
+            white-space: nowrap;
+        }
+        .index {
+            width: 60px;
+        }
+
+    }
+
+    .list {
+        flex: 1;
+
+        dt {
+            color: #c5cfd5;
+            line-height: 60px;
+            height: 60px;
+
+            span {
+                white-space: nowrap;
+            }
+        }
+        .bids {
+            color: #03ad8f;
+            background: linear-gradient(rgba(3,173,143,.2),rgba(3,173,143,.2)) no-repeat;
+            background-position: 100%;
+            background-size: 0 0;
+        }
+        .asks {
+            color: #d14b64;
+            background: linear-gradient(rgba(209,75,100,.2),rgba(209,75,100,.2)) no-repeat;
+            background-position: 0;
+            background-size: 0 0;
+            .amount {
+                color: #8c9fad;
+            }
+        }
+    }
+
+    .index {
+        width: 60px;
+         dd {
+            display: flex;
+            justify-content: center;
+            border-left: 1px solid #e7ebee;
+            border-right: 1px solid #e7ebee;
+        }
+    }
+}

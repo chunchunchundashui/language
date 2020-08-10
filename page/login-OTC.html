@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录|火币OTC</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/iconfont.css">
+    <link rel="stylesheet" href="../static/css/conmentAdd.css">
+</head>
+
+<body>
+    <div id="app" class="login-page">
+        <div class="left flex-y" style="padding-top:48px;">
+            <div class="left-header-box headerBackgroundColor">
+                <div>
+                    <header data-mobile="true" data-locale="zh-cn" class="fedui-root fedui-header">
+                        <div class="fedui-header-vip-greeting">
+                            <!---->
+                        </div>
+                        <div class="fedui-header-m">
+                            <div class="fedui-header-m-head">
+                                <div class="fedui-header-m-head-left"><i class="fedui-header-m-head-icon"></i></div>
+                                <div href="//www.huobi.me/zh-cn/" class="fedui-header-m-head-logo"><img width="18"
+                                        height="26"
+                                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMThweCIgaGVpZ2h0PSIyNnB4IiB2aWV3Qm94PSIwIDAgMTggMjYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUzLjIgKDcyNjQzKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT7nvJbnu4QgNOWkjeWItiAyPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IuS4u+WvvOiIqiIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9Ik9UQy1INSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQxMC4wMDAwMDAsIC00MTUuMDAwMDAwKSIgZmlsbC1ydWxlPSJub256ZXJvIj4KICAgICAgICAgICAgPGcgaWQ9Iue8lue7hC01IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMzEuMDAwMDAwLCA0MDMuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0i57yW57uELTTlpI3liLYtMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTc5LjAwMDAwMCwgMTIuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgPGcgaWQ9Iue8lue7hC0yIj4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTExLjIyMzEwOTMsNy45NTA2ODA5MyBDMTEuMjIzMTA5Myw0LjI0MTQ4MDk0IDkuMzkwMTYzNjMsMS4wNTE2ODA5NCA3Ljk5NTg3NTEzLDAuMDEzMDgwOTQzMSBDNy45OTAxOTQxMywwLjAwOTY4MDk0MzExIDcuODg5MTUyODMsLTAuMDQ2MTE5MDU3IDcuODk3Njc0MzgsMC4xMDIwODA5NDMgQzcuODk3ODc3MywwLjEwNDA4MDk0MyA3Ljg5NjA1MTIzLDAuMTA0NjgwOTQzIDcuODk2MDUxMjMsMC4xMDY0ODA5NDMgQzcuNzc5OTk1NzgsNy4yNjgyODA5NCA0LjA2ODQ1MzM3LDkuMjA5MjgwOTUgMi4wMjc5NDcwNSwxMS44MjQwODA5IEMtMi42ODEwMjI5NCwxNy44NTgwODA5IDEuNjk4NDQ2OTcsMjQuNDczNjgwOSA2LjE1Nzg1NzE3LDI1LjY5NjI4MSBDOC42NTMyNTIxNywyNi4zODA0ODA5IDUuNTgxNjM3ODQsMjQuNDg1NjgwOSA1LjE4NTk5NDI3LDIwLjQ4Mzg4MSBDNC43MDc3NzI3OCwxNS42NDY4ODEgMTEuMjIzMTA5MywxMS45NTQ4ODEgMTEuMjIzMTA5Myw3Ljk1MDY4MDkzIiBpZD0iRmlsbC0zIiBmaWxsPSIjRDdFMkYyIj48L3BhdGg+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMy42Njk2NDczLDEwLjM4ODg2MSBDMTMuNjM5MjEzMiwxMC4zNjk2NjEgMTMuNTk1OTk2OCwxMC4zNTY0NjA5IDEzLjU2NTk2ODQsMTAuNDAyMjYwOSBDMTMuNDgzOTk5MiwxMS4zMDQwNjEgMTIuNDg2OTc3NCwxMy4yMzIyNjEgMTEuMjIzMTQ5OCwxNS4wMDMwNjA5IEM2LjkzNjgwODM1LDIxLjAwOTY2MDkgOS4zNzk0NTA4MywyMy45MDQ4NjA5IDEwLjc1MzA0NDEsMjUuNDYwMDYxIEMxMS41NTA0MTgxLDI2LjM2Mjg2MDkgMTAuNzUzMDQ0MSwyNS40NjAwNjEgMTIuNzQ2Mjc2MSwyNC41Mzc0NjEgQzEyLjkwMjcwNzUsMjQuNDY1MjYxIDE2LjYzNTc1NjcsMjIuNTMxNDYwOSAxNy4wNDAxMjQ3LDE4LjEyNTY2MDkgQzE3LjQzMTUwNzUsMTMuODU5NDYwOSAxNC42NTcxMzMxLDExLjE3MDI2MDkgMTMuNjY5NjQ3MywxMC4zODg4NjEiIGlkPSJGaWxsLTUiIGZpbGw9IiMzQzdBRDIiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg=="
+                                        alt="火币合约"></div>
+                                <div class="fedui-header-m-head-info fedui-theme-text"><i class="fedui-icon-info"></i>
+                                </div>
+                            </div>
+                            <nav class="fedui-header-m-nav">
+                                <div class="fedui-header-m-menu">
+                                    <!---->
+                                    <!----><a href="//www.huobi.me/zh-cn/markets/"
+                                        class="fedui-theme-text fedui-nav-markets">行情</a><a rel="nofollow"
+                                        href="/zh-cn/" class="fedui-theme-text fedui-nav-otc">买币</a><a
+                                        href="//www.huobi.me/zh-cn/exchange/"
+                                        class="fedui-theme-text fedui-nav-exchange">币币交易</a><a target="_blank"
+                                        href="//www.huobi.me/zh-cn/guide/"
+                                        class="fedui-theme-text fedui-nav-guide">成长学院</a></div>
+                            </nav>
+                            <nav class="fedui-header-m-nav fedui-header-m-nologin"><a href="/zh-cn/login/">登录</a><a
+                                    href="/zh-cn/register/" class="fedui-header-m-nologin-register">注册</a></nav>
+                            <nav class="fedui-header-m-nav fedui-header-m-user">
+                                <div class="fedui-header-m-vip-bd">
+                                    <div class="fedui-header-m-vip">
+                                        <p class="fedui-header-m-vip-name fedui-line-1"></p>
+                                        <div class="fedui-flex-space-between">
+                                            <p class="fedui-header-m-vip-uid fedui-line-1">UID:</p><a target="_blank"
+                                                href="//www.huobi.me/zh-cn/topic/vip/">了解VIP</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fedui-header-m-menu">
+                                    <dl>
+                                        <dt>资产</dt>
+                                        <dd><a href="//www.huobi.me/zh-cn/finance/">币币账户（充币&amp;提币）</a>
+                                            <!----><a href="//www.huobi.me/zh-cn/finance/cross-margin/">杠杆账户</a><a
+                                                href="/zh-cn/user-center/balances/">法币账户</a><a
+                                                href="//futures.huobi.me/zh-cn/contract/assets/">合约账户</a><a
+                                                href="https://www.hpt.com/usercenter/?lang=cn" rel="noopener noreferrer"
+                                                data-type="pow" target="_blank">矿池账户</a><a
+                                                href="//www.huobi.me/zh-cn/finance/hb10/">HB10</a><a
+                                                href="//www.huobi.me/zh-cn/ht/points/my_points/">我的点卡</a>
+                                            <!---->
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>订单</dt>
+                                        <dd><a href="//www.huobi.me/zh-cn/transac/">币币&amp;杠杆订单</a><a
+                                                href="/zh-cn/user-center/orders/">法币订单</a><a
+                                                href="//futures.huobi.me/zh-cn/contract/orders/">合约订单</a>
+                                            <!---->
+                                        </dd>
+                                    </dl><a href="//account.huobi.me/zh-cn/user-center/security/">账户&amp;安全</a><a
+                                        href="//www.huobi.me/zh-cn/user_auth/">身份认证</a><a
+                                        href="/zh-cn/user-center/">法币设置</a><a href="//www.huobi.me/zh-cn/fee/"
+                                        class="fedui-header-m-info-fee"><span>费率设置</span><em>专业费率重磅升级</em></a><a
+                                        href="//www.huobi.me/zh-cn/invite/"><span>我的奖励</span></a><a
+                                        href="//www.huobi.me/zh-cn/apikey/">API管理</a><a
+                                        href="//account.huobi.me/zh-cn/subaccount/management/">子账号</a><a href="#"
+                                        class="fedui-header-m-menu-logout">退出</a>
+                                </div>
+                            </nav>
+                        </div>
+                        <!---->
+                    </header>
+                    <!---->
+                    <div class="empty-header-box" style="display:none;"></div>
+                </div>
+            </div>
+            <div class="login-page flex-y flex-auto">
+                <div><b></b></div>
+                <div class="logins-box common-login-container">
+                    <div class="login-ins">
+                        <section class="form-boxs common-layout-container flex-center">
+                            <div style="display:inline;width:1px;height:1px;overflow:hidden"></div>
+                            <div label-position="right" label-width="80" class="login-in tabs-form fix-width">
+                                <h1 class="login-title font-bold flex-y-center font32"><i
+                                        class="iconfont icon-logo"></i>
+                                    欢迎登录
+                                </h1>
+                                <p class="login-remake font-gray">法币交易与币币交易共用一个账户</p>
+                                <p class="label-desc">账号</p>
+                                <div class="login-item login-spe">
+                                    <div
+                                        class="input-control input-spe ivu-input-wrapper ivu-input-wrapper-large ivu-input-type">
+                                        <!---->
+                                        <!----> <i
+                                            class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="text"
+                                            placeholder="账号为邮箱或手机号码" value="" class="ivu-input ivu-input-large">
+                                        <!---->
+                                    </div>
+                                </div>
+                                <p class="label-desc">密码</p>
+                                <div class="login-item login-spe">
+                                    <div
+                                        class="input-control input-spe ivu-input-wrapper ivu-input-wrapper-large ivu-input-type">
+                                        <!---->
+                                        <!----> <i
+                                            class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="password" placeholder="请输入密码"
+                                            value="" class="ivu-input ivu-input-large">
+                                        <!---->
+                                    </div>
+                                </div>
+                                <!---->
+                                <!---->
+                                <p class="label-desc" style="display:none;">验证</p>
+                                <div style="display:none;">
+                                    <div class="public-risk-inner" style="width:100%;">
+                                        <div class="otc-loading-container" style="background-color:transparent;"><img
+                                                src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTQzODMwNDc3NDkwIiBjbGFzcz0iaWNvbiIgc3R5bGU9IiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjE3NjciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48L3N0eWxlPjwvZGVmcz48cGF0aCBkPSJNNTEyLjA1NiA5MDguNjQ3Yy04NC41MTYgMC0xNjYuNDE2LTI3LjA4NC0yMzUuMjY2LTc4LjYzNy04NC4xNS02My4wMjgtMTM4Ljc0MS0xNTUuMTA5LTE1My42NzUtMjU5LjItMTQuOTM0LTEwNC4xMTkgMTEuNTU5LTIwNy44MTYgNzQuNTg4LTI5MS45OTQgMTMwLjE2Mi0xNzMuODEyIDM3Ny40MzgtMjA5LjI1IDU1MS4xOTQtNzkuMTcyIDcyLjg0NCA1NC41NjIgMTI0LjgxOSAxMzMuMjI4IDE0Ni4zOTEgMjIxLjQ4NCAzLjY4NCAxNS4xMDMtNS41NjkgMzAuMzE5LTIwLjY0NCAzNC4wMDMtMTUuMDc1IDMuNTcyLTMwLjMxOS01LjU0MS0zNC4wMDMtMjAuNjQ0LTE4LjQ1LTc1LjYyOC02My0xNDMuMDQ0LTEyNS40NjYtMTg5LjgxNi0xNDguODY2LTExMS41MTYtMzYwLjg0NC04MS4xMTItNDcyLjQ0NCA2Ny44NjYtNTQuMDI4IDcyLjE0MS03Ni43MjUgMTYxLjAxNi02My45IDI1MC4yNTYgMTIuNzk3IDg5LjI0MSA1OS41OTcgMTY4LjEzMSAxMzEuNzM3IDIyMi4xMzEgMTQ5LjAwNiAxMTEuNjU2IDM2MC45NTYgODEuMTk3IDQ3Mi41LTY3Ljc4MSAyOS4xOTQtMzkuMDA5IDQ5LjIxOS04Mi43MTYgNTkuNDU2LTEyOS45MzggMy4zMTktMTUuMTg4IDE4LjM2Ni0yNC44MzQgMzMuNDQxLTIxLjU0NCAxNS4xODggMy4yOTEgMjQuODM0IDE4LjI4MSAyMS41NDQgMzMuNDQxLTEyLjAwOSA1NS4xODEtMzUuMzUzIDEwNi4yLTY5LjQxMyAxNTEuNzYyLTYzLjAyOCA4NC4xNS0xNTUuMTA5IDEzOC43NjktMjU5LjI1NiAxNTMuNjc1LTE4Ljk4NCAyLjc1Ni0zNy45NDEgNC4xMDYtNTYuNzg0IDQuMTA2eiIgcC1pZD0iMTc2OCI+PC9wYXRoPjwvc3ZnPg=="
+                                                alt="loading" class="icons-loading min-height"></div>
+                                        <div id="riskBox" class="risk-inner-in"></div>
+                                    </div>
+                                    <div class="recaptcha-box" style="display:none;">
+                                        <div class="otc-loading-container loading-box"
+                                            style="background-color:transparent;"><img
+                                                src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTQzODMwNDc3NDkwIiBjbGFzcz0iaWNvbiIgc3R5bGU9IiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjE3NjciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48L3N0eWxlPjwvZGVmcz48cGF0aCBkPSJNNTEyLjA1NiA5MDguNjQ3Yy04NC41MTYgMC0xNjYuNDE2LTI3LjA4NC0yMzUuMjY2LTc4LjYzNy04NC4xNS02My4wMjgtMTM4Ljc0MS0xNTUuMTA5LTE1My42NzUtMjU5LjItMTQuOTM0LTEwNC4xMTkgMTEuNTU5LTIwNy44MTYgNzQuNTg4LTI5MS45OTQgMTMwLjE2Mi0xNzMuODEyIDM3Ny40MzgtMjA5LjI1IDU1MS4xOTQtNzkuMTcyIDcyLjg0NCA1NC41NjIgMTI0LjgxOSAxMzMuMjI4IDE0Ni4zOTEgMjIxLjQ4NCAzLjY4NCAxNS4xMDMtNS41NjkgMzAuMzE5LTIwLjY0NCAzNC4wMDMtMTUuMDc1IDMuNTcyLTMwLjMxOS01LjU0MS0zNC4wMDMtMjAuNjQ0LTE4LjQ1LTc1LjYyOC02My0xNDMuMDQ0LTEyNS40NjYtMTg5LjgxNi0xNDguODY2LTExMS41MTYtMzYwLjg0NC04MS4xMTItNDcyLjQ0NCA2Ny44NjYtNTQuMDI4IDcyLjE0MS03Ni43MjUgMTYxLjAxNi02My45IDI1MC4yNTYgMTIuNzk3IDg5LjI0MSA1OS41OTcgMTY4LjEzMSAxMzEuNzM3IDIyMi4xMzEgMTQ5LjAwNiAxMTEuNjU2IDM2MC45NTYgODEuMTk3IDQ3Mi41LTY3Ljc4MSAyOS4xOTQtMzkuMDA5IDQ5LjIxOS04Mi43MTYgNTkuNDU2LTEyOS45MzggMy4zMTktMTUuMTg4IDE4LjM2Ni0yNC44MzQgMzMuNDQxLTIxLjU0NCAxNS4xODggMy4yOTEgMjQuODM0IDE4LjI4MSAyMS41NDQgMzMuNDQxLTEyLjAwOSA1NS4xODEtMzUuMzUzIDEwNi4yLTY5LjQxMyAxNTEuNzYyLTYzLjAyOCA4NC4xNS0xNTUuMTA5IDEzOC43NjktMjU5LjI1NiAxNTMuNjc1LTE4Ljk4NCAyLjc1Ni0zNy45NDEgNC4xMDYtNTYuNzg0IDQuMTA2eiIgcC1pZD0iMTc2OCI+PC9wYXRoPjwvc3ZnPg=="
+                                                alt="loading" class="icons-loading min-height"></div>
+                                        <div></div>
+                                    </div>
+                                    <p class="switch-box font12 font-gray cursor"><i
+                                            class="iconfont icon-exchange-mark"></i>切换验证码</p>
+                                </div>
+                                <div class="login-btn-container"><button type="button"
+                                        class="btn-login ivu-btn ivu-btn-primary ivu-btn-long">
+                                        <!---->
+                                        <!----> <span>立即登录</span></button>
+                                    <div class="flex-between-center">
+                                        <p class="register-tips font12">还没有账号？<a href="/zh-cn/register/"
+                                                class="font-blue">点击注册</a></p><a
+                                            href="https://www.huobi.me/zh-cn/user_center/uc_reset_pwd/?action=resetpwd&amp;backurl=backHost%2f%23%2flogin"
+                                            class="forgetPwd font-blue font12">忘记密码？</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!---->
+                            <div class="login-guide-container">
+                                <div class="img">
+                                    <p>火币旗下产品推荐</p><img
+                                        src="https://file.eiijo.cn/vue/static/pages/login/web_login_guide.svg" alt=""
+                                        class="pc-picture"><img
+                                        src="https://file.eiijo.cn/vue/static/pages/login/mobile_login_guide.svg" alt=""
+                                        class="mobile-picture">
+                                </div>
+                                <div class="guide-container web-guide-container flex-column">
+                                    <div class="guide-item">
+                                        <div class="inner">
+                                            <p class="font16 font-base">火信App</p>
+                                            <p class="font12 font-gray">来火信，聊懂区块链，火币集团旗下社群工具</p>
+                                        </div>
+                                    </div>
+                                    <div class="hover-container">
+                                        <div data-qr-name="otcApp" data-qr-width="70" data-qr-height="70"
+                                            data-qr-text="https://h5.huobi.im/dl/" class="qrcode-img qr-code-box">
+                                            <canvas width="70" height="70" style="display: none;"></canvas><img
+                                                alt="Scan me!"
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAYAAABxLuKEAAADxUlEQVR4Xu1c0ZLiMAyD//9odujSu9RYlpQWZqf1vR00IZVlWXZh77fb7XGb+Pd48GX3+33ZOV6LXh+Pwdau1657r9ePnze+5t7i8+T8DpNdLwOMcqNPfKpox/dixBTmMDYpTIoscu9tuc+VMe7i7PpTA4PyEkVhJreVICC2KbqhnHVUh0yn3hjTwPxC9hFg1mjMRB2xydnrzzKmgQHmQI1u5UHi1qwazRSDygvtTqUMm1MCwxyi4mNiJGJqIT+TfbbifUZ/lTlfpQrGPT7iY04FDGNKfF/pUVh1+NYe7r1tyrW7+Fs3dQS47r0twDzUBBR2Z30O05rxI9QqpH6mcPzNJQ0MshyIMW7JHVWddbdKZctSlfU3SPSRJ6quh4xpYIDGNDAvYNxZiuJ4WYmfsfGsSinpppjGf6nUwGxn02/AuGVNiTraUxk6RYFEAaxch1v6Nz7GOWRGV8WDsOpQBYWl0OHAxKcE6gGyKDBwneYRgTTjR1khSVnfwLw/9ypTiUW3MmBsLapWWToijaleZ6xnutXAvJ6mprKAniuxpwWxIXz+H7GIMcgRTvVcSnVF2rMwpoH5D+EYIOhjUBSrysOax5ly7e5ZMcVhWwOTfBtDMngOc5iWsArDjGPVnykO3Gl7aEtweWAUFV8o9voyUIy+ktuOa3X0wNUuNgTbpFIDs0XAnvlehjF7e6VKMNkEXyn9LE2ytFBSZTSkqag3MLmIvKUSG+pUDaC69ggRVhpRpJuKHDQwzOAxdGei7KxhVZGZs2y9qjWZ9aBViQmo60YZAGqA2LRwFFfl2ijGNjAKUExrlNaBNY/OOVArUp2jgRkoOjKLzmPYmHAzwwjtwmzaMI8xtiZ7fEzV1jQwqCrFCR6r8YpbdRvA7HrW1TMNyhpepDWl852d12YtwSWAqfKQ9TFs7Qz7nIq2fj7zQBkp7O/5VoJ6BFMY3b8OzJ4Koq5FN1WNJdW9Z64rH9vM/sLtiINUJk11qzPnYCm+CHcDk0NLnS+LyBhZVtmQFaj2YJpSGTxWHKqS38CA33lOp5JixZlJy9jIRgWMQVlX7e65S2MuA4w6VFLafZbblW65LJvRGKaFG8Y0MOFbm6yJRE6U5W2W62wvNk5gFdJ9v6xKDUz+1wfsXqlqyJyh1siOrEOPDSDroZQKx/RrM3Q7kjENDJh6oRxHLFMFP2OXs3aGfbtTSRG8UwDDbnSmI1bGkCiq8TwOU9THOFkn/9GfFyvl2TWDXweGMcWJHOuiq35HFXBlLIpAVxi8u4nMAG1gAM3OAMwPSN724If05NYAAAAASUVORK5CYII="
+                                                style="display: block;"></div><span class="font16">扫描二维码下载火信App</span>
+                                    </div>
+                                </div>
+                                <div class="guide-container web-guide-container flex-column">
+                                    <div class="guide-item wallet">
+                                        <div class="inner">
+                                            <p class="font16 font-base">火币钱包</p>
+                                            <p class="font12 font-gray">专业的多币种钱包，数字资产管理更便捷</p>
+                                        </div>
+                                    </div>
+                                    <div class="hover-container">
+                                        <div data-qr-name="otcApp" data-qr-width="70" data-qr-height="70"
+                                            data-qr-text="https://www.huobiwallet.com/download"
+                                            class="qrcode-img qr-code-box"><canvas width="70" height="70"
+                                                style="display: none;"></canvas><img alt="Scan me!"
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAYAAABxLuKEAAAEV0lEQVR4Xu2c4XarMAyD2/d/6N7TbnBcI/tTUrZz22X/BiQEWZblwHa9XC63y+DP7fY15Hq9HkZW57bj24BtbDyej1W/b3PkOeOaujU6j3t/spu6gRrcLZTmUCDGe3Tj89gKZDWfCkAHzHb9AiahJIGpopppWf1epZeKkIp6xRpiTJx/NB1zWi5gUrRysJ9SaZQxWUg7zaC5u6hnxnV6RSJP6ziFMQuYVJ67MlnlLOnH/fxoeXYqDs35Ixqj6P+RwJDxIcV3gBoxeFWqOuatq5y/5mNGUuutgCGm5PMqGsQm57zrl7q5XE2hZ36Ua7roTwJjN0oCPaeJpFx3mskq/UbGjgb/uoDRkD0B47pCVRUcnxJ7Kaebpo5dMWm0i6+uX8CIPaVHAON+TOUkyWHez5O3oD0UtWFFZlFVILpPNefheKxKo5N2jR+lpSOGTkCqeUZL/6FRXcAct2f3VJqh7H1Mlz5uxDrWVS1Blw6zrM8MfzJ47sM47tKd662AOeRbUm6nN6Lcd0otlWvHYJLYVuuUjFnAXC7Sx5CNV8C5uV31XSqlzmQdpf9h/bEloA64pF3wMSSYbwOMMnjV4jtv4lpxZyP7FaM5s3bF1qm3BOrmHwkM0dtxoGe0BHQfVckeZuy7asYN9VyNyGkfZERtVNG7mU583VYgX6feEnSapgzm6cBQRSE2dNGoxs54IWedFBiqTjsr1dcOKpqRskTLeP5tgXHKdZWvEUDaqKoc6Ei/RXNkvVHVxpUJy+D9WWAodcgJx42qqnKMVBRqQF9JZVcvrQ+HnDJKouZQmIydY94IVLcxXcAktLfgtBrj9j2dfxhl0ohgdsaUnDil4wKmQOgBDKHr5KVzTXSrLhvVuh29Uu5c3b901wsYDU37wo1ca7e1iDlcvOjqXPNv2Iadycr5Vg6Tjg9R9Z2BId8QI0jG6RX2jTaGsTVwnyFrnvXumnqU6HzdhxhhnztnFOWZMRFQ+RkItQhdpSD3SsxRPiaDSPp1hhdawCSU98B1767LGt8Ip6s1ymc4G1GR7nQvVeGylpTbJQsY/QmibCJdJ9xtVFFHTj1ULP2kW50G0ToqB76A+UYmk6H9oorQjueJAdRLKe2o9KC610iXT/rZMsYtrV3qkaCqNKjsQkX7OAfJAJX6p6pE3ersQlWLQMZLudYRcE8D5qzvfKnBq6LtlFzaruwMp7IFXcD2ey1gvqA76NYrf0sQWVAaJeiiFWPc1FZM6oS5S1NZlUiQ8nm18I8EximlXTntgHXEdpvb1RInCHQNsvKVv9R3mPYRwNBDdCbOjVBn72kOJxDuNVQNp76ocgTTda1nCLgLRrzu14GZ2eRSvmJW08i3UFbsgZr5OLFjzAIm/f8YqmwzbQXRXdkICgw59G38j2sMtQJdY/jfAEMi1m1DuJGqRHnECzlNJXkiqoDWZyDOw3wkMMQUagni+dENK8XC2a2DTucocIdqdkYT+YnA/AOxsdglnfodnwAAAABJRU5ErkJggg=="
+                                                style="display: block;"></div><span class="font16">扫描二维码下载火币钱包App</span>
+                                    </div>
+                                </div><a href="https://www.huobichat.com/zh-cn/"
+                                    class="guide-container mobile-guide-container flex-column">
+                                    <div class="guide-item">
+                                        <div class="inner">
+                                            <p class="font16 font-base">火信App</p>
+                                            <p class="font12 font-gray">来火信，聊懂区块链，火币集团旗下社群工具</p>
+                                        </div><i class="icons ivu-icon ivu-icon-ios-arrow-forward"
+                                            style="font-size:18px;"></i>
+                                    </div>
+                                </a><a href="https://www.huobiwallet.com/zh/"
+                                    class="guide-container mobile-guide-container flex-column">
+                                    <div class="guide-item wallet">
+                                        <div class="inner">
+                                            <p class="font16 font-base">火币钱包</p>
+                                            <p class="font12 font-gray">专业的多币种钱包，数字资产管理更便捷</p>
+                                        </div><i class="icons ivu-icon ivu-icon-ios-arrow-forward"
+                                            style="font-size:18px;"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+                    <!---->
+                </div>
+            </div>
+            <div class="com-footer-space">
+                <footer data-mobile="true" ssr="true" class="fedui-root fedui-footer-simple">
+                    <ul>
+                        <li><a href="//www.huobi.me/zh-cn/">首页</a></li>
+                        <li><a rel="noopener noreferrer" target="_blank"
+                                href="https://www.huobigroup.com/zh-cn/">火币集团</a></li>
+                        <li><a rel="noopener noreferrer" target="_blank"
+                                href="https://huobiglobal.zendesk.com/hc/zh-cn/">帮助中心</a></li>
+                        <li><a target="_blank" href="//www.huobi.me/zh-cn/download/#exchange">客户端下载</a></li>
+                        <li><span>© 2013-2020 Huobi</span></li>
+                    </ul>
+                    <div class="fedui-footer-locales-center">
+                        <div data-mobile="true" class="fedui-footer-locales">
+                            <div class="fedui-footer-locales-text"><i class="fedui-icon-locale"></i><span>简体中文</span><i
+                                    class="fedui-icon-xiajiantou"></i></div>
+                            <div class="fedui-footer-locales-down">
+                                <span>简体中文</span><span>繁體中文</span><span>English</span><span>Tiếng
+                                    Việt</span><span>Русский</span><span>Türkçe</span><span>Português-BR</span></div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+    </div>
+</body>
+
+</html> 

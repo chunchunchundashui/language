@@ -1,0 +1,321 @@
+body,
+html {
+    font: 28px/1 Roboto, PingFang SC, Hiragino Sans GB, Heiti SC, Microsoft YaHei, WenQuanYi Micro Hei, serif;
+    height: 100%;
+    max-width: 750px;
+    width: 750px;
+    color: #1f3f59;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    background: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+.color-up {
+    color: #03ad8f !important;
+}
+
+b,
+em,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    font-weight: 400;
+}
+
+address,
+cite,
+dfn,
+em,
+i,
+var {
+    font-style: normal;
+}
+
+b,
+button,
+em,
+i,
+img,
+input,
+select,
+span,
+strong {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.bg-buy,
+.bg-up {
+    background: #03ad8f;
+}
+
+.bg-down,
+.bg-sell {
+    background: #d14b64;
+}
+
+.fr {
+    float: right;
+}
+
+.nav {
+    padding: 16px 30px 0;
+    height: 116px;
+    width: 100%;
+    box-shadow: 0 0 16px rgba(0, 0, 0, .1);
+    background: #fff;
+    position: fixed;
+    bottom: -11px;
+    right: 0;
+    left: 0;
+    z-index: 9;
+    box-sizing: border-box;
+
+    a {
+        color: #c5cfd5;
+        float: left;
+        width: 20%;
+        height: 72px;
+        text-align: center;
+        font-size: 20px;
+        white-space: nowrap;
+
+        i {
+            display: block;
+            font-size: 40px;
+            height: 52px;
+        }
+    }
+
+    .cur {
+        color: #1882d4;
+    }
+}
+
+input {
+    border: none;
+    caret-color: #1882d4;
+    color: #1f3f59;
+}
+
+.color-buy,
+.color-up,
+.page-trade .trade-panel--content .handicap-buy {
+    color: #03ad8f !important;
+}
+
+.color-down,
+.color-sell,
+.page-trade .trade-panel--content .handicap-sell {
+    color: #d14b64 !important;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.footer .user-info:after,
+.header .btn-group:after,
+.page-trade .drawer--content dl:after,
+.page-trade .trade-order--content dl:after,
+.page-trade .trade-order--title:after,
+.page-trade .trade-panel--content .handicap-buy dl:after,
+.page-trade .trade-panel--content .handicap-price:after,
+.page-trade .trade-panel--content .handicap-sell dl:after,
+.page-trade .trade-panel--content .handicap-title:after,
+.page-trade .trade-panel--content .trade-form .avaliable dl:after,
+.page-trade .trade-panel--content .trade-form .btn-group:after,
+.page-trade .trade-panel--content:after,
+.page-trade .trade-panel--title:after,
+.page-trade .trade-symbol .actions:after,
+.page-trade .trade-symbol p:after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+    content: ".";
+}
+
+.page-trade .trade-panel .select-box .arrow:after,
+.page-trade .trade-panel .select-box .arrow:before {
+    content: "";
+    position: absolute;
+}
+
+.bg-buy,
+.bg-up,
+.page-trade .trade-panel--content .trade-form.buy .submit {
+    background: #03ad8f;
+}
+
+.flex-y {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    display: flex;
+    flex-direction: column;
+}
+
+.fedui-root,
+.fedui-root *,
+.fedui-root :after,
+.fedui-root :before {
+    box-sizing: border-box;
+}
+
+.fedui-header-m-vip .fedui-flex-space-between,
+.fedui-header-m-vip .fedui-header-left,
+.fedui-header-m-vip .fedui-header-m-head,
+.fedui-header-m-vip .fedui-header-menu-text,
+.fedui-header-m-vip .fedui-header-nologin,
+.fedui-header-m-vip .fedui-header-pc,
+.fedui-header-m-vip .fedui-header-right,
+.fedui-header-m-vip .fedui-header-userinfo {
+    position: absolute;
+    left: 0;
+    top: 57px;
+    width: 100%;
+}
+
+.fedui-flex-space-between,
+.fedui-header-left,
+.fedui-header-m-head,
+.fedui-header-menu-text,
+.fedui-header-nologin,
+.fedui-header-pc,
+.fedui-header-right,
+.fedui-header-userinfo {
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.flex-center,
+.flex-y-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-auto {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+}
+
+.flex-x-center {
+    display: flex;
+    justify-content: center;
+}
+
+.font-bold,
+.font-bold-cn {
+    font-weight: 500;
+}
+
+.font20 {
+    font-size: 20px;
+}
+
+.ivu-icon {
+    display: inline-block;
+    font-family: Ionicons;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+}
+
+.font-black {
+    color: #495666;
+}
+
+.fedui-footer-link a,
+.fedui-footer-locales-down>span,
+.fedui-footer-locales-text .fedui-icon-xiajiantou,
+.fedui-footer-right a,
+.fedui-footer-simple a,
+.fedui-footer[data-mobile=true] .fedui-footer-inner dt:after,
+.fedui-header-download>a,
+.fedui-header-group-icon,
+.fedui-header-group-icon:after,
+.fedui-header-group-icon:before,
+.fedui-header-group-left a,
+.fedui-header-group-right a,
+.fedui-header-info-dropdowns>a,
+.fedui-header-info-text,
+.fedui-header-locales-dropdowns>a,
+.fedui-header-locales-text i,
+.fedui-header-m-head-icon:after,
+.fedui-header-m-head-icon:before,
+.fedui-header-m-menu dt:after,
+.fedui-header-menu-dropdowns a,
+.fedui-header-menu-text,
+.fedui-header-menu-text a,
+.fedui-header-menu-text i,
+.fedui-header-mob a,
+.fedui-header-modal-container button,
+.fedui-header-nav>a,
+.fedui-header-nav>div,
+.fedui-header-nologin>a,
+.fedui-header-notice-dropdowns-list dl,
+.fedui-header-notice-dropdowns>footer button,
+.fedui-header-notice-dropdowns>header a,
+.fedui-header-notice-icon,
+.fedui-transition {
+    transition: all .3s;
+}
+
+.l-height12 {
+    line-height: 12px;
+}
+
+.font12 {
+    font-size: 12px;
+}
+
+.login-name-form .country-id .arrow:after,
+.login-name-form .country-id .arrow:before {
+    content: "";
+    position: absolute;
+}
+
+@media (max-width: 768px) {
+
+    #app,
+    body,
+    html {
+        min-width: auto !important;
+    }
+}

@@ -1,0 +1,661 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 750px;
+    height: 110px;
+    box-sizing: border-box;
+    background: #fff;
+    border-bottom: 1px solid #e7ebee;
+    padding-left: 30px;
+    padding-right: 20px;
+    z-index: 1;
+
+    .header-logo {
+        margin-top: 35px;
+    }
+
+    .btn-group {
+        position: absolute;
+        top: 0;
+        right: 20px;
+
+        .btn-login,
+        .btn-register {
+            float: left;
+            line-height: 60px;
+            padding: 0 20px;
+            text-align: center;
+            margin-top: 25px;
+            margin-left: 20px;
+            border: 1px solid #e7ebee;
+            font-size: 24px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+        }
+
+        .btn-login {
+            color: #1882d4;
+        }
+    }
+
+    .header .user-info {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        height: 110px;
+    }
+}
+
+.page-trade {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 110px;
+    padding-bottom: 98px;
+    overflow: hidden;
+
+    .drawer {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 10;
+        background: rgba(0, 0, 0, .4);
+        transition: all .3s;
+
+        .drawer-box {
+            width: 630px;
+            height: 100%;
+            background: #fff;
+            overflow: auto;
+            position: relative;
+            transition: all .3s;
+            left: -630px;
+
+            .drawer--title {
+                height: 120px;
+                line-height: 120px;
+                font-size: 40px;
+                padding-left: 30px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 600px;
+                font-weight: 700;
+                background: #fff;
+
+                i {
+                    font-size: 30px;
+                    margin-right: 32px;
+                }
+
+                .fr {
+                    float: right;
+                }
+            }
+
+            .drawer--tabs {
+                height: 68px;
+                line-height: 68px;
+                border-bottom: 1px solid #c5cfd5;
+                padding-left: 30px;
+                position: absolute;
+                top: 120px;
+                left: 0;
+                width: 600px;
+                overflow-x: auto;
+                white-space: nowrap;
+                word-wrap: break-word;
+                font-size: 0;
+
+                span {
+                    font-size: 28px;
+                    font-weight: 900;
+                    margin-right: 60px;
+                    min-width: 50px;
+                    color: #8c9fad;
+                }
+
+                .cur {
+                    color: inherit;
+                }
+            }
+
+            .drawer--content {
+                padding: 188px 40px 0 30px;
+
+                .partition {
+                    height: 64px;
+                    padding-top: 30px;
+                    box-sizing: border-box;
+                    font-size: 28px;
+                    color: #1882d4;
+                    font-weight: 700;
+                }
+
+                dl {
+                    height: 100px;
+                    line-height: 100px;
+                    box-sizing: border-box;
+                    border-bottom: 1px solid #e7ebee;
+
+                    dt {
+                        width: 160px;
+                        font-weight: 700;
+                    }
+
+                    .upper,
+                    .uppercase {
+                        font-style: normal;
+                        text-transform: uppercase;
+                    }
+
+                    dd {
+                        width: 200px;
+                        text-align: right;
+                    }
+
+                    .color-down,
+                    .color-sell,
+                    .page-trade .trade-panel--content .handicap-sell {
+                        color: #d14b64 !important;
+                    }
+                }
+
+                .lists {
+                    .no-info {
+                        height: 480px;
+                        text-align: center;
+                        color: #c5cfd5;
+                        font-size: 24px;
+                        box-sizing: border-box;
+                        padding-top: 110px;
+
+                        img {
+                            display: block;
+                            margin: 0 auto 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .trade-symbol {
+        padding-left: 30px;
+        height: 110px;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 110px;
+        position: relative;
+
+        p {
+            margin-right: 30px;
+        }
+
+        i {
+            font-size: 30px;
+            vertical-align: unset;
+        }
+
+        span {
+            vertical-align: unset;
+        }
+
+        .actions {
+            float: right;
+
+            .mobile_icon_fav {
+                color: #c5cfd5;
+                float: left;
+            }
+
+            i {
+                margin-left: 30px;
+            }
+        }
+    }
+
+    .upper,
+    .uppercase {
+        font-style: normal;
+        text-transform: uppercase;
+    }
+
+    .margin-risk {
+        padding-top: 20px;
+        box-sizing: border-box;
+        height: 176px;
+        overflow: hidden;
+        width: 750px;
+
+        .info {
+            margin: 0 30px;
+            display: flex;
+            justify-content: space-between;
+
+            dt {
+                font-weight: 700;
+            }
+
+            dd {
+                font-size: 24px;
+                margin-top: 10px;
+                color: #c5cfd5;
+            }
+        }
+
+        .risk {
+            margin-top: 30px;
+            width: 100%;
+            color: #8c9fad;
+
+            span {
+                vertical-align: unset;
+                margin-left: 30px;
+            }
+
+            .track {
+                margin-top: 10px;
+                height: 20px;
+                width: 100%;
+                background: #f7f7fb;
+
+                .progress {
+                    width: 100%;
+                    height: 100%;
+                    background-image: linear-gradient(-90deg, #dee2e6, #c7cfd5);
+                }
+            }
+        }
+    }
+
+    .trade-panel {
+        .trade-panel--title {
+            height: 86px;
+            padding-left: 30px;
+            width: 412px;
+
+            button {
+                font-size: 40px;
+                height: 54px;
+                margin-top: 24px;
+                line-height: 40px;
+                margin-right: 60px;
+                padding-bottom: 10px;
+                border-bottom: 4px solid transparent;
+                font-weight: 700;
+                float: left;
+            }
+
+            .cur {
+                border-bottom-color: currentColor;
+            }
+
+            button:last-of-type {
+                margin-right: 0;
+            }
+
+            .select-box {
+                position: relative;
+                float: right;
+                margin-right: 30px;
+                white-space: nowrap;
+                margin-top: 12px;
+
+                select {
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    -webkit-appearance: none;
+                    color: rgba(31, 63, 89, .5);
+                    font-size: 28px;
+                    line-height: 28px;
+                    padding-right: 30px;
+                    width: 100%;
+                    padding: 20px 30px 20px 0;
+
+                    option {
+                        font-size: 14px;
+                    }
+                }
+
+                .arrow {
+                    left: -20px;
+                    top: -4px;
+                    position: relative;
+                }
+
+                .arrow:before {
+                    top: 0;
+                    left: 0;
+                    border-top: 10px solid #c5cfd5;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                }
+
+                .arrow:after {
+                    border-top: 0 solid transparent;
+                    border-left: 0 solid transparent;
+                    border-right: 0 solid transparent;
+                    top: 0;
+                    left: 10px;
+                }
+            }
+
+        }
+
+        .trade-panel--content {
+            padding-left: 30px;
+            border-bottom: 20px solid #f7f7fb;
+
+            .trade-form {
+                width: 382px;
+                padding-top: 18px;
+
+                .input-box {
+                    position: relative;
+
+                    input {
+                        display: block;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 100px;
+                        border: 1px solid #c8cfd5;
+                        font-size: 32px;
+                        font-weight: 700;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                    }
+
+                    .actions {
+                        position: absolute;
+                        display: none;
+                        visibility: hidden;
+                        right: 0;
+                        top: 0;
+                        height: 100%;
+                        font-size: 0;
+                        border-left: 1px solid #e7ebee;
+
+                        i {
+                            height: 30px;
+                            width: 80px;
+                            margin-top: 35px;
+                            display: inline-block;
+                        }
+
+                        i:last-of-type {
+                            border-left: 1px solid #e7ebee;
+                        }
+                    }
+                }
+
+                .equivalent {
+                    color: #c5cfd5;
+                    font-size: 20px;
+                    padding-top: 10px;
+                    box-sizing: border-box;
+                    height: 60px;
+                }
+
+                .input-amount {
+                    position: relative;
+
+                    span {
+                        position: absolute;
+                        right: 20px;
+                        top: 0;
+                        line-height: 100px;
+                        font-size: 28px;
+                        color: #8c9fad;
+                    }
+                }
+
+                .avaliable {
+                    height: 74px;
+                    font-size: 24px;
+                    padding-top: 10px;
+                    box-sizing: border-box;
+                    color: #8c9fad;
+
+                    dl {
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+
+                        dt {
+                            margin-right: 10px;
+                            float: left;
+                            height: 48px;
+                        }
+
+                        dd {
+                            white-space: nowrap;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            span {
+                                margin-right: 10px;
+                                color: #1f3f59;
+                            }
+                        }
+                    }
+                }
+
+                .btn-group {
+                    border: 1px solid #c8cfd5;
+                    height: 60px;
+                    box-sizing: border-box;
+
+                    button {
+                        color: #8c9fad;
+                        width: 126px;
+                        height: 58px;
+                        line-height: 60px;
+                        font-size: 24px;
+                        float: left;
+                    }
+
+                    span {
+                        float: left;
+                        width: 1px;
+                        height: 24px;
+                        margin-top: 18px;
+                        background: #e7ebee;
+                    }
+                }
+
+                .total {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    height: 120px;
+                    padding-top: 62px;
+                    box-sizing: border-box;
+                    color: #8c9fad;
+
+                    em {
+                        vertical-align: unset;
+                        font-weight: 700;
+                        color: #1f3f59;
+                    }
+                }
+
+                .submit {
+                    width: 382px;
+                    height: 88px;
+                    font-size: 28px;
+                    line-height: 88px;
+                    font-weight: 700;
+                    color: #fff;
+                }
+            }
+
+            .handicap {
+                width: 298px;
+                margin-top: -50px;
+
+                .handicap-title {
+                    height: 50px;
+                    font-size: 24px;
+                    color: #c5cfd5;
+                    margin-right: 30px;
+                    white-space: nowrap;
+
+                    .index {
+                        margin-right: 30px;
+                    }
+
+                    .amount {
+                        float: right;
+                    }
+                }
+
+                .handicap-buy,
+                .handicap-sell {
+                    height: 240px;
+                }
+
+                .handicap-buy dd:last-of-type,
+                .handicap-sell dd:last-of-type {
+                    color: #8c9fad;
+                    margin-right: 30px;
+                }
+
+                .handicap-buy {
+                    dl {
+                        height: 48px;
+                        line-height: 48px;
+                        font-size: 24px;
+                        overflow: hidden;
+                    }
+                }
+
+                .handicap-sell {
+                    height: 240px;
+
+                    dl {
+                        background: linear-gradient(#fdf5f6, #fdf5f6) no-repeat;
+                        background-position: 100%;
+                        height: 48px;
+                        line-height: 48px;
+                        font-size: 24px;
+                        overflow: hidden;
+                    }
+
+                    dt {
+                        width: 24px;
+                    }
+
+                    dd {
+                        letter-spacing: -1px;
+                    }
+                }
+
+                .handicap-price {
+                    height: 86px;
+                    box-sizing: border-box;
+                    padding-top: 12px;
+                    font-size: 0;
+                }
+
+                .handicap-depth {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    white-space: nowrap;
+                    height: 84px;
+
+                    a {
+                        font-size: 24px;
+                        line-height: 64px;
+                        color: #8c9fad;
+                    }
+
+                    .select-box {
+                        position: relative;
+                        float: right;
+                        margin-right: 30px;
+                        white-space: nowrap;
+
+                        select {
+                            border: none;
+                            outline: none;
+                            background: transparent;
+                            color: rgba(31, 63, 89, .5);
+                            font-size: 28px;
+                            line-height: 28px;
+                            padding-right: 30px;
+                            width: 100%;
+                            padding: 20px 30px 20px 0;
+                            font-size: 24px;
+                            line-height: 24px;
+                        }
+
+                        .arrow {
+                            left: -20px;
+                            top: -4px;
+                            position: relative;
+                        }
+
+                        .arrow:before {
+                            top: 0;
+                            left: 0;
+                            border-top: 10px solid #c5cfd5;
+                            border-left: 10px solid transparent;
+                            border-right: 10px solid transparent;
+                        }
+
+                        .arrow:after {
+                            border-top: 0 solid transparent;
+                            border-left: 0 solid transparent;
+                            border-right: 0 solid transparent;
+                            top: 0;
+                            left: 10px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .trade-order {
+        padding-left: 0;
+
+        .trade-order--title {
+            height: 120px;
+            line-height: 120px;
+            font-size: 40px;
+            padding-left: 30px;
+
+            span {
+                opacity: .5;
+                margin-right: 32px;
+                font-size: 28px;
+
+                i {
+                    margin-right: 8px;
+                    vertical-align: unset;
+                }
+            }
+        }
+
+        .trade-order--content {
+            .no-info {
+                height: 480px;
+                text-align: center;
+                color: #c5cfd5;
+                font-size: 24px;
+                box-sizing: border-box;
+                padding-top: 110px;
+
+                img {
+                    display: block;
+                    margin: 0 auto 20px;
+                }
+            }
+        }
+    }
+}

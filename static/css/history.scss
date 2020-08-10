@@ -1,0 +1,94 @@
+.page-history {
+    width: 100%;
+    padding-top: 110px;
+    padding-bottom: 98px;
+    font-size: 24px;
+
+    .page-nav {
+        height: 110px;
+        line-height: 110px;
+        padding: 0 30px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        background: #fff;
+
+        a {
+            color: #8c9fad;
+            font-size: 32px;
+        }
+    }
+
+    .page-bar {
+        height: 140px;
+        padding: 0 30px;
+        position: relative;
+
+        .bar-title {
+            color: #194f70;
+            font-size: 60px;
+            padding-top: 30px;
+        }
+
+        .select-box {
+            position: relative;
+            float: right;
+            padding-top: 30px;
+            white-space: nowrap;
+
+            select {
+                border: none;
+                outline: none;
+                background: transparent;
+                -webkit-appearance: none;
+                color: rgba(31, 63, 89, .5);
+                font-size: 28px;
+                line-height: 28px;
+                padding-right: 30px;
+                width: 100%;
+                padding: 20px 30px;
+            }
+            .arrow {
+                left: -20px;
+                top: -4px;
+                position: relative;
+            }
+            .arrow:before {
+                top: 0;
+                left: 0;
+                border-top: 10px solid #c5cfd5;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+            }
+            .arrow:after {
+                border-top: 0 solid transparent;
+                border-left: 0 solid transparent;
+                border-right: 0 solid transparent;
+                top: 0;
+                left: 10px;
+            }
+            .arrow:after, .arrow:before {
+                content: "";
+                position: absolute;
+            }
+        }
+    }
+
+    .page-list {
+        .no-info {
+            height: 480px;
+            text-align: center;
+            color: #c5cfd5;
+            font-size: 24px;
+            box-sizing: border-box;
+            padding-top: 110px;
+
+            img {
+                display: block;
+                margin: 0 auto 20px;
+            }
+        }
+    }
+}

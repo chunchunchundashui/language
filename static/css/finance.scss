@@ -1,0 +1,195 @@
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 750px;
+    z-index: 1;
+    height: 88px;
+    background-color: #1d2243;
+    line-height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main {
+    margin-top: 186px;
+
+    .finance-tabs {
+        height: 98px;
+        display: flex;
+        position: fixed;
+        top: 88px;
+        left: 0;
+        width: 750px;
+        background: #fff;
+        z-index: 1;
+
+        button {
+            height: 88px;
+            color: #8c9fad;
+            position: relative;
+            font-size: 32px;
+            flex: 1;
+            font-weight: 700;
+
+            span {
+                line-height: 56px;
+                border-bottom: 4px solid transparent;
+            }
+        }
+
+        .active {
+            span {
+                border-bottom-color: #1882d4;
+            }
+
+            color: #1882d4;
+        }
+    }
+
+    .finance-card {
+        height: 264px;
+        margin: 0 30px;
+        border-radius: 20px 20px 0 0;
+        background: #1882d4;
+        position: relative;
+
+        dl {
+            color: #fff;
+            padding: 30px;
+
+            dt {
+                font-size: 32px;
+                line-height: 40px;
+            }
+
+            em {
+                opacity: .5;
+                font-size: 24px;
+                line-height: 24px;
+                display: block;
+            }
+
+            dd {
+                font-size: 60px;
+                line-height: 80px;
+                margin-top: 30px;
+                font-weight: 700;
+
+                em {
+                    opacity: .5;
+                    font-size: 24px;
+                    line-height: 24px;
+                    display: block;
+                }
+            }
+        }
+
+        button {
+            position: absolute;
+            right: 30px;
+            top: 26px;
+            opacity: .5;
+            color: #fff;
+            font-size: 40px;
+        }
+    }
+
+    .search-box {
+        height: 80px;
+        margin-left: 30px;
+        padding-right: 30px;
+        border-bottom: 1px solid #e7ebee;
+        line-height: 80px;
+        color: #c5cfd5;
+
+        i {
+            margin-right: 10px;
+            float: left;
+        }
+
+        input {
+            height: 80px;
+            font-size: 28px;
+            line-height: 1;
+            text-transform: uppercase;
+            float: left;
+        }
+
+        input[type=checkbox] {
+            width: 0;
+        }
+    }
+
+    label {
+        float: right;
+    }
+
+    .finance-list {
+        margin-left: 30px;
+        margin-bottom: 120px;
+        dl {
+            height: 160px;
+            border-bottom: 1px solid #e7ebee;
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 32px;
+            padding-right: 30px;
+            width: 100%;
+
+            dt {
+                width: 100%;
+                font-size: 32px;
+                line-height: 32px;
+                font-weight: 700;
+            }
+
+            dd {
+                width: 216px;
+                line-height: 28px;
+
+                em {
+                    color: #c5cfd5;
+                    display: block;
+                    white-space: nowrap;
+                    line-height: 24px;
+                    margin-bottom: 18px;
+                }
+            }
+
+            .more {
+                width: 30px;
+                background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNXB4IiBoZWlnaHQ9IjMwcHgiIHZpZXdCb3g9IjAgMCA1IDMwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA1Mi4yICg2NzE0NSkgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+Q29tYmluZWQgU2hhcGU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0i5rOV5biB6LSm5oi3LWNvcHktNiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTcxNS4wMDAwMDAsIC04OTYuMDAwMDAwKSIgZmlsbD0iI0M1Q0ZENSI+CiAgICAgICAgICAgIDxnIGlkPSLliIbnu4QtNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsIDMxNC4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxnIGlkPSLliIbnu4QiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMwLjAwMDAwMCwgNDg4LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik02ODUsOTQgTDY5MCw5NCBMNjkwLDk5IEw2ODUsOTkgTDY4NSw5NCBaIE02ODUsMTA2IEw2OTAsMTA2IEw2OTAsMTExIEw2ODUsMTExIEw2ODUsMTA2IFogTTY4NSwxMTkgTDY5MCwxMTkgTDY5MCwxMjQgTDY4NSwxMjQgTDY4NSwxMTkgWiIgaWQ9IkNvbWJpbmVkLVNoYXBlIj48L3BhdGg+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==) no-repeat;
+                background-position: 25px 38px;
+            }
+        }
+
+        .quote {
+            dt {
+                color: #1882d4;
+            }
+        }
+
+        .no-data {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            margin-top: 140px;
+            border: none;
+            text-align: center;
+
+            dt {
+                width: auto;
+            }
+
+            dd {
+                margin-top: 20px;
+                color: #c5cfd5;
+                font-size: 24px;
+                font-weight: 400;
+            }
+        }
+    }
+}

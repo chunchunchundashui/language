@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手机注册-Eth Global</title>
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/comment.css">
+    <link rel="stylesheet" href="../static/css/register.css">
+    <link rel="stylesheet" href="../static/css/iconfont.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.1/css/jquery-weui.min.css">
+    <script src="../static/js/auto-size.js"></script>
+</head>
+
+<body>
+    <nav class="page-nav">
+        <a href="./login.html" class="fr">
+            登录
+        </a>
+    </nav>
+    <h1>手机注册</h1>
+    <h2 class="warning">
+        <i class="mobile_icon_tip"></i>
+        国籍注册后不可修改
+    </h2>
+    <div class="login-name-form">
+        <a href="./country.html" class="country-id" id="country-id">
+            <em>中国</em>
+            <i class="arrow"></i>
+        </a>
+        <div class="phone-input-box">
+            <a href="./country.html" id="country-code">
+                +
+                <em>
+                    86
+                </em>
+                <i class="arrow"></i>
+            </a>
+            <input type="tel" growing-ignore="true" name="phone" autocomplate="new-password" maxlength="11"
+                placeholder="手机号码">
+
+        </div>
+        <button class="submit" disabled>下一步</button>
+    </div>
+    <a href="./registerEmail.html" class="to-register">邮箱注册</a>
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script> -->
+    <script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+    <script src="../static/js/request.js"></script>
+    <script src="../static/js/register.js"></script>
+    <script>
+        // --------------------------新加代码片段开始位置 2020-08-09------------------------------
+        //语言选中
+        $("#language").change(function(){
+            var multer=$(this).val();          //获取下拉选中值
+            console.log("multer",multer)
+            switch(multer)
+            {   //选择中文
+                case "zh-cn":localStorage.setItem("yuyan_type","zh-cn");location.reload();//刷新页面//存储页面缓存
+                    break;
+                //选择English
+                case "en-us":localStorage.setItem("yuyan_type","en-us");location.reload();//刷新页面//存储页面缓存
+                    break;
+                //选择한국어
+                case "ko-kr":localStorage.setItem("yuyan_type","ko-kr");location.reload();//刷新页面//存储页面缓存
+                    break;
+                default:localStorage.setItem("yuyan_type","zh-cn");location.reload();//刷新页面//存储页面缓存
+            }
+        })
+        // --------------------------新加代码片段结束位置------------------------------
+
+
+
+        $(function () {
+            // --------------------------新加代码片段开始位置 2020-08-09------------------------------
+            //获取选中的语言类型
+            var yuyan_type=localStorage.getItem("yuyan_type");
+            //设置下拉框语言的选中状态
+            var language=$("#language option");
+            for(var i=0;i<language.length;i++){
+                var values=language.eq(i).val();
+                if(values==yuyan_type){language.eq(i).prop("selected","selected")}
+            }
+            // 不同语言分段处理数据
+            if(yuyan_type=="zh-cn"){
+                //中文的数据
+                var China_data=["登录","手机注册","国籍注册后不可修改","手机号码","下一步","邮箱注册"]
+                versionKey(China_data);//翻译数据
+            }
+            if(yuyan_type=="en-us"){
+                //英文的数据
+                var English_data=["Log In","Sign up by Phone","Your country can not be changed after registration.","Phone Number","Next","Sign up by Email"]
+                versionKey(English_data);//翻译数据
+            }
+            if(yuyan_type=="ko-kr"){
+                //韩语的数据
+                var han_data=["로그인","휴대폰으로 가입하기","가입후에는 국적을 수정할 수 없습니다.","휴대폰 번호","다음","이메일로 가입 하기"]
+                versionKey(han_data);//翻译数据
+            }
+            // 需要翻译的公用方法  自助添加
+            function versionKey(datas){
+                // 登陆
+                $(".page-nav a").html(datas[0]);
+                //手机注册
+                $("h1").html(datas[1]);
+                //国籍注册后不可修改
+                $(".warning").html("<i class=\"mobile_icon_tip\"></i>"+datas[2]);
+                // 输入框手机号码
+                $(".phone-input-box input").attr("placeholder",datas[3]);
+                //下一步
+                $(".login-name-form button").html(datas[4])
+                //邮箱注册
+                $(".to-register").html(datas[5])
+            }
+        });
+        // --------------------------新加代码片段结束位置------------------------------
+    </script>
+</body>
+
+</html>

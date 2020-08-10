@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册|火币OTC</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/iconfont.css">
+    <link rel="stylesheet" href="../static/css/conmentAdd.css">
+</head>
+
+<body>
+    <div id="app" class="">
+        <div class="left flex-y" style="padding-top: 104px;">
+            <div class="left-header-box headerBackgroundColor">
+                <div>
+                    <header data-mobile="true" data-locale="zh-cn" class="fedui-root fedui-header">
+                        <div class="fedui-header-vip-greeting">
+                            <!---->
+                        </div>
+                        <div class="fedui-header-m">
+                            <div class="fedui-header-m-head">
+                                <div class="fedui-header-m-head-left"><i class="fedui-header-m-head-icon"></i></div>
+                                <div href="//www.huobi.me/zh-cn/" class="fedui-header-m-head-logo"><img width="18"
+                                        height="26"
+                                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMThweCIgaGVpZ2h0PSIyNnB4IiB2aWV3Qm94PSIwIDAgMTggMjYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUzLjIgKDcyNjQzKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT7nvJbnu4QgNOWkjeWItiAyPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IuS4u+WvvOiIqiIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9Ik9UQy1INSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQxMC4wMDAwMDAsIC00MTUuMDAwMDAwKSIgZmlsbC1ydWxlPSJub256ZXJvIj4KICAgICAgICAgICAgPGcgaWQ9Iue8lue7hC01IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMzEuMDAwMDAwLCA0MDMuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0i57yW57uELTTlpI3liLYtMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTc5LjAwMDAwMCwgMTIuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgPGcgaWQ9Iue8lue7hC0yIj4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTExLjIyMzEwOTMsNy45NTA2ODA5MyBDMTEuMjIzMTA5Myw0LjI0MTQ4MDk0IDkuMzkwMTYzNjMsMS4wNTE2ODA5NCA3Ljk5NTg3NTEzLDAuMDEzMDgwOTQzMSBDNy45OTAxOTQxMywwLjAwOTY4MDk0MzExIDcuODg5MTUyODMsLTAuMDQ2MTE5MDU3IDcuODk3Njc0MzgsMC4xMDIwODA5NDMgQzcuODk3ODc3MywwLjEwNDA4MDk0MyA3Ljg5NjA1MTIzLDAuMTA0NjgwOTQzIDcuODk2MDUxMjMsMC4xMDY0ODA5NDMgQzcuNzc5OTk1NzgsNy4yNjgyODA5NCA0LjA2ODQ1MzM3LDkuMjA5MjgwOTUgMi4wMjc5NDcwNSwxMS44MjQwODA5IEMtMi42ODEwMjI5NCwxNy44NTgwODA5IDEuNjk4NDQ2OTcsMjQuNDczNjgwOSA2LjE1Nzg1NzE3LDI1LjY5NjI4MSBDOC42NTMyNTIxNywyNi4zODA0ODA5IDUuNTgxNjM3ODQsMjQuNDg1NjgwOSA1LjE4NTk5NDI3LDIwLjQ4Mzg4MSBDNC43MDc3NzI3OCwxNS42NDY4ODEgMTEuMjIzMTA5MywxMS45NTQ4ODEgMTEuMjIzMTA5Myw3Ljk1MDY4MDkzIiBpZD0iRmlsbC0zIiBmaWxsPSIjRDdFMkYyIj48L3BhdGg+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMy42Njk2NDczLDEwLjM4ODg2MSBDMTMuNjM5MjEzMiwxMC4zNjk2NjEgMTMuNTk1OTk2OCwxMC4zNTY0NjA5IDEzLjU2NTk2ODQsMTAuNDAyMjYwOSBDMTMuNDgzOTk5MiwxMS4zMDQwNjEgMTIuNDg2OTc3NCwxMy4yMzIyNjEgMTEuMjIzMTQ5OCwxNS4wMDMwNjA5IEM2LjkzNjgwODM1LDIxLjAwOTY2MDkgOS4zNzk0NTA4MywyMy45MDQ4NjA5IDEwLjc1MzA0NDEsMjUuNDYwMDYxIEMxMS41NTA0MTgxLDI2LjM2Mjg2MDkgMTAuNzUzMDQ0MSwyNS40NjAwNjEgMTIuNzQ2Mjc2MSwyNC41Mzc0NjEgQzEyLjkwMjcwNzUsMjQuNDY1MjYxIDE2LjYzNTc1NjcsMjIuNTMxNDYwOSAxNy4wNDAxMjQ3LDE4LjEyNTY2MDkgQzE3LjQzMTUwNzUsMTMuODU5NDYwOSAxNC42NTcxMzMxLDExLjE3MDI2MDkgMTMuNjY5NjQ3MywxMC4zODg4NjEiIGlkPSJGaWxsLTUiIGZpbGw9IiMzQzdBRDIiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg=="
+                                        alt="火币合约"></div>
+                                <div class="fedui-header-m-head-info fedui-theme-text"><i class="fedui-icon-info"></i>
+                                </div>
+                            </div>
+                            <nav class="fedui-header-m-nav">
+                                <div class="fedui-header-m-menu">
+                                    <!---->
+                                    <!----><a href="//www.huobi.me/zh-cn/markets/"
+                                        class="fedui-theme-text fedui-nav-markets">行情</a><a rel="nofollow"
+                                        href="/zh-cn/" class="fedui-theme-text fedui-nav-otc fedui-active">买币</a><a
+                                        href="//www.huobi.me/zh-cn/exchange/"
+                                        class="fedui-theme-text fedui-nav-exchange">币币交易</a><a target="_blank"
+                                        href="//www.huobi.me/zh-cn/guide/"
+                                        class="fedui-theme-text fedui-nav-guide">成长学院</a></div>
+                            </nav>
+                            <nav class="fedui-header-m-nav fedui-header-m-nologin"><a href="/zh-cn/login/">登录</a><a
+                                    href="/zh-cn/register/" class="fedui-header-m-nologin-register">注册</a></nav>
+                            <nav class="fedui-header-m-nav fedui-header-m-user">
+                                <div class="fedui-header-m-vip-bd">
+                                    <div class="fedui-header-m-vip">
+                                        <p class="fedui-header-m-vip-name fedui-line-1"></p>
+                                        <div class="fedui-flex-space-between">
+                                            <p class="fedui-header-m-vip-uid fedui-line-1">UID:</p><a target="_blank"
+                                                href="//www.huobi.me/zh-cn/topic/vip/">了解VIP</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fedui-header-m-menu">
+                                    <dl>
+                                        <dt>资产</dt>
+                                        <dd><a href="//www.huobi.me/zh-cn/finance/">币币账户（充币&amp;提币）</a>
+                                            <!----><a href="//www.huobi.me/zh-cn/finance/cross-margin/">杠杆账户</a><a
+                                                href="/zh-cn/user-center/balances/">法币账户</a><a
+                                                href="//futures.huobi.me/zh-cn/contract/assets/">合约账户</a><a
+                                                href="https://www.hpt.com/usercenter/?lang=cn" rel="noopener noreferrer"
+                                                data-type="pow" target="_blank">矿池账户</a><a
+                                                href="//www.huobi.me/zh-cn/finance/hb10/">HB10</a><a
+                                                href="//www.huobi.me/zh-cn/ht/points/my_points/">我的点卡</a>
+                                            <!---->
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>订单</dt>
+                                        <dd><a href="//www.huobi.me/zh-cn/transac/">币币&amp;杠杆订单</a><a
+                                                href="/zh-cn/user-center/orders/">法币订单</a><a
+                                                href="//futures.huobi.me/zh-cn/contract/orders/">合约订单</a>
+                                            <!---->
+                                        </dd>
+                                    </dl><a href="//account.huobi.me/zh-cn/user-center/security/">账户&amp;安全</a><a
+                                        href="//www.huobi.me/zh-cn/user_auth/">身份认证</a><a
+                                        href="/zh-cn/user-center/">法币设置</a><a href="//www.huobi.me/zh-cn/fee/"
+                                        class="fedui-header-m-info-fee"><span>费率设置</span><em>专业费率重磅升级</em></a><a
+                                        href="//www.huobi.me/zh-cn/invite/"><span>我的奖励</span></a><a
+                                        href="//www.huobi.me/zh-cn/apikey/">API管理</a><a
+                                        href="//account.huobi.me/zh-cn/subaccount/management/">子账号</a><a href="#"
+                                        class="fedui-header-m-menu-logout">退出</a>
+                                </div>
+                            </nav>
+                        </div>
+                        <!---->
+                    </header>
+                    <div class="">
+                        <div class="mobile-header-container" tutorialinfo="[object Object]">
+                            <div class="mobile-nav-l flex-y-center"
+                                style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a
+                                    href="./one-trade.html" class="text-center" rel="noopener noreferrer">一键买卖</a><a
+                                    href="./buy-usdt.html" class="text-center" rel="noopener noreferrer">自选交易</a><a
+                                    href="./sell-usdt.html" class="text-center"
+                                    rel="noopener noreferrer">大宗交易</a></div>
+                            <!---->
+                            <!---->
+                            <div style="display: none;">
+                                <div class="content-in common-content-in-wrapper order-info ping-order-info">
+                                    <div class="no-data-tips"><img
+                                            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE5OCIgdmlld0JveD0iMCAwIDE2MCAxOTgiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+Cjx0aXRsZT4mIzIzMDsmIzE3ODsmIzE2MTsmIzIzMDsmIzE1NjsmIzEzNzsmIzIzMjsmIzE3NDsmIzE2MjsmIzIyOTsmIzE0MTsmIzE0OTs8L3RpdGxlPgo8ZGVzYz5DcmVhdGVkIHVzaW5nIEZpZ21hPC9kZXNjPgo8ZyBpZD0iQ2FudmFzIiB0cmFuc2Zvcm09Im1hdHJpeCgyIDAgMCAyIC0yNTczMCAtODEzMikiPgo8ZyBpZD0iJiMyMzA7JiMxNzg7JiMxNjE7JiMyMzA7JiMxNTY7JiMxMzc7JiMyMzI7JiMxNzQ7JiMxNjI7JiMyMjk7JiMxNDE7JiMxNDk7Ij4KPGcgaWQ9IkVsbGlwc2UiPgo8dXNlIHhsaW5rOmhyZWY9IiNwYXRoMF9maWxsIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMjg2OCA0MTUzKSIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyKSIvPgo8L2c+CjxnIGlkPSJSZWN0YW5nbGUiPgo8dXNlIHhsaW5rOmhyZWY9IiNwYXRoMV9maWxsIiB0cmFuc2Zvcm09Im1hdHJpeCgwLjk4MzU0NCAwLjE4MDY2NiAtMC4xODA2NjYgMC45ODM1NDQgMTI4OTEgNDA2NikiIGZpbGw9InVybCgjcGFpbnQxX2xpbmVhcikiLz4KPC9nPgo8ZyBpZD0iUmVjdGFuZ2xlIj4KPHVzZSB4bGluazpocmVmPSIjcGF0aDFfZmlsbCIgdHJhbnNmb3JtPSJtYXRyaXgoLTAuOTgzNTQ0IDAuMTgwNjY2IDAuMTgwNjY2IDAuOTgzNTQ0IDEyOTE1LjMgNDA2NikiIGZpbGw9InVybCgjcGFpbnQyX2xpbmVhcikiIGZpbGwtb3BhY2l0eT0iMC41Ii8+CjwvZz4KPGcgaWQ9IlJlY3RhbmdsZSI+Cjx1c2UgeGxpbms6aHJlZj0iI3BhdGgyX2ZpbGwiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyODc4IDQwNzIpIiBmaWxsPSJ1cmwoI3BhaW50M19saW5lYXIpIi8+CjwvZz4KPGcgaWQ9ImxvZ29fd2hpdGUiPgo8ZyBpZD0iRmlsbCAxIj4KPHVzZSB4bGluazpocmVmPSIjcGF0aDNfZmlsbCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTI4OTQgNDA5MCkiIGZpbGw9IiNGRkZGRkYiIGZpbGwtb3BhY2l0eT0iMC42Ii8+CjwvZz4KPGcgaWQ9IkZpbGwgMyI+Cjx1c2UgeGxpbms6aHJlZj0iI3BhdGg0X2ZpbGwiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyOTAwLjcgNDEwMi42MykiIGZpbGw9IiNGRkZGRkYiIGZpbGwtb3BhY2l0eT0iMC42Ii8+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhciIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDQuNzE0ODllLTE1IDEyIC03NyA3LjM0Nzg4ZS0xNiA3NyAtNy4zNDc4OGUtMTYpIj4KPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjRjdGN0Y3Ii8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0Y1RjVGNSIgc3RvcC1vcGFjaXR5PSIwIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQxX2xpbmVhciIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDMuMTMwMjZlLTE1IDY2LjE1NjcgLTUxLjEyMTEgNC4wNTA5M2UtMTUgNTEuMTIxMSAtNC4wNTA5M2UtMTUpIj4KPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjRkFGQUZBIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0Y1RjVGNSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50Ml9saW5lYXIiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgzLjEzMDI2ZS0xNSA2Ni4xNTY3IC01MS4xMjExIDQuMDUwOTNlLTE1IDUxLjEyMTEgLTQuMDUwOTNlLTE1KSI+CjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI0ZBRkFGQSIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGNUY1RjUiLz4KPC9saW5lYXJHcmFkaWVudD4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDNfbGluZWFyIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMy4xMjI4NWUtMTUgNjYgLTUxIDQuMDQxMzNlLTE1IDUxIC00LjA0MTMzZS0xNSkiPgo8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNGNUY1RjUiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRURFREVEIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxwYXRoIGlkPSJwYXRoMF9maWxsIiBkPSJNIDc3IDZDIDc3IDkuMzEzNzEgNTkuNzYzIDEyIDM4LjUgMTJDIDE3LjIzNyAxMiAwIDkuMzEzNzEgMCA2QyAwIDIuNjg2MjkgMTcuMjM3IDAgMzguNSAwQyA1OS43NjMgMCA3NyAyLjY4NjI5IDc3IDZaIi8+CjxwYXRoIGlkPSJwYXRoMV9maWxsIiBkPSJNIDAgNEMgMCAxLjc5MDg2IDEuNzkwODYgMCA0IDBMIDQ3LjEyMTEgMEMgNDkuMzMwMiAwIDUxLjEyMTEgMS43OTA4NiA1MS4xMjExIDRMIDUxLjEyMTEgNjIuMTU2N0MgNTEuMTIxMSA2NC4zNjU4IDQ5LjMzMDIgNjYuMTU2NyA0Ny4xMjExIDY2LjE1NjdMIDQgNjYuMTU2N0MgMS43OTA4NiA2Ni4xNTY3IDAgNjQuMzY1OCAwIDYyLjE1NjdMIDAgNFoiLz4KPHBhdGggaWQ9InBhdGgyX2ZpbGwiIGQ9Ik0gMCA0QyAwIDEuNzkwODYgMS43OTA4NiAwIDQgMEwgNDcgMEMgNDkuMjA5MSAwIDUxIDEuNzkwODYgNTEgNEwgNTEgNjJDIDUxIDY0LjIwOTEgNDkuMjA5MSA2NiA0NyA2NkwgNCA2NkMgMS43OTA4NiA2NiAwIDY0LjIwOTEgMCA2MkwgMCA0WiIvPgo8cGF0aCBpZD0icGF0aDNfZmlsbCIgZD0iTSA4LjkwOTA0IDAuMjU0MzYxQyA4LjkwOTA0IDAuMjU3MjA4IDguOTA5NzcgMC4yNjAwNTUgOC45MDk3NyAwLjI2MjkwMkMgOC45MjUwOSAwLjM3NjA2MSA5LjI2MDU5IDIuOTgwODUgOC4yNzY2OSA2LjAxNjIyQyA4LjAyMjg4IDYuNzk3NjYgNy42OTI0OCA3LjYxMTgzIDcuMjI3MTYgOC40MTEwNkMgNi42MDg2NiA5LjQ3NjQ2IDUuODkwMjUgMTAuNTIwNSA1LjAyODE2IDExLjQ0NTdDIDQuNTg5ODIgMTEuOTE2MSAzLjkyMzkyIDEyLjQ0NzEgMy40ODQ4NSAxMi44MzQyQyAwLjE4NzQ0NCAxNS43NDM2IDAgMTguOTcxMSAwIDIwLjMzMTlDIDAgMjEuODU0OSAwLjQzNDY5NCAyNS4yMDIgMy42MzI5MSAyNy43ODMzQyAzLjcwOTQ5IDI3Ljg0NTIgMy44MjYxOCAyNy44MDMyIDMuODQ2NjEgMjcuNzA4NkMgNC4wMjM4NCAyNi44NzI0IDQuODE1MTkgMjMuNjYwNSA3LjEyNDMyIDIwLjE1MzNDIDcuODA0MDcgMTkuMTIwNiA4LjYzMzM1IDE4LjA5NjUgOS41NzQyMSAxNy4xMjI5QyAxMC41MTU4IDE2LjE0OTMgMTEuNTUyMiAxNS4zMTU5IDEyLjQ0OTMgMTQuMjM0OEMgMTQuNzI3MSAxMS41ODY2IDE0LjM2NjEgOS44MjAyMSAxMy45Mjk5IDcuNzg3NjJDIDEzLjI0MjEgNC41ODY0MyAxMS40MzI2IDIuNTAxODggMTEuMDE5OCAxLjkzMTExQyAxMS4wMTY5IDEuOTI3NTUgMTEuMDE0IDEuOTI0NyAxMS4wMTEgMS45MjExNEwgMTAuMTU5MiAwLjk3ODg2NEMgMTAuMTU3IDAuOTc2MDE3IDEwLjE1NDggMC45NzM4ODIgMTAuMTUyNiAwLjk3MTc0N0wgOS41OTM5IDAuNDM1ODQzQyA5LjU5MjQ1IDAuNDMzNzA4IDkuNTkwMjYgMC40MzIyODQgOS41ODg4IDAuNDMwODYxTCA5LjEyMjAxIDAuMDMyMzEzNEMgOS4wMzMwMyAtMC4wNDMxMjU5IDguODk0NDUgMC4wMjIzNDk4IDguOTAxNzUgMC4xMzc2NDRMIDguOTA5MDQgMC4yNTQzNjFaIi8+CjxwYXRoIGlkPSJwYXRoNF9maWxsIiBkPSJNIDMuMDM4MjNlLTA3IDE2LjgyMjhDIDIuMDYxMTUgMTcuNDE3MSA0LjE5NjcgMTcuNjIxMyA2LjI3NjA4IDE2Ljk2M0MgOC40Mzg2MSAxNi4yNzg0IDEwLjg0NTUgMTQuNzc2IDEyLjIyNDcgMTIuMTY4M0MgMTIuOTc2NiAxMC43NDcxIDEzLjMzNTUgOS4xODkyIDEzLjM0NTcgNy43MTAzQyAxMy4zNDY0IDcuNTU4NzEgMTMuMzQ1NyA3LjQwNzEyIDEzLjM0MiA3LjI1NTUzQyAxMy4zMzkxIDcuMTA3NSAxMy4zMzQgNi45NjAxOCAxMy4zMjY3IDYuODEyMTVDIDEzLjMyMDIgNi42Njc2NyAxMy4zMTA3IDYuNTIzOTEgMTMuMjk5NyA2LjM4MDE1QyAxMy4yODk1IDYuMjM5OTUgMTMuMjc2NCA2LjEwMDQ2IDEzLjI2MjUgNS45NjAyNUMgMTMuMjQ4NyA1LjgyMzYxIDEzLjIzMjYgNS42ODc2NyAxMy4yMTUxIDUuNTUyNDVDIDEzLjE5ODQgNS40MjAwOCAxMy4xNzk0IDUuMjg3NyAxMy4xNTkgNS4xNTYwNEMgMTMuMTM5MyA1LjAyNzk0IDEzLjExNzQgNC44OTk4MyAxMy4wOTQ4IDQuNzcyNDRDIDEzLjA3MjIgNC42NDg2IDEzLjA0ODggNC41MjQ3NyAxMy4wMjI2IDQuNDAwOTRDIDEyLjk5ODUgNC4yODEzNyAxMi45NzIzIDQuMTYxODEgMTIuOTQ1MyA0LjA0Mjk2QyAxMi45MTgzIDMuOTI3NjYgMTIuODkwNiAzLjgxMjM3IDEyLjg2MTQgMy42OTc3OEMgMTIuODMzIDMuNTg2NzYgMTIuODAzOCAzLjQ3NTc0IDEyLjc3MjQgMy4zNjU0MkMgMTIuNzQzMiAzLjI1ODY3IDEyLjcxMTkgMy4xNTI2MyAxMi42Nzk4IDMuMDQ3M0MgMTIuNjQ5MiAyLjk0NDgxIDEyLjYxNzEgMi44NDMwNCAxMi41ODM1IDIuNzQxOThDIDEyLjU1MjIgMi42NDUxOSAxMi41MTkzIDIuNTQ3NjkgMTIuNDg1MSAyLjQ1MDlDIDEyLjQ1MyAyLjM1ODM4IDEyLjQxOTQgMi4yNjU4NiAxMi4zODUxIDIuMTc0MDVDIDEyLjM1MyAyLjA4NjUxIDEyLjMxOTUgMS45OTg5OCAxMi4yODQ1IDEuOTExNDRDIDEyLjI1MTcgMS44Mjg4OCAxMi4yMTgxIDEuNzQ2MzMgMTIuMTgzOCAxLjY2Mzc3QyAxMi4xNTEgMS41ODU0OCAxMi4xMTc1IDEuNTA3OTEgMTIuMDgzMiAxLjQzMTA1QyAxMi4wNTExIDEuMzU3NzQgMTIuMDE5IDEuMjg1MTUgMTEuOTg2MiAxLjIxMjU2QyAxMS45NTQ4IDEuMTQ0OTUgMTEuOTIyNyAxLjA3NjYyIDExLjg4OTkgMS4wMDk3MkMgMTEuODU5MyAwLjk0NzA5NSAxMS44Mjg2IDAuODg0NDY2IDExLjc5NzMgMC44MjI1NDlDIDExLjc2ODEgMC43NjQ5MDIgMTEuNzM4OSAwLjcwNzI1NSAxMS43MDkgMC42NTAzMkMgMTEuNjgyIDAuNTk4MzY3IDExLjY1NDMgMC41NDY0MTMgMTEuNjI1MiAwLjQ5NDQ2QyAxMS41OTk2IDAuNDQ4MiAxMS41NzQxIDAuNDAxMjI3IDExLjU0NzggMC4zNTQ5NjdDIDExLjUyNDUgMC4zMTM2ODkgMTEuNTAxMiAwLjI3MjQxMSAxMS40NzY0IDAuMjMxODQ0QyAxMS40NTUyIDAuMTk1NTQ4IDExLjQzNDEgMC4xNTk5NjQgMTEuNDEyMiAwLjEyNDM4QyAxMS4zOTM5IDAuMDkzNzc2OCAxMS4zNzY0IDAuMDU2MDU3NCAxMS4zNDggMC4wMzI1NzE1QyAxMS4zMjE3IDAuMDExMjIwOCAxMS4yODY3IC0wLjAwMzAxMzEgMTEuMjUyNSAwLjAwMDU0NTM1N0MgMTEuMTk1NiAwLjAwNjIzODg5IDExLjE1MDMgMC4wNDc1MTcgMTEuMTMzNiAwLjA5OTQ3MDVDIDExLjAxMDMgMC40Nzk1MTQgMTAuNjU3MyAxLjMxMDA2IDEwLjUwMDUgMS42NTM4MUMgOS4yMjc3NyA0LjQ0NzIgNy4yNjg3MyA2LjQ4OTc1IDUuMDY5NzMgOC42MzU1QyA0LjEwOTkgOS41NzIwOSAzLjE1MjI2IDEwLjYxODMgMi40NzM5NiAxMS44MDA0QyAyLjEzMjYzIDEyLjM5MzIgMS44NTkxMiAxMy4wMjM4IDEuNjc5NyAxMy42ODA3QyAxLjUyNjUzIDE0LjI0MjkgMS41ODI3IDE0Ljg0NzIgMS4zODU3NyAxNS40MDIzQyAxLjMyMDg2IDE1LjU4NTkgMS4yNDU3MyAxNS43NzczIDEuMTA3MTYgMTUuOTIxMUMgMC44MzA3MzMgMTYuMjA3OSAwLjQ3MDQzMiAxNi4zMjExIDAuMDc5NDk5MiAxNi4zMjExIi8+CjwvZGVmcz4KPC9zdmc+Cg=="
+                                            alt="no-order">
+                                        <p>暂无进行中的订单</p>
+                                    </div>
+                                    <div class="footer order-footer"><a href="/zh-cn/user-center/orders/" class=""
+                                            rel="noopener noreferrer">
+                                            查询所有订单
+                                            <i class="ivu-icon ivu-icon-ios-arrow-right"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="empty-header-box" style="display:none;"></div>
+                </div>
+            </div>
+            <div class="flex-auto">
+                <div class="register-container">
+                    <div class="content">
+                        <div class="header">
+                            <h1 class="font32"><i class="iconfont icon-logo"></i>注册火币</h1>
+                            <p class="font-gray register-account mobile-account">法币交易与币币交易共用一个账户</p>
+                            <div class="flex-y-center title-container">
+                                <div class="reg-type-choice flex">
+                                    <p class="type cursor font16 choice"><span>手机注册</span></p>
+                                    <p class="type cursor font16 last"><span>邮箱注册</span></p>
+                                </div>
+                                <p class="font-gray register-account web-account">法币交易与币币交易共用一个账户</p>
+                            </div>
+                        </div>
+                        <form autocomplete="off" class="reg-form ivu-form ivu-form-label-top">
+                            <div class="ivu-form-item"><label class="ivu-form-item-label">国籍</label>
+                                <div class="ivu-form-item-content">
+                                    <div class="filterableStyle ivu-select ivu-select-single ivu-select-default">
+                                        <div tabindex="-1" class="ivu-select-selection"><input type="hidden" value="37">
+                                            <div class="">
+                                                <!---->
+                                                <!----> <span class="" style="display: none;"></span> <input type="text"
+                                                    placeholder="" autocomplete="off" spellcheck="false"
+                                                    class="ivu-select-input">
+                                                <!----> <i
+                                                    class="ivu-icon ivu-icon-ios-arrow-down ivu-select-arrow"></i></div>
+                                        </div>
+                                        <div class="ivu-select-dropdown"
+                                            style="display: none; min-width: 327px; position: absolute; will-change: top, left; transform-origin: center top; top: 50px; left: 0px;"
+                                            x-placement="bottom-start">
+                                            <ul class="ivu-select-not-found" style="display: none;">
+                                                <li>无匹配数据</li>
+                                            </ul>
+                                            <ul class="ivu-select-dropdown-list">
+                                                <li class="ivu-select-item ivu-select-item-selected">中国</li>
+                                                <li class="ivu-select-item">中国台湾</li>
+                                                <li class="ivu-select-item">中国香港</li>
+                                                <li class="ivu-select-item">越南</li>
+                                                <li class="ivu-select-item">新加坡</li>
+                                                <li class="ivu-select-item">加拿大</li>
+                                                <li class="ivu-select-item">印度</li>
+                                                <li class="ivu-select-item">英国</li>
+                                                <li class="ivu-select-item">韩国</li>
+                                                <li class="ivu-select-item">澳大利亚</li>
+                                                <li class="ivu-select-item">瑞士</li>
+                                                <li class="ivu-select-item">尼日利亚</li>
+                                                <li class="ivu-select-item">印度尼西亚</li>
+                                                <li class="ivu-select-item">菲律宾</li>
+                                                <li class="ivu-select-item">柬埔寨</li>
+                                                <li class="ivu-select-item">阿尔巴尼亚</li>
+                                                <li class="ivu-select-item">阿尔及利亚</li>
+                                                <li class="ivu-select-item">安道尔共和国</li>
+                                                <li class="ivu-select-item">安哥拉</li>
+                                                <li class="ivu-select-item">安圭拉岛</li>
+                                                <li class="ivu-select-item">安提瓜和巴布达</li>
+                                                <li class="ivu-select-item">阿根廷</li>
+                                                <li class="ivu-select-item">亚美尼亚</li>
+                                                <li class="ivu-select-item">阿鲁巴</li>
+                                                <li class="ivu-select-item">阿森松</li>
+                                                <li class="ivu-select-item">澳大利亚海外领地</li>
+                                                <li class="ivu-select-item">奥地利</li>
+                                                <li class="ivu-select-item">阿塞拜疆</li>
+                                                <li class="ivu-select-item">巴哈马</li>
+                                                <li class="ivu-select-item">巴林</li>
+                                                <li class="ivu-select-item">巴巴多斯</li>
+                                                <li class="ivu-select-item">比利时</li>
+                                                <li class="ivu-select-item">伯利兹</li>
+                                                <li class="ivu-select-item">贝宁</li>
+                                                <li class="ivu-select-item">百慕大群岛</li>
+                                                <li class="ivu-select-item">不丹</li>
+                                                <li class="ivu-select-item">波斯尼亚和黑塞哥维那</li>
+                                                <li class="ivu-select-item">博茨瓦纳</li>
+                                                <li class="ivu-select-item">巴西</li>
+                                                <li class="ivu-select-item">英属维尔京群岛</li>
+                                                <li class="ivu-select-item">文莱</li>
+                                                <li class="ivu-select-item">保加利亚</li>
+                                                <li class="ivu-select-item">布基纳法索</li>
+                                                <li class="ivu-select-item">布隆迪</li>
+                                                <li class="ivu-select-item">佛得角</li>
+                                                <li class="ivu-select-item">开曼群岛</li>
+                                                <li class="ivu-select-item">智利</li>
+                                                <li class="ivu-select-item">哥伦比亚</li>
+                                                <li class="ivu-select-item">科摩罗群岛</li>
+                                                <li class="ivu-select-item">库克群岛</li>
+                                                <li class="ivu-select-item">哥斯达黎加</li>
+                                                <li class="ivu-select-item">克罗地亚</li>
+                                                <li class="ivu-select-item">塞浦路斯</li>
+                                                <li class="ivu-select-item">捷克</li>
+                                                <li class="ivu-select-item">丹麦</li>
+                                                <li class="ivu-select-item">迭戈加西亚群岛</li>
+                                                <li class="ivu-select-item">吉布提</li>
+                                                <li class="ivu-select-item">多米尼加共和国</li>
+                                                <li class="ivu-select-item">东帝汶</li>
+                                                <li class="ivu-select-item">埃及</li>
+                                                <li class="ivu-select-item">萨尔瓦多</li>
+                                                <li class="ivu-select-item">迪拜酋长国</li>
+                                                <li class="ivu-select-item">赤道几内亚</li>
+                                                <li class="ivu-select-item">厄立特里亚</li>
+                                                <li class="ivu-select-item">爱沙尼亚</li>
+                                                <li class="ivu-select-item">埃塞俄比亚</li>
+                                                <li class="ivu-select-item">福克兰群岛</li>
+                                                <li class="ivu-select-item">法罗群岛</li>
+                                                <li class="ivu-select-item">斐济</li>
+                                                <li class="ivu-select-item">芬兰</li>
+                                                <li class="ivu-select-item">法国</li>
+                                                <li class="ivu-select-item">法属圭亚那</li>
+                                                <li class="ivu-select-item">法属玻利尼西亚</li>
+                                                <li class="ivu-select-item">加蓬</li>
+                                                <li class="ivu-select-item">冈比亚</li>
+                                                <li class="ivu-select-item">格鲁吉亚</li>
+                                                <li class="ivu-select-item">德国</li>
+                                                <li class="ivu-select-item">加纳</li>
+                                                <li class="ivu-select-item">直布罗陀</li>
+                                                <li class="ivu-select-item">希腊</li>
+                                                <li class="ivu-select-item">格陵兰岛</li>
+                                                <li class="ivu-select-item">格林纳达</li>
+                                                <li class="ivu-select-item">瓜德罗普</li>
+                                                <li class="ivu-select-item">关岛</li>
+                                                <li class="ivu-select-item">危地马拉</li>
+                                                <li class="ivu-select-item">几内亚比绍</li>
+                                                <li class="ivu-select-item">圭亚那</li>
+                                                <li class="ivu-select-item">海地</li>
+                                                <li class="ivu-select-item">洪都拉斯</li>
+                                                <li class="ivu-select-item">匈牙利</li>
+                                                <li class="ivu-select-item">冰岛</li>
+                                                <li class="ivu-select-item">爱尔兰</li>
+                                                <li class="ivu-select-item">以色列</li>
+                                                <li class="ivu-select-item">意大利</li>
+                                                <li class="ivu-select-item">牙买加</li>
+                                                <li class="ivu-select-item">约旦</li>
+                                                <li class="ivu-select-item">哈萨克斯坦</li>
+                                                <li class="ivu-select-item">肯尼亚</li>
+                                                <li class="ivu-select-item">基里巴斯</li>
+                                                <li class="ivu-select-item">科威特</li>
+                                                <li class="ivu-select-item">吉尔吉斯坦</li>
+                                                <li class="ivu-select-item">老挝</li>
+                                                <li class="ivu-select-item">拉脱维亚</li>
+                                                <li class="ivu-select-item">莱索托</li>
+                                                <li class="ivu-select-item">列支敦士登</li>
+                                                <li class="ivu-select-item">立陶宛</li>
+                                                <li class="ivu-select-item">卢森堡</li>
+                                                <li class="ivu-select-item">马其顿</li>
+                                                <li class="ivu-select-item">马达加斯加</li>
+                                                <li class="ivu-select-item">马拉维</li>
+                                                <li class="ivu-select-item">马来西亚</li>
+                                                <li class="ivu-select-item">马尔代夫</li>
+                                                <li class="ivu-select-item">马里</li>
+                                                <li class="ivu-select-item">马耳他</li>
+                                                <li class="ivu-select-item">马里亚那群岛</li>
+                                                <li class="ivu-select-item">马绍尔群岛</li>
+                                                <li class="ivu-select-item">马提尼克</li>
+                                                <li class="ivu-select-item">毛里塔尼亚</li>
+                                                <li class="ivu-select-item">毛里求斯</li>
+                                                <li class="ivu-select-item">墨西哥</li>
+                                                <li class="ivu-select-item">密克罗尼西亚</li>
+                                                <li class="ivu-select-item">摩尔多瓦</li>
+                                                <li class="ivu-select-item">摩纳哥</li>
+                                                <li class="ivu-select-item">蒙古</li>
+                                                <li class="ivu-select-item">黑山</li>
+                                                <li class="ivu-select-item">蒙特塞拉特岛</li>
+                                                <li class="ivu-select-item">摩洛哥</li>
+                                                <li class="ivu-select-item">莫桑比克</li>
+                                                <li class="ivu-select-item">纳米比亚</li>
+                                                <li class="ivu-select-item">瑙鲁</li>
+                                                <li class="ivu-select-item">尼泊尔</li>
+                                                <li class="ivu-select-item">荷属安的列斯</li>
+                                                <li class="ivu-select-item">荷兰</li>
+                                                <li class="ivu-select-item">新喀里多尼亚</li>
+                                                <li class="ivu-select-item">新西兰</li>
+                                                <li class="ivu-select-item">尼加拉瓜</li>
+                                                <li class="ivu-select-item">尼日尔</li>
+                                                <li class="ivu-select-item">纽埃岛</li>
+                                                <li class="ivu-select-item">挪威</li>
+                                                <li class="ivu-select-item">阿曼</li>
+                                                <li class="ivu-select-item">帕劳</li>
+                                                <li class="ivu-select-item">巴勒斯坦</li>
+                                                <li class="ivu-select-item">巴拿马</li>
+                                                <li class="ivu-select-item">巴布亚新几内亚</li>
+                                                <li class="ivu-select-item">巴拉圭</li>
+                                                <li class="ivu-select-item">秘鲁</li>
+                                                <li class="ivu-select-item">波兰</li>
+                                                <li class="ivu-select-item">葡萄牙</li>
+                                                <li class="ivu-select-item">波多黎各</li>
+                                                <li class="ivu-select-item">卡塔尔</li>
+                                                <li class="ivu-select-item">留尼旺</li>
+                                                <li class="ivu-select-item">罗马尼亚</li>
+                                                <li class="ivu-select-item">俄罗斯</li>
+                                                <li class="ivu-select-item">卢旺达</li>
+                                                <li class="ivu-select-item">圣卢西亚</li>
+                                                <li class="ivu-select-item">圣皮埃尔和密克隆群岛</li>
+                                                <li class="ivu-select-item">圣文森特岛</li>
+                                                <li class="ivu-select-item">东萨摩亚(美)</li>
+                                                <li class="ivu-select-item">西萨摩亚</li>
+                                                <li class="ivu-select-item">圣马力诺</li>
+                                                <li class="ivu-select-item">圣多美和普林西比</li>
+                                                <li class="ivu-select-item">沙特阿拉伯</li>
+                                                <li class="ivu-select-item">塞内加尔</li>
+                                                <li class="ivu-select-item">塞尔维亚</li>
+                                                <li class="ivu-select-item">塞舌尔</li>
+                                                <li class="ivu-select-item">塞拉利昂</li>
+                                                <li class="ivu-select-item">斯洛伐克</li>
+                                                <li class="ivu-select-item">斯洛文尼亚</li>
+                                                <li class="ivu-select-item">所罗门群岛</li>
+                                                <li class="ivu-select-item">南非</li>
+                                                <li class="ivu-select-item">西班牙</li>
+                                                <li class="ivu-select-item">斯里兰卡</li>
+                                                <li class="ivu-select-item">圣赫勒拿岛</li>
+                                                <li class="ivu-select-item">圣卢西亚</li>
+                                                <li class="ivu-select-item">圣文森特</li>
+                                                <li class="ivu-select-item">苏里南</li>
+                                                <li class="ivu-select-item">斯威士兰</li>
+                                                <li class="ivu-select-item">瑞典</li>
+                                                <li class="ivu-select-item">塔吉克斯坦</li>
+                                                <li class="ivu-select-item">坦桑尼亚</li>
+                                                <li class="ivu-select-item">泰国</li>
+                                                <li class="ivu-select-item">多哥</li>
+                                                <li class="ivu-select-item">托克劳群岛</li>
+                                                <li class="ivu-select-item">汤加</li>
+                                                <li class="ivu-select-item">特立尼达和多巴哥</li>
+                                                <li class="ivu-select-item">突尼斯</li>
+                                                <li class="ivu-select-item">土耳其</li>
+                                                <li class="ivu-select-item">土库曼斯坦</li>
+                                                <li class="ivu-select-item">图瓦卢</li>
+                                                <li class="ivu-select-item">乌干达</li>
+                                                <li class="ivu-select-item">乌克兰</li>
+                                                <li class="ivu-select-item">阿拉伯联合酋长国</li>
+                                                <li class="ivu-select-item">乌拉圭</li>
+                                                <li class="ivu-select-item">乌兹别克斯坦</li>
+                                                <li class="ivu-select-item">瓦努阿图</li>
+                                                <li class="ivu-select-item">梵蒂冈城</li>
+                                                <li class="ivu-select-item">委内瑞拉</li>
+                                                <li class="ivu-select-item">瓦利斯和富图纳</li>
+                                                <li class="ivu-select-item">南斯拉夫</li>
+                                                <li class="ivu-select-item">扎伊尔</li>
+                                                <li class="ivu-select-item">赞比亚</li>
+                                            </ul>
+                                            <ul class="ivu-select-loading" style="display: none;">加载中</ul>
+                                        </div>
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                            <div class="ivu-form-item"><label class="ivu-form-item-label">手机</label>
+                                <div class="ivu-form-item-content">
+                                    <div
+                                        class="telephone ivu-input-wrapper ivu-input-wrapper-default ivu-input-type ivu-input-group ivu-input-group-default ivu-input-group-with-prepend">
+                                        <div class="ivu-input-group-prepend" style="">
+                                            <div class="country-code ivu-select ivu-select-single ivu-select-default">
+                                                <div tabindex="0" class="ivu-select-selection"><input type="hidden"
+                                                        value="0086">
+                                                    <div class="">
+                                                        <!---->
+                                                        <!----> <span class="ivu-select-selected-value">0086</span>
+                                                        <!---->
+                                                        <!----> <i
+                                                            class="ivu-icon ivu-icon-ios-arrow-down ivu-select-arrow"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="ivu-select-dropdown"
+                                                    style="display: none; min-width: 78px; position: absolute; will-change: top, left; transform-origin: center top; top: 50px; left: 0px;"
+                                                    x-placement="bottom-start">
+                                                    <ul class="ivu-select-not-found" style="display: none;">
+                                                        <li>无匹配数据</li>
+                                                    </ul>
+                                                    <ul class="ivu-select-dropdown-list">
+                                                        <li class="ivu-select-item ivu-select-item-selected"><span
+                                                                class="text-left">中国</span><span
+                                                                class="text-right">0086</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">中国台湾</span><span
+                                                                class="text-right">00886</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">中国香港</span><span
+                                                                class="text-right">00852</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">越南</span><span
+                                                                class="text-right">0084</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">新加坡</span><span
+                                                                class="text-right">0065</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">加拿大</span><span
+                                                                class="text-right">001</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">印度</span><span
+                                                                class="text-right">0091</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">英国</span><span
+                                                                class="text-right">0044</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">韩国</span><span
+                                                                class="text-right">0082</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">澳大利亚</span><span
+                                                                class="text-right">0061</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">瑞士</span><span
+                                                                class="text-right">0041</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">尼日利亚</span><span
+                                                                class="text-right">00234</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">印度尼西亚</span><span
+                                                                class="text-right">0062</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">菲律宾</span><span
+                                                                class="text-right">0063</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">柬埔寨</span><span
+                                                                class="text-right">00855</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">阿尔巴尼亚</span><span
+                                                                class="text-right">00355</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">阿尔及利亚</span><span
+                                                                class="text-right">00213</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">安道尔共和国</span><span
+                                                                class="text-right">00376</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">安哥拉</span><span
+                                                                class="text-right">00244</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">安圭拉岛</span><span
+                                                                class="text-right">001264</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">安提瓜和巴布达</span><span
+                                                                class="text-right">001268</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">阿根廷</span><span
+                                                                class="text-right">0054</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">亚美尼亚</span><span
+                                                                class="text-right">00374</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">阿鲁巴</span><span
+                                                                class="text-right">00297</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">阿森松</span><span
+                                                                class="text-right">00247</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">澳大利亚海外领地</span><span
+                                                                class="text-right">00672</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">奥地利</span><span
+                                                                class="text-right">0043</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">阿塞拜疆</span><span
+                                                                class="text-right">00994</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">巴哈马</span><span
+                                                                class="text-right">001242</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">巴林</span><span
+                                                                class="text-right">00973</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">巴巴多斯</span><span
+                                                                class="text-right">001246</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">比利时</span><span
+                                                                class="text-right">0032</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">伯利兹</span><span
+                                                                class="text-right">00501</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">贝宁</span><span
+                                                                class="text-right">00229</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">百慕大群岛</span><span
+                                                                class="text-right">001441</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">不丹</span><span
+                                                                class="text-right">00975</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">波斯尼亚和黑塞哥维那</span><span
+                                                                class="text-right">00387</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">博茨瓦纳</span><span
+                                                                class="text-right">00267</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">巴西</span><span
+                                                                class="text-right">0055</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">英属维尔京群岛</span><span
+                                                                class="text-right">001284</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">文莱</span><span
+                                                                class="text-right">00673</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">保加利亚</span><span
+                                                                class="text-right">00359</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">布基纳法索</span><span
+                                                                class="text-right">00226</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">布隆迪</span><span
+                                                                class="text-right">00257</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">佛得角</span><span
+                                                                class="text-right">00238</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">开曼群岛</span><span
+                                                                class="text-right">001345</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">智利</span><span
+                                                                class="text-right">0056</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">哥伦比亚</span><span
+                                                                class="text-right">0057</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">科摩罗群岛</span><span
+                                                                class="text-right">00269</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">库克群岛</span><span
+                                                                class="text-right">00682</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">哥斯达黎加</span><span
+                                                                class="text-right">00506</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">克罗地亚</span><span
+                                                                class="text-right">00385</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">塞浦路斯</span><span
+                                                                class="text-right">00357</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">捷克</span><span
+                                                                class="text-right">00420</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">丹麦</span><span
+                                                                class="text-right">0045</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">迭戈加西亚群岛</span><span
+                                                                class="text-right">00246</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">吉布提</span><span
+                                                                class="text-right">00253</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">多米尼加共和国</span><span
+                                                                class="text-right">001809</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">东帝汶</span><span
+                                                                class="text-right">00670</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">埃及</span><span
+                                                                class="text-right">0020</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">萨尔瓦多</span><span
+                                                                class="text-right">00503</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">迪拜酋长国</span><span
+                                                                class="text-right">009714</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">赤道几内亚</span><span
+                                                                class="text-right">00240</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">厄立特里亚</span><span
+                                                                class="text-right">00291</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">爱沙尼亚</span><span
+                                                                class="text-right">00372</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">埃塞俄比亚</span><span
+                                                                class="text-right">00251</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">福克兰群岛</span><span
+                                                                class="text-right">00500</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">法罗群岛</span><span
+                                                                class="text-right">00298</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">斐济</span><span
+                                                                class="text-right">00679</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">芬兰</span><span
+                                                                class="text-right">00358</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">法国</span><span
+                                                                class="text-right">0033</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">法属圭亚那</span><span
+                                                                class="text-right">00594</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">法属玻利尼西亚</span><span
+                                                                class="text-right">00689</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">加蓬</span><span
+                                                                class="text-right">00241</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">冈比亚</span><span
+                                                                class="text-right">00220</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">格鲁吉亚</span><span
+                                                                class="text-right">00995</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">德国</span><span
+                                                                class="text-right">0049</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">加纳</span><span
+                                                                class="text-right">00233</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">直布罗陀</span><span
+                                                                class="text-right">00350</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">希腊</span><span
+                                                                class="text-right">0030</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">格陵兰岛</span><span
+                                                                class="text-right">00299</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">格林纳达</span><span
+                                                                class="text-right">001473</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">瓜德罗普</span><span
+                                                                class="text-right">00590</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">关岛</span><span
+                                                                class="text-right">001671</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">危地马拉</span><span
+                                                                class="text-right">00502</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">几内亚比绍</span><span
+                                                                class="text-right">00245</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">圭亚那</span><span
+                                                                class="text-right">00592</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">海地</span><span
+                                                                class="text-right">00509</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">洪都拉斯</span><span
+                                                                class="text-right">00504</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">匈牙利</span><span
+                                                                class="text-right">0036</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">冰岛</span><span
+                                                                class="text-right">00354</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">爱尔兰</span><span
+                                                                class="text-right">00353</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">以色列</span><span
+                                                                class="text-right">00972</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">意大利</span><span
+                                                                class="text-right">0039</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">牙买加</span><span
+                                                                class="text-right">001876</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">约旦</span><span
+                                                                class="text-right">00962</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">哈萨克斯坦</span><span
+                                                                class="text-right">007</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">肯尼亚</span><span
+                                                                class="text-right">00254</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">基里巴斯</span><span
+                                                                class="text-right">00686</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">科威特</span><span
+                                                                class="text-right">00965</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">吉尔吉斯坦</span><span
+                                                                class="text-right">00996</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">老挝</span><span
+                                                                class="text-right">00856</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">拉脱维亚</span><span
+                                                                class="text-right">00371</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">莱索托</span><span
+                                                                class="text-right">00266</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">列支敦士登</span><span
+                                                                class="text-right">00423</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">立陶宛</span><span
+                                                                class="text-right">00370</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">卢森堡</span><span
+                                                                class="text-right">00352</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">马其顿</span><span
+                                                                class="text-right">00389</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">马达加斯加</span><span
+                                                                class="text-right">00261</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">马拉维</span><span
+                                                                class="text-right">00265</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">马来西亚</span><span
+                                                                class="text-right">0060</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">马尔代夫</span><span
+                                                                class="text-right">00960</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">马里</span><span
+                                                                class="text-right">00223</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">马耳他</span><span
+                                                                class="text-right">00356</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">马里亚那群岛</span><span
+                                                                class="text-right">00223</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">马绍尔群岛</span><span
+                                                                class="text-right">00692</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">马提尼克</span><span
+                                                                class="text-right">00596</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">毛里塔尼亚</span><span
+                                                                class="text-right">00222</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">毛里求斯</span><span
+                                                                class="text-right">00230</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">墨西哥</span><span
+                                                                class="text-right">0052</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">密克罗尼西亚</span><span
+                                                                class="text-right">00691</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">摩尔多瓦</span><span
+                                                                class="text-right">00373</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">摩纳哥</span><span
+                                                                class="text-right">00377</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">蒙古</span><span
+                                                                class="text-right">00976</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">黑山</span><span
+                                                                class="text-right">00382</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">蒙特塞拉特岛</span><span
+                                                                class="text-right">001664</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">摩洛哥</span><span
+                                                                class="text-right">00212</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">莫桑比克</span><span
+                                                                class="text-right">00258</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">纳米比亚</span><span
+                                                                class="text-right">00264</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">瑙鲁</span><span
+                                                                class="text-right">00674</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">尼泊尔</span><span
+                                                                class="text-right">00977</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">荷属安的列斯</span><span
+                                                                class="text-right">00599</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">荷兰</span><span
+                                                                class="text-right">0031</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">新喀里多尼亚</span><span
+                                                                class="text-right">00687</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">新西兰</span><span
+                                                                class="text-right">0064</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">尼加拉瓜</span><span
+                                                                class="text-right">00505</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">尼日尔</span><span
+                                                                class="text-right">00227</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">纽埃岛</span><span
+                                                                class="text-right">00683</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">挪威</span><span
+                                                                class="text-right">0047</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">阿曼</span><span
+                                                                class="text-right">00968</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">帕劳</span><span
+                                                                class="text-right">00680</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">巴勒斯坦</span><span
+                                                                class="text-right">00970</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">巴拿马</span><span
+                                                                class="text-right">00507</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">巴布亚新几内亚</span><span
+                                                                class="text-right">00675</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">巴拉圭</span><span
+                                                                class="text-right">00595</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">秘鲁</span><span
+                                                                class="text-right">0051</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">波兰</span><span
+                                                                class="text-right">0048</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">葡萄牙</span><span
+                                                                class="text-right">00351</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">波多黎各</span><span
+                                                                class="text-right">001</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">卡塔尔</span><span
+                                                                class="text-right">00974</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">留尼旺</span><span
+                                                                class="text-right">00262</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">罗马尼亚</span><span
+                                                                class="text-right">0040</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">俄罗斯</span><span
+                                                                class="text-right">007</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">卢旺达</span><span
+                                                                class="text-right">00250</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">圣卢西亚</span><span
+                                                                class="text-right">001758</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">圣皮埃尔和密克隆群岛</span><span
+                                                                class="text-right">00508</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">圣文森特岛</span><span
+                                                                class="text-right">001784</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">东萨摩亚(美)</span><span
+                                                                class="text-right">00684</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">西萨摩亚</span><span
+                                                                class="text-right">00685</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">圣马力诺</span><span
+                                                                class="text-right">00378</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">圣多美和普林西比</span><span
+                                                                class="text-right">00239</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">沙特阿拉伯</span><span
+                                                                class="text-right">00966</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">塞内加尔</span><span
+                                                                class="text-right">00221</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">塞尔维亚</span><span
+                                                                class="text-right">00381</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">塞舌尔</span><span
+                                                                class="text-right">00248</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">塞拉利昂</span><span
+                                                                class="text-right">00232</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">斯洛伐克</span><span
+                                                                class="text-right">00421</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">斯洛文尼亚</span><span
+                                                                class="text-right">00386</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">所罗门群岛</span><span
+                                                                class="text-right">00677</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">南非</span><span
+                                                                class="text-right">0027</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">西班牙</span><span
+                                                                class="text-right">0034</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">斯里兰卡</span><span
+                                                                class="text-right">0094</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">圣赫勒拿岛</span><span
+                                                                class="text-right">00290</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">圣卢西亚</span><span
+                                                                class="text-right">001758</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">圣文森特</span><span
+                                                                class="text-right">001784</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">苏里南</span><span
+                                                                class="text-right">00597</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">斯威士兰</span><span
+                                                                class="text-right">00268</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">瑞典</span><span
+                                                                class="text-right">0046</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">塔吉克斯坦</span><span
+                                                                class="text-right">00992</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">坦桑尼亚</span><span
+                                                                class="text-right">00255</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">泰国</span><span
+                                                                class="text-right">0066</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">多哥</span><span
+                                                                class="text-right">00228</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">托克劳群岛</span><span
+                                                                class="text-right">00690</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">汤加</span><span
+                                                                class="text-right">00676</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">特立尼达和多巴哥</span><span
+                                                                class="text-right">001868</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">突尼斯</span><span
+                                                                class="text-right">00216</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">土耳其</span><span
+                                                                class="text-right">0090</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">土库曼斯坦</span><span
+                                                                class="text-right">00993</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">图瓦卢</span><span
+                                                                class="text-right">00688</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">乌干达</span><span
+                                                                class="text-right">00256</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">乌克兰</span><span
+                                                                class="text-right">00380</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">阿拉伯联合酋长国</span><span
+                                                                class="text-right">00971</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">乌拉圭</span><span
+                                                                class="text-right">00598</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">乌兹别克斯坦</span><span
+                                                                class="text-right">00998</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">瓦努阿图</span><span
+                                                                class="text-right">00678</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">梵蒂冈城</span><span
+                                                                class="text-right">00379</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">委内瑞拉</span><span
+                                                                class="text-right">0058</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">瓦利斯和富图纳</span><span
+                                                                class="text-right">00681</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">南斯拉夫</span><span
+                                                                class="text-right">00338</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">扎伊尔</span><span
+                                                                class="text-right">00243</span></li>
+                                                        <li class="ivu-select-item"><span
+                                                                class="text-left">赞比亚</span><span
+                                                                class="text-right">00260</span></li>
+                                                    </ul>
+                                                    <ul class="ivu-select-loading" style="display: none;">加载中</ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!----> <i
+                                            class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="text" placeholder=""
+                                            maxlength="11" class="ivu-input ivu-input-default">
+                                        <!---->
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                            <div class="code-input no-start">
+                                <div class="ivu-form-item ivu-form-item-required"><label
+                                        class="ivu-form-item-label">手机验证码</label>
+                                    <div class="ivu-form-item-content">
+                                        <div class="ivu-input-wrapper ivu-input-wrapper-default ivu-input-type"
+                                            data-type="text" data-max-integer="6">
+                                            <!---->
+                                            <!----> <i
+                                                class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                            <input autocomplete="off" spellcheck="false" type="text" placeholder=""
+                                                class="ivu-input ivu-input-default">
+                                            <!---->
+                                        </div>
+                                        <div class="send-btn"><span class="button-color font-gray disabled">发送验证码</span>
+                                        </div>
+                                        <!---->
+                                        <!---->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ivu-form-item"><label class="ivu-form-item-label">登录密码</label>
+                                <div class="ivu-form-item-content">
+                                    <div class="ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                        <!---->
+                                        <!----> <i
+                                            class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="password"
+                                            placeholder="8-20位数字和字母组合" maxlength="20"
+                                            class="ivu-input ivu-input-default">
+                                        <!---->
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                            <div class="ivu-form-item"><label class="ivu-form-item-label">确认密码</label>
+                                <div class="ivu-form-item-content">
+                                    <div class="ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                        <!---->
+                                        <!----> <i
+                                            class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="password"
+                                            placeholder="8-20位数字和字母组合" maxlength="20"
+                                            class="ivu-input ivu-input-default">
+                                        <!---->
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                            <div class="ivu-form-item"><label class="ivu-form-item-label">邀请码(选填)</label>
+                                <div class="ivu-form-item-content">
+                                    <div class="ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                        <!---->
+                                        <!----> <i
+                                            class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="text" placeholder=""
+                                            maxlength="20" class="ivu-input ivu-input-default">
+                                        <!---->
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                        </form>
+                        <form autocomplete="off" class="reg-form ivu-form ivu-form-label-top" style="display: none;">
+                            <div class="ivu-form-item"><label class="ivu-form-item-label">国籍</label>
+                                <div class="ivu-form-item-content">
+                                    <div class="filterableStyle ivu-select ivu-select-single ivu-select-default">
+                                        <div tabindex="-1" class="ivu-select-selection"><input type="hidden" value="37">
+                                            <div class="">
+                                                <!---->
+                                                <!----> <span class="" style="display: none;"></span> <input type="text"
+                                                    placeholder="" autocomplete="off" spellcheck="false"
+                                                    class="ivu-select-input">
+                                                <!----> <i
+                                                    class="ivu-icon ivu-icon-ios-arrow-down ivu-select-arrow"></i></div>
+                                        </div>
+                                        <div class="ivu-select-dropdown"
+                                            style="display: none; min-width: 100px; position: absolute; will-change: top, left; transform-origin: center top; top: 400px; left: 0px;"
+                                            x-placement="bottom-start" x-out-of-boundaries="">
+                                            <ul class="ivu-select-not-found" style="display: none;">
+                                                <li>无匹配数据</li>
+                                            </ul>
+                                            <ul class="ivu-select-dropdown-list">
+                                                <li class="ivu-select-item ivu-select-item-selected">中国</li>
+                                                <li class="ivu-select-item">中国台湾</li>
+                                                <li class="ivu-select-item">中国香港</li>
+                                                <li class="ivu-select-item">越南</li>
+                                                <li class="ivu-select-item">新加坡</li>
+                                                <li class="ivu-select-item">加拿大</li>
+                                                <li class="ivu-select-item">印度</li>
+                                                <li class="ivu-select-item">英国</li>
+                                                <li class="ivu-select-item">韩国</li>
+                                                <li class="ivu-select-item">澳大利亚</li>
+                                                <li class="ivu-select-item">瑞士</li>
+                                                <li class="ivu-select-item">尼日利亚</li>
+                                                <li class="ivu-select-item">印度尼西亚</li>
+                                                <li class="ivu-select-item">菲律宾</li>
+                                                <li class="ivu-select-item">柬埔寨</li>
+                                                <li class="ivu-select-item">阿尔巴尼亚</li>
+                                                <li class="ivu-select-item">阿尔及利亚</li>
+                                                <li class="ivu-select-item">安道尔共和国</li>
+                                                <li class="ivu-select-item">安哥拉</li>
+                                                <li class="ivu-select-item">安圭拉岛</li>
+                                                <li class="ivu-select-item">安提瓜和巴布达</li>
+                                                <li class="ivu-select-item">阿根廷</li>
+                                                <li class="ivu-select-item">亚美尼亚</li>
+                                                <li class="ivu-select-item">阿鲁巴</li>
+                                                <li class="ivu-select-item">阿森松</li>
+                                                <li class="ivu-select-item">澳大利亚海外领地</li>
+                                                <li class="ivu-select-item">奥地利</li>
+                                                <li class="ivu-select-item">阿塞拜疆</li>
+                                                <li class="ivu-select-item">巴哈马</li>
+                                                <li class="ivu-select-item">巴林</li>
+                                                <li class="ivu-select-item">巴巴多斯</li>
+                                                <li class="ivu-select-item">比利时</li>
+                                                <li class="ivu-select-item">伯利兹</li>
+                                                <li class="ivu-select-item">贝宁</li>
+                                                <li class="ivu-select-item">百慕大群岛</li>
+                                                <li class="ivu-select-item">不丹</li>
+                                                <li class="ivu-select-item">波斯尼亚和黑塞哥维那</li>
+                                                <li class="ivu-select-item">博茨瓦纳</li>
+                                                <li class="ivu-select-item">巴西</li>
+                                                <li class="ivu-select-item">英属维尔京群岛</li>
+                                                <li class="ivu-select-item">文莱</li>
+                                                <li class="ivu-select-item">保加利亚</li>
+                                                <li class="ivu-select-item">布基纳法索</li>
+                                                <li class="ivu-select-item">布隆迪</li>
+                                                <li class="ivu-select-item">佛得角</li>
+                                                <li class="ivu-select-item">开曼群岛</li>
+                                                <li class="ivu-select-item">智利</li>
+                                                <li class="ivu-select-item">哥伦比亚</li>
+                                                <li class="ivu-select-item">科摩罗群岛</li>
+                                                <li class="ivu-select-item">库克群岛</li>
+                                                <li class="ivu-select-item">哥斯达黎加</li>
+                                                <li class="ivu-select-item">克罗地亚</li>
+                                                <li class="ivu-select-item">塞浦路斯</li>
+                                                <li class="ivu-select-item">捷克</li>
+                                                <li class="ivu-select-item">丹麦</li>
+                                                <li class="ivu-select-item">迭戈加西亚群岛</li>
+                                                <li class="ivu-select-item">吉布提</li>
+                                                <li class="ivu-select-item">多米尼加共和国</li>
+                                                <li class="ivu-select-item">东帝汶</li>
+                                                <li class="ivu-select-item">埃及</li>
+                                                <li class="ivu-select-item">萨尔瓦多</li>
+                                                <li class="ivu-select-item">迪拜酋长国</li>
+                                                <li class="ivu-select-item">赤道几内亚</li>
+                                                <li class="ivu-select-item">厄立特里亚</li>
+                                                <li class="ivu-select-item">爱沙尼亚</li>
+                                                <li class="ivu-select-item">埃塞俄比亚</li>
+                                                <li class="ivu-select-item">福克兰群岛</li>
+                                                <li class="ivu-select-item">法罗群岛</li>
+                                                <li class="ivu-select-item">斐济</li>
+                                                <li class="ivu-select-item">芬兰</li>
+                                                <li class="ivu-select-item">法国</li>
+                                                <li class="ivu-select-item">法属圭亚那</li>
+                                                <li class="ivu-select-item">法属玻利尼西亚</li>
+                                                <li class="ivu-select-item">加蓬</li>
+                                                <li class="ivu-select-item">冈比亚</li>
+                                                <li class="ivu-select-item">格鲁吉亚</li>
+                                                <li class="ivu-select-item">德国</li>
+                                                <li class="ivu-select-item">加纳</li>
+                                                <li class="ivu-select-item">直布罗陀</li>
+                                                <li class="ivu-select-item">希腊</li>
+                                                <li class="ivu-select-item">格陵兰岛</li>
+                                                <li class="ivu-select-item">格林纳达</li>
+                                                <li class="ivu-select-item">瓜德罗普</li>
+                                                <li class="ivu-select-item">关岛</li>
+                                                <li class="ivu-select-item">危地马拉</li>
+                                                <li class="ivu-select-item">几内亚比绍</li>
+                                                <li class="ivu-select-item">圭亚那</li>
+                                                <li class="ivu-select-item">海地</li>
+                                                <li class="ivu-select-item">洪都拉斯</li>
+                                                <li class="ivu-select-item">匈牙利</li>
+                                                <li class="ivu-select-item">冰岛</li>
+                                                <li class="ivu-select-item">爱尔兰</li>
+                                                <li class="ivu-select-item">以色列</li>
+                                                <li class="ivu-select-item">意大利</li>
+                                                <li class="ivu-select-item">牙买加</li>
+                                                <li class="ivu-select-item">约旦</li>
+                                                <li class="ivu-select-item">哈萨克斯坦</li>
+                                                <li class="ivu-select-item">肯尼亚</li>
+                                                <li class="ivu-select-item">基里巴斯</li>
+                                                <li class="ivu-select-item">科威特</li>
+                                                <li class="ivu-select-item">吉尔吉斯坦</li>
+                                                <li class="ivu-select-item">老挝</li>
+                                                <li class="ivu-select-item">拉脱维亚</li>
+                                                <li class="ivu-select-item">莱索托</li>
+                                                <li class="ivu-select-item">列支敦士登</li>
+                                                <li class="ivu-select-item">立陶宛</li>
+                                                <li class="ivu-select-item">卢森堡</li>
+                                                <li class="ivu-select-item">马其顿</li>
+                                                <li class="ivu-select-item">马达加斯加</li>
+                                                <li class="ivu-select-item">马拉维</li>
+                                                <li class="ivu-select-item">马来西亚</li>
+                                                <li class="ivu-select-item">马尔代夫</li>
+                                                <li class="ivu-select-item">马里</li>
+                                                <li class="ivu-select-item">马耳他</li>
+                                                <li class="ivu-select-item">马里亚那群岛</li>
+                                                <li class="ivu-select-item">马绍尔群岛</li>
+                                                <li class="ivu-select-item">马提尼克</li>
+                                                <li class="ivu-select-item">毛里塔尼亚</li>
+                                                <li class="ivu-select-item">毛里求斯</li>
+                                                <li class="ivu-select-item">墨西哥</li>
+                                                <li class="ivu-select-item">密克罗尼西亚</li>
+                                                <li class="ivu-select-item">摩尔多瓦</li>
+                                                <li class="ivu-select-item">摩纳哥</li>
+                                                <li class="ivu-select-item">蒙古</li>
+                                                <li class="ivu-select-item">黑山</li>
+                                                <li class="ivu-select-item">蒙特塞拉特岛</li>
+                                                <li class="ivu-select-item">摩洛哥</li>
+                                                <li class="ivu-select-item">莫桑比克</li>
+                                                <li class="ivu-select-item">纳米比亚</li>
+                                                <li class="ivu-select-item">瑙鲁</li>
+                                                <li class="ivu-select-item">尼泊尔</li>
+                                                <li class="ivu-select-item">荷属安的列斯</li>
+                                                <li class="ivu-select-item">荷兰</li>
+                                                <li class="ivu-select-item">新喀里多尼亚</li>
+                                                <li class="ivu-select-item">新西兰</li>
+                                                <li class="ivu-select-item">尼加拉瓜</li>
+                                                <li class="ivu-select-item">尼日尔</li>
+                                                <li class="ivu-select-item">纽埃岛</li>
+                                                <li class="ivu-select-item">挪威</li>
+                                                <li class="ivu-select-item">阿曼</li>
+                                                <li class="ivu-select-item">帕劳</li>
+                                                <li class="ivu-select-item">巴勒斯坦</li>
+                                                <li class="ivu-select-item">巴拿马</li>
+                                                <li class="ivu-select-item">巴布亚新几内亚</li>
+                                                <li class="ivu-select-item">巴拉圭</li>
+                                                <li class="ivu-select-item">秘鲁</li>
+                                                <li class="ivu-select-item">波兰</li>
+                                                <li class="ivu-select-item">葡萄牙</li>
+                                                <li class="ivu-select-item">波多黎各</li>
+                                                <li class="ivu-select-item">卡塔尔</li>
+                                                <li class="ivu-select-item">留尼旺</li>
+                                                <li class="ivu-select-item">罗马尼亚</li>
+                                                <li class="ivu-select-item">俄罗斯</li>
+                                                <li class="ivu-select-item">卢旺达</li>
+                                                <li class="ivu-select-item">圣卢西亚</li>
+                                                <li class="ivu-select-item">圣皮埃尔和密克隆群岛</li>
+                                                <li class="ivu-select-item">圣文森特岛</li>
+                                                <li class="ivu-select-item">东萨摩亚(美)</li>
+                                                <li class="ivu-select-item">西萨摩亚</li>
+                                                <li class="ivu-select-item">圣马力诺</li>
+                                                <li class="ivu-select-item">圣多美和普林西比</li>
+                                                <li class="ivu-select-item">沙特阿拉伯</li>
+                                                <li class="ivu-select-item">塞内加尔</li>
+                                                <li class="ivu-select-item">塞尔维亚</li>
+                                                <li class="ivu-select-item">塞舌尔</li>
+                                                <li class="ivu-select-item">塞拉利昂</li>
+                                                <li class="ivu-select-item">斯洛伐克</li>
+                                                <li class="ivu-select-item">斯洛文尼亚</li>
+                                                <li class="ivu-select-item">所罗门群岛</li>
+                                                <li class="ivu-select-item">南非</li>
+                                                <li class="ivu-select-item">西班牙</li>
+                                                <li class="ivu-select-item">斯里兰卡</li>
+                                                <li class="ivu-select-item">圣赫勒拿岛</li>
+                                                <li class="ivu-select-item">圣卢西亚</li>
+                                                <li class="ivu-select-item">圣文森特</li>
+                                                <li class="ivu-select-item">苏里南</li>
+                                                <li class="ivu-select-item">斯威士兰</li>
+                                                <li class="ivu-select-item">瑞典</li>
+                                                <li class="ivu-select-item">塔吉克斯坦</li>
+                                                <li class="ivu-select-item">坦桑尼亚</li>
+                                                <li class="ivu-select-item">泰国</li>
+                                                <li class="ivu-select-item">多哥</li>
+                                                <li class="ivu-select-item">托克劳群岛</li>
+                                                <li class="ivu-select-item">汤加</li>
+                                                <li class="ivu-select-item">特立尼达和多巴哥</li>
+                                                <li class="ivu-select-item">突尼斯</li>
+                                                <li class="ivu-select-item">土耳其</li>
+                                                <li class="ivu-select-item">土库曼斯坦</li>
+                                                <li class="ivu-select-item">图瓦卢</li>
+                                                <li class="ivu-select-item">乌干达</li>
+                                                <li class="ivu-select-item">乌克兰</li>
+                                                <li class="ivu-select-item">阿拉伯联合酋长国</li>
+                                                <li class="ivu-select-item">乌拉圭</li>
+                                                <li class="ivu-select-item">乌兹别克斯坦</li>
+                                                <li class="ivu-select-item">瓦努阿图</li>
+                                                <li class="ivu-select-item">梵蒂冈城</li>
+                                                <li class="ivu-select-item">委内瑞拉</li>
+                                                <li class="ivu-select-item">瓦利斯和富图纳</li>
+                                                <li class="ivu-select-item">南斯拉夫</li>
+                                                <li class="ivu-select-item">扎伊尔</li>
+                                                <li class="ivu-select-item">赞比亚</li>
+                                            </ul>
+                                            <ul class="ivu-select-loading" style="display: none;">加载中</ul>
+                                        </div>
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                            <div class="ivu-form-item"><label class="ivu-form-item-label">邮箱</label>
+                                <div class="ivu-form-item-content">
+                                    <div class="email-input ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                        <!---->
+                                        <!----> <i
+                                            class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="text" placeholder=""
+                                            class="ivu-input ivu-input-default">
+                                        <!---->
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                            <div class="code-input no-start">
+                                <div class="ivu-form-item ivu-form-item-required"><label
+                                        class="ivu-form-item-label">邮箱验证码</label>
+                                    <div class="ivu-form-item-content">
+                                        <div class="ivu-input-wrapper ivu-input-wrapper-default ivu-input-type"
+                                            data-type="text" data-max-integer="6">
+                                            <!---->
+                                            <!----> <i
+                                                class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                            <input autocomplete="off" spellcheck="false" type="text" placeholder=""
+                                                class="ivu-input ivu-input-default">
+                                            <!---->
+                                        </div>
+                                        <div class="send-btn disabled"><span
+                                                class="button-color font-gray disabled">发送验证码</span></div>
+                                        <!---->
+                                        <!---->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ivu-form-item"><label class="ivu-form-item-label">登录密码</label>
+                                <div class="ivu-form-item-content">
+                                    <div class="ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                        <!---->
+                                        <!----> <i
+                                            class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="password"
+                                            placeholder="8-20位数字和字母组合" maxlength="20"
+                                            class="ivu-input ivu-input-default">
+                                        <!---->
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                            <div class="ivu-form-item"><label class="ivu-form-item-label">确认密码</label>
+                                <div class="ivu-form-item-content">
+                                    <div class="ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                        <!---->
+                                        <!----> <i
+                                            class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="password"
+                                            placeholder="8-20位数字和字母组合" maxlength="20"
+                                            class="ivu-input ivu-input-default">
+                                        <!---->
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                            <div class="ivu-form-item"><label class="ivu-form-item-label">邀请码(选填)</label>
+                                <div class="ivu-form-item-content">
+                                    <div class="ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                        <!---->
+                                        <!----> <i
+                                            class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="text" placeholder=""
+                                            maxlength="20" class="ivu-input ivu-input-default">
+                                        <!---->
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                        </form>
+                        <div class="footer">
+                            <div class="check-wrapper"><label class="ivu-checkbox-wrapper ivu-checkbox-default"><span
+                                        class="ivu-checkbox"><span class="ivu-checkbox-inner"></span> <input
+                                            type="checkbox" class="ivu-checkbox-input"></span> <span>
+                                        我已阅读并同意
+                                        <a href="https://huobiglobal.zendesk.com/hc/zh-cn/articles/360000120722"
+                                            target="_blank" rel="noopener noreferrer"
+                                            class="font-blue">《用户协议》</a></span></label></div>
+                            <div class="btn-wrapper"><a href="javascript:void(0)"
+                                    class="reg-btn flex-center btn btn_submit">确定注册</a>
+                                <p class="font12">已有账号？
+                                    <a href="/zh-cn/login/" class="font-blue" rel="noopener noreferrer">点击登录</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                </div>
+            </div>
+            <div class="com-footer-space">
+                <footer data-locale="zh-cn" data-mobile="true" class="fedui-root fedui-footer" ssr="true">
+                    <div class="fedui-footer-inner">
+                        <div class="fedui-footer-left">
+                            <div class="fedui-footer-logo"><img width="84" height="23"
+                                    src="data:image/png;base64,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"
+                                    alt="Eth Global"></div>
+                            <div class="fedui-footer-copyright">
+                                © 2013-2020 Huobi
+                            </div>
+                            <div class="fedui-footer-link"><a rel="noopener noreferrer nofollow" target="_blank"
+                                    href="https://www.facebook.com/huobiglobalofficial"><i
+                                        class="fedui-icon-facebook"></i></a><a rel="noopener noreferrer nofollow"
+                                    target="_blank" href="https://twitter.com/HuobiGlobal"><i
+                                        class="fedui-icon-twitter"></i></a><a rel="noopener noreferrer nofollow"
+                                    target="_blank" href="https://www.youtube.com/HuobiGlobal"><i
+                                        class="fedui-icon-youtube"></i></a><a rel="noopener noreferrer nofollow"
+                                    target="_blank" href="https://www.huobichat.com/globalGroup"><i
+                                        class="fedui-icon-chat"></i></a><a rel="noopener noreferrer nofollow"
+                                    target="_blank" href="https://medium.com/@huobiglobal"><i
+                                        class="fedui-icon-medium"></i></a><a rel="noopener noreferrer nofollow"
+                                    target="_blank" href="https://www.instagram.com/huobiglobalofficial/"><i
+                                        class="fedui-icon-instagram"></i></a><a rel="noopener noreferrer nofollow"
+                                    target="_blank" href="https://weibo.com/huobicom"><i
+                                        class="fedui-icon-weibo"></i></a><a rel="noopener noreferrer nofollow"
+                                    target="_blank" href="https://coinmarketcap.com/zh/exchanges/huobi-global/"><i
+                                        class="fedui-icon-coinmarketcap"></i></a><a rel="noopener noreferrer nofollow"
+                                    target="_blank" href="https://www.coingecko.com/zh/exchanges/huobi/"><i
+                                        class="fedui-icon-clingecko"></i></a></div>
+                        </div>
+                        <div class="fedui-footer-right">
+                            <dl>
+                                <dt>工具</dt>
+                                <dd><a target="_blank" href="//www.huobi.me/zh-cn/download/#exchange">客户端下载</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiapi.github.io/docs/spot/v1/cn/#5ea2e0cde2">API文档</a><a
+                                        target="_blank" href="//www.huobi.me/zh-cn/assetintro/">数字资产介绍</a><a
+                                        target="_blank" href="//www.huobi.me/zh-cn/verification/">官方验证通道</a>
+                                    <!---->
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>服务</dt>
+                                <dd>
+                                    <!----><a target="_blank" href="//www.huobi.me/zh-cn/fee/">费率</a><a target="_blank"
+                                        href="//www.huobi.me/zh-cn/ladder-lending/cross-margin/">借币额度</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/">帮助中心</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/categories/115000389432-%E6%96%B0%E6%89%8B%E5%B8%AE%E5%8A%A9/">新手指南</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/sections/360000063661">合约课堂</a><a
+                                        target="_blank" href="https://www.huobitoken.com/zh-cn/">HT介绍</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>支持</dt>
+                                <dd><a target="_blank" href="//www.huobi.me/zh-cn/application-center/">上币申请</a><a
+                                        href="//institution.huobi.me/zh-cn/" class="" target="_blank">机构服务</a><a
+                                        target="_blank" href="//www.huobi.me/zh-cn/topic/vip/">大客户权益</a><a
+                                        href="/zh-cn/business/" class="" rel="nofollow" target="_blank">法币广告权限申请</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://www.huobigroup.com/zh-cn/">火币集团</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>条款说明</dt>
+                                <dd><a rel="noopener noreferrer nofollow" target="_blank"
+                                        href="//www.huobi.me/zh-cn/agreement/">用户协议</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/articles/360000298601-%E9%9A%90%E7%A7%81%E6%9D%A1%E6%AC%BE">隐私条款</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/articles/360000298621-%E6%B3%95%E5%BE%8B%E5%A3%B0%E6%98%8E">法律声明</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/articles/360000672702">执法和监管查询</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/articles/360000301401-%E6%B3%95%E5%B8%81%E4%BA%A4%E6%98%93%E8%A7%84%E5%88%99">法币交易规则</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="fedui-footer-locales-center">
+                        <div data-mobile="true" class="fedui-footer-locales">
+                            <div class="fedui-footer-locales-text"><i class="fedui-icon-locale"></i><span>简体中文</span><i
+                                    class="fedui-icon-xiajiantou"></i></div>
+                            <div class="fedui-footer-locales-down">
+                                <span>简体中文</span><span>繁體中文</span><span>English</span><span>Tiếng
+                                    Việt</span><span>Русский</span><span>Türkçe</span><span>Português-BR</span></div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+    </div>
+</body>
+
+</html>

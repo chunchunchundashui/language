@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>火币OTC|Eth Global法币交易区</title>
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/iconfont.css">
+    <link rel="stylesheet" href="../static/css/conmentAdd.css">
+</head>
+
+<body>
+    <div id="app" class="">
+        <div class="left flex-y" style="padding-top: 48px;">
+            <div class="left-header-box headerBackgroundColor">
+                <div>
+                    <header data-mobile="true" data-locale="zh-cn" class="fedui-root fedui-header">
+                        <div class="fedui-header-vip-greeting">
+                            <!---->
+                        </div>
+                        <div class="fedui-header-m">
+                            <div class="fedui-header-m-head" data-dropdowns="">
+                                <div class="fedui-header-m-head-left">
+                                    <i class="fedui-header-m-head-icon"></i>
+                                </div>
+                                <div href="//www.huobi.me/zh-cn/" class="fedui-header-m-head-logo">
+                                    <img width="18" height="26"
+                                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMThweCIgaGVpZ2h0PSIyNnB4IiB2aWV3Qm94PSIwIDAgMTggMjYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUzLjIgKDcyNjQzKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT7nvJbnu4QgNOWkjeWItiAyPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IuS4u+WvvOiIqiIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9Ik9UQy1INSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQxMC4wMDAwMDAsIC00MTUuMDAwMDAwKSIgZmlsbC1ydWxlPSJub256ZXJvIj4KICAgICAgICAgICAgPGcgaWQ9Iue8lue7hC01IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMzEuMDAwMDAwLCA0MDMuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0i57yW57uELTTlpI3liLYtMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTc5LjAwMDAwMCwgMTIuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgPGcgaWQ9Iue8lue7hC0yIj4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTExLjIyMzEwOTMsNy45NTA2ODA5MyBDMTEuMjIzMTA5Myw0LjI0MTQ4MDk0IDkuMzkwMTYzNjMsMS4wNTE2ODA5NCA3Ljk5NTg3NTEzLDAuMDEzMDgwOTQzMSBDNy45OTAxOTQxMywwLjAwOTY4MDk0MzExIDcuODg5MTUyODMsLTAuMDQ2MTE5MDU3IDcuODk3Njc0MzgsMC4xMDIwODA5NDMgQzcuODk3ODc3MywwLjEwNDA4MDk0MyA3Ljg5NjA1MTIzLDAuMTA0NjgwOTQzIDcuODk2MDUxMjMsMC4xMDY0ODA5NDMgQzcuNzc5OTk1NzgsNy4yNjgyODA5NCA0LjA2ODQ1MzM3LDkuMjA5MjgwOTUgMi4wMjc5NDcwNSwxMS44MjQwODA5IEMtMi42ODEwMjI5NCwxNy44NTgwODA5IDEuNjk4NDQ2OTcsMjQuNDczNjgwOSA2LjE1Nzg1NzE3LDI1LjY5NjI4MSBDOC42NTMyNTIxNywyNi4zODA0ODA5IDUuNTgxNjM3ODQsMjQuNDg1NjgwOSA1LjE4NTk5NDI3LDIwLjQ4Mzg4MSBDNC43MDc3NzI3OCwxNS42NDY4ODEgMTEuMjIzMTA5MywxMS45NTQ4ODEgMTEuMjIzMTA5Myw3Ljk1MDY4MDkzIiBpZD0iRmlsbC0zIiBmaWxsPSIjRDdFMkYyIj48L3BhdGg+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMy42Njk2NDczLDEwLjM4ODg2MSBDMTMuNjM5MjEzMiwxMC4zNjk2NjEgMTMuNTk1OTk2OCwxMC4zNTY0NjA5IDEzLjU2NTk2ODQsMTAuNDAyMjYwOSBDMTMuNDgzOTk5MiwxMS4zMDQwNjEgMTIuNDg2OTc3NCwxMy4yMzIyNjEgMTEuMjIzMTQ5OCwxNS4wMDMwNjA5IEM2LjkzNjgwODM1LDIxLjAwOTY2MDkgOS4zNzk0NTA4MywyMy45MDQ4NjA5IDEwLjc1MzA0NDEsMjUuNDYwMDYxIEMxMS41NTA0MTgxLDI2LjM2Mjg2MDkgMTAuNzUzMDQ0MSwyNS40NjAwNjEgMTIuNzQ2Mjc2MSwyNC41Mzc0NjEgQzEyLjkwMjcwNzUsMjQuNDY1MjYxIDE2LjYzNTc1NjcsMjIuNTMxNDYwOSAxNy4wNDAxMjQ3LDE4LjEyNTY2MDkgQzE3LjQzMTUwNzUsMTMuODU5NDYwOSAxNC42NTcxMzMxLDExLjE3MDI2MDkgMTMuNjY5NjQ3MywxMC4zODg4NjEiIGlkPSJGaWxsLTUiIGZpbGw9IiMzQzdBRDIiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg=="
+                                        alt="火币合约">
+                                </div>
+                                <div class="fedui-header-m-head-info fedui-theme-text">
+                                    <i class="fedui-icon-info"></i>
+                                </div>
+                            </div>
+                            <nav class="fedui-header-m-nav">
+                                <div class="fedui-header-m-menu">
+                                    <!---->
+                                    <!---->
+                                    <a href="//www.huobi.me/zh-cn/markets/"
+                                        class="fedui-theme-text fedui-nav-markets">行情</a>
+                                    <a rel="nofollow" href="/zh-cn/" class="fedui-theme-text fedui-nav-otc">买币</a>
+                                    <a href="//www.huobi.me/zh-cn/exchange/"
+                                        class="fedui-theme-text fedui-nav-exchange">币币交易</a>
+                                    <a target="_blank" href="//www.huobi.me/zh-cn/guide/"
+                                        class="fedui-theme-text fedui-nav-guide">成长学院</a>
+                                </div>
+                            </nav>
+                            <nav class="fedui-header-m-nav fedui-header-m-nologin"><a href="/zh-cn/login/">登录</a>
+                                <a href="/zh-cn/register/" class="fedui-header-m-nologin-register">注册</a>
+                            </nav>
+                            <nav class="fedui-header-m-nav fedui-header-m-user">
+                                <div class="fedui-header-m-vip-bd" data-level="0">
+                                    <div class="fedui-header-m-vip" data-level="0">
+                                        <p class="fedui-header-m-vip-name fedui-line-1">Hi，兰枭 </p>
+                                        <div class="fedui-flex-space-between">
+                                            <p class="fedui-header-m-vip-uid fedui-line-1">UID:149732642</p>
+                                            <a target="_blank" href="//www.huobi.me/zh-cn/topic/vip/">了解VIP</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fedui-header-m-menu">
+                                    <dl>
+                                        <dt>资产</dt>
+                                        <dd><a href="//www.huobi.me/zh-cn/finance/">币币账户（充币&amp;提币）</a>
+                                            <!----><a href="//www.huobi.me/zh-cn/finance/cross-margin/">杠杆账户</a><a
+                                                href="/zh-cn/user-center/balances/">法币账户</a><a
+                                                href="//futures.huobi.me/zh-cn/contract/assets/">合约账户</a><a
+                                                href="https://www.hpt.com/usercenter/?lang=cn" rel="noopener noreferrer"
+                                                data-type="pow" target="_blank">矿池账户</a><a
+                                                href="//www.huobi.me/zh-cn/finance/hb10/">HB10</a><a
+                                                href="//www.huobi.me/zh-cn/ht/points/my_points/">我的点卡</a>
+                                            <!---->
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>订单</dt>
+                                        <dd><a href="//www.huobi.me/zh-cn/transac/">币币&amp;杠杆订单</a><a
+                                                href="/zh-cn/user-center/orders/">法币订单</a><a
+                                                href="//futures.huobi.me/zh-cn/contract/orders/">合约订单</a>
+                                            <!---->
+                                        </dd>
+                                    </dl><a href="//account.huobi.me/zh-cn/user-center/security/">账户&amp;安全</a><a
+                                        href="//www.huobi.me/zh-cn/user_auth/">身份认证</a><a
+                                        href="/zh-cn/user-center/">法币设置</a><a href="//www.huobi.me/zh-cn/fee/"
+                                        class="fedui-header-m-info-fee"><span>费率设置</span><em>专业费率重磅升级</em></a><a
+                                        href="//www.huobi.me/zh-cn/invite/"><span>我的奖励</span></a><a
+                                        href="//www.huobi.me/zh-cn/apikey/">API管理</a><a
+                                        href="//account.huobi.me/zh-cn/subaccount/management/">子账号</a><a href="#"
+                                        class="fedui-header-m-menu-logout">退出</a>
+                                </div>
+                            </nav>
+                        </div>
+                        <!---->
+                    </header>
+                    <!---->
+                    <div class="empty-header-box" style="display:none;"></div>
+                </div>
+            </div>
+            <div class="flex-auto">
+                <div class="l-trade">
+                    <div class="flex auto-center">
+                        <div>
+                            <section class="l-trade-detail">
+                                <div class="flex-between-center l-trade-title c-padding24">
+                                    <div class="flex-y-center"><i class="iconfont icon-coin-2"></i><span
+                                            class="font16 text-space font-bold">购买USDT</span>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </div>
+                                    <div class="font-gray flex-y-center font12 l-14 font-normal"><span>订单编号：</span>
+                                        <div class="ivu-tooltip">
+                                            <div class="ivu-tooltip-rel"><span class="btnCopy"
+                                                    data-clipboard-text="731090892658016256">731090892658016256</span>
+                                            </div>
+                                            <div class="ivu-tooltip-popper ivu-tooltip-dark"
+                                                style="display: none; position: absolute; will-change: top, left; top: 5px; left: 0px;"
+                                                x-placement="bottom" x-out-of-boundaries="">
+                                                <div class="ivu-tooltip-content">
+                                                    <div class="ivu-tooltip-arrow"></div>
+                                                    <div class="ivu-tooltip-inner">点击复制</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pay-code"><span>付款参考号：</span>
+                                            <div class="ivu-tooltip">
+                                                <div class="ivu-tooltip-rel"><span data-clipboard-text="797271"
+                                                        class="btnCopy">797271</span></div>
+                                                <div class="ivu-tooltip-popper ivu-tooltip-dark"
+                                                    style="display: none; position: absolute; will-change: top, left; top: 5px; left: 0px;"
+                                                    x-placement="bottom" x-out-of-boundaries="">
+                                                    <div class="ivu-tooltip-content">
+                                                        <div class="ivu-tooltip-arrow"></div>
+                                                        <div class="ivu-tooltip-inner">点击复制</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="l-trade-coin font-gray flex">
+                                    <div class="coin-item">
+                                        <p class="font12 l-22 font-normal">总价</p>
+                                        <div class="ivu-tooltip">
+                                            <div class="ivu-tooltip-rel"><span
+                                                    class="font-green font16 font-bold-en btnCopy main-price"
+                                                    data-clipboard-text="48000">48,000 CNY</span></div>
+                                            <div class="ivu-tooltip-popper ivu-tooltip-dark"
+                                                style="display: none; position: absolute; will-change: top, left; top: 5px; left: 0px;"
+                                                x-placement="bottom" x-out-of-boundaries="">
+                                                <div class="ivu-tooltip-content">
+                                                    <div class="ivu-tooltip-arrow"></div>
+                                                    <div class="ivu-tooltip-inner">点击复制</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!---->
+                                    </div>
+                                    <div class="coin-item">
+                                        <div class="font12 l-22 font-normal">数量<span style="display: none;">
+                                                (已过期)</span></div>
+                                        <div class="ivu-tooltip">
+                                            <div class="ivu-tooltip-rel"><span
+                                                    class="font-base font16 font-bold-en btnCopy"
+                                                    data-clipboard-text="6876.79083">6876.79083 USDT</span></div>
+                                            <div class="ivu-tooltip-popper ivu-tooltip-dark"
+                                                style="display: none; position: absolute; will-change: top, left; top: 5px; left: 0px;"
+                                                x-placement="bottom" x-out-of-boundaries="">
+                                                <div class="ivu-tooltip-content">
+                                                    <div class="ivu-tooltip-arrow"></div>
+                                                    <div class="ivu-tooltip-inner">点击复制</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="coin-item">
+                                        <div class="font12 l-22 font-normal">单价<span style="display: none;">
+                                                (已过期)</span></div>
+                                        <div class="ivu-tooltip">
+                                            <div class="ivu-tooltip-rel"><span
+                                                    class="font-base font16 font-bold-en btnCopy"
+                                                    data-clipboard-text="6.98">6.98 CNY</span></div>
+                                            <div class="ivu-tooltip-popper ivu-tooltip-dark"
+                                                style="display: none; position: absolute; will-change: top, left; top: 5px; left: 0px;"
+                                                x-placement="bottom" x-out-of-boundaries="">
+                                                <div class="ivu-tooltip-content">
+                                                    <div class="ivu-tooltip-arrow"></div>
+                                                    <div class="ivu-tooltip-inner">点击复制</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!---->
+                                </div>
+                                <div class="mobile-trade-info">
+                                    <div class="mobile-nav flex-center"><a href="/zh-cn/user-center/orders/"
+                                            class="close-href"><i class="ivu-icon ivu-icon-md-close"
+                                                style="font-size: 24px;"></i></a><span
+                                            class="font18 font-black font-bold">订单详情</span></div>
+                                    <div class="m-trade-detail">
+                                        <div class="flex-y-center m-bottom"><i
+                                                class="iconfont coin-size icon-coin-2"></i><span
+                                                class="font16 font-black font-bold">购买 USDT</span></div>
+                                        <!---->
+                                        <!---->
+                                        <div class="font-gray">
+                                            <div class="flex-between m-info-in l-14"><span>总价</span>
+                                                <div class="text-right"><span class="font-bold-en main-price">48,000
+                                                        CNY</span>
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                            <div class="flex-between-center m-info-in l-14"><span>数量<span
+                                                        style="display: none;">(已过期)</span></span><span
+                                                    class="font-bold-en font-base">6876.79083 USDT</span></div>
+                                            <div class="flex-between-center m-info-in l-14"><span>单价<span
+                                                        style="display: none;">(已过期)</span></span><span
+                                                    class="font-bold-en font-base">6.98 CNY</span></div>
+                                            <div>
+                                                <div class="font-gray mobile-dropdown-container">
+                                                    <!---->
+                                                    <div class="flex-between-center m-info-in l-14">
+                                                        <span>订单编号</span><span
+                                                            class="font-bold-en font-base">731090892658016256</span>
+                                                    </div>
+                                                    <div class="flex-between-center m-info-in l-14">
+                                                        <span>付款参考号</span><span
+                                                            class="font-bold-en font-base">797271</span></div>
+                                                </div>
+                                                <div class="flex-center">
+                                                    <div class="flex-y-center"><span class="m-indent">全部</span><i
+                                                            class="ivu-icon iconfont icon-down"
+                                                            style="font-size: 16px;"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="l-trade-payment c-padding24">
+                                    <div class="flex-between-center mobile-top">
+                                        <span class="payment-title font-gray font12 l-18 font-normal">卖家收款方式</span>
+                                        <span class="border-line"></span>
+                                        <div class="font-blue m-contact font-normal">
+                                            <i class="icon-tel ivu-icon iconfont icon-ios-cell"></i>联系卖家</div>
+                                    </div>
+                                    <div class="payment-flag flex-y-center">
+                                        <i class="icon-warn ivu-icon ivu-icon-md-alert" style="font-size: 16px;"></i>
+                                        <span class="font12 font-normal">请务必使用本人（*枭）的支付方式向以下账号自行转账。</span>
+                                    </div>
+                                    <div>
+                                        <div class="payment-item font14">
+                                            <div class="pc-payment-col">
+                                                <div class="flex-y-center img-box"><img alt=""
+                                                        src="https://file.eiijo.cn/common/images/pay-icon/alipay-cn.svg"
+                                                        class="iconfont pay-iconfont"></div>
+                                                <div class="flex payment-border font-black font-normal no-border">
+                                                    <div class="name">
+                                                        <div class="flex spe-align ivu-tooltip">
+                                                            <div class="ivu-tooltip-rel">
+                                                                <div data-clipboard-text="小窗口咨询支付宝账号"
+                                                                    class="btnCopy font-bold-cn name-span">小窗口咨询支付宝账号
+                                                                </div>
+                                                            </div>
+                                                            <div class="ivu-tooltip-popper ivu-tooltip-dark"
+                                                                style="display: none; position: absolute; will-change: top, left; top: 5px; left: 0px;"
+                                                                x-placement="bottom" x-out-of-boundaries="">
+                                                                <div class="ivu-tooltip-content">
+                                                                    <div class="ivu-tooltip-arrow"></div>
+                                                                    <div class="ivu-tooltip-inner">点击复制</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="payment-info flex-between-center">
+                                                        <div class="frist-span other-span">
+                                                            <div class="ivu-tooltip">
+                                                                <div class="ivu-tooltip-rel"><span
+                                                                        data-clipboard-text="小窗口咨询支付宝账号"
+                                                                        class="btnCopy font-bold-cn">小窗口咨询支付宝账号</span>
+                                                                </div>
+                                                                <div class="ivu-tooltip-popper ivu-tooltip-dark"
+                                                                    style="display: none; position: absolute; will-change: top, left; top: 5px; left: 0px;"
+                                                                    x-placement="bottom" x-out-of-boundaries="">
+                                                                    <div class="ivu-tooltip-content">
+                                                                        <div class="ivu-tooltip-arrow"></div>
+                                                                        <div class="ivu-tooltip-inner">点击复制</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ivu-tooltip">
+                                                                <div class="ivu-tooltip-rel"></div>
+                                                                <div class="ivu-tooltip-popper ivu-tooltip-dark"
+                                                                    style="display: none; position: absolute; will-change: top, left; top: 5px; left: 0px;"
+                                                                    x-placement="bottom" x-out-of-boundaries="">
+                                                                    <div class="ivu-tooltip-content">
+                                                                        <div class="ivu-tooltip-arrow"></div>
+                                                                        <div class="ivu-tooltip-inner">点击复制</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ivu-tooltip">
+                                                                <div class="ivu-tooltip-rel"></div>
+                                                                <div class="ivu-tooltip-popper ivu-tooltip-dark"
+                                                                    style="display: none; position: absolute; will-change: top, left; top: 5px; left: 0px;"
+                                                                    x-placement="bottom" x-out-of-boundaries="">
+                                                                    <div class="ivu-tooltip-content">
+                                                                        <div class="ivu-tooltip-arrow"></div>
+                                                                        <div class="ivu-tooltip-inner">点击复制</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!---->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mobile-payment-col flex"><img alt=""
+                                                    src="https://file.eiijo.cn/common/images/pay-icon/alipay-cn.svg"
+                                                    class="iconfont img-icon pay-iconfont">
+                                                <div class="right-content font-normal no-border">
+                                                    <div class="m-name">
+                                                        <div class="spe-align ivu-tooltip">
+                                                            <div class="ivu-tooltip-rel"><span
+                                                                    data-clipboard-text="小窗口咨询支付宝账号"
+                                                                    class="btnCopy name-span mobile-bank-name l-22">小窗口咨询支付宝账号</span>
+                                                            </div>
+                                                            <div class="ivu-tooltip-popper ivu-tooltip-dark"
+                                                                style="display: none; position: absolute; will-change: top, left; top: 523px; left: 124px;"
+                                                                x-placement="bottom">
+                                                                <div class="ivu-tooltip-content">
+                                                                    <div class="ivu-tooltip-arrow"></div>
+                                                                    <div class="ivu-tooltip-inner">点击复制</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="m-pay-info">
+                                                        <div class="ivu-tooltip">
+                                                            <div class="ivu-tooltip-rel"><span
+                                                                    data-clipboard-text="小窗口咨询支付宝账号"
+                                                                    class="btnCopy bank-num l-22">小窗口咨询支付宝账号</span>
+                                                            </div>
+                                                            <div class="ivu-tooltip-popper ivu-tooltip-dark"
+                                                                style="display: none; position: absolute; will-change: top, left; top: 479px; left: 242px;"
+                                                                x-placement="bottom">
+                                                                <div class="ivu-tooltip-content">
+                                                                    <div class="ivu-tooltip-arrow"></div>
+                                                                    <div class="ivu-tooltip-inner">点击复制</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!---->
+                                                        <!---->
+                                                        <!---->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!---->
+                                </div>
+                                <div class="font12 l-trade-legal flex-y-center mobile-legal">
+                                    <div class="m-inline"><label
+                                            class="legal-checkbox flex-y-center ivu-checkbox-wrapper ivu-checkbox-default"><span
+                                                class="ivu-checkbox"><span class="ivu-checkbox-inner"></span> <input
+                                                    type="checkbox" class="ivu-checkbox-input"></span> <span
+                                                class="tips-pop font-normal">法律服务 0.1HT,</span></label></div>
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <div class="m-inline">
+                                        <div class="law-server flex-y-center ivu-poptip">
+                                            <div class="ivu-poptip-rel"><span
+                                                    class="font-blue flex-y-center cursor font-normal"><i
+                                                        class="iconfont icon-question-mark icon-flag-in flex-center"></i><a
+                                                        rel="noopener noreferrer" target="_blank"
+                                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/articles/360000114641"
+                                                        class="font-blue font-normal">服务协议</a></span></div>
+                                            <div class="ivu-poptip-popper"
+                                                style="width: 312px; display: none; position: absolute; will-change: top, left; top: 591px; left: 170px;"
+                                                x-placement="bottom">
+                                                <div class="ivu-poptip-content">
+                                                    <div class="ivu-poptip-arrow"></div>
+                                                    <!---->
+                                                    <div class="ivu-poptip-inner">
+                                                        <!---->
+                                                        <div class="ivu-poptip-body">
+                                                            <div class="ivu-poptip-body-content">
+                                                                <div class="server-tips font12">
+                                                                    <span>法律服务：如这笔订单完成后7天内出现以下纠纷，将由经验丰富的第三方团队提供在线法律服务。</span>
+                                                                    <h6>• 卖方未收到全部款项，却已放行</h6>
+                                                                    <h6>• 买方多打钱或者转错钱</h6>
+                                                                    <h6>• 银行卡被银行或司法机关冻结</h6>
+                                                                    <p class="font-gray">
+                                                                        如果涉及到法律文书、线下沟通、提起诉讼等，我们将协助您对接当地合作律所，提供服务</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><span class="font-normal">（可用等值其他资产支付）</span>
+                                        <!---->
+                                    </div>
+                                </div>
+                                <div class="l-trade-status">
+                                    <div class="flex-between m-status-change pc-state-change">
+                                        <div>
+                                            <div class="flex-y-center font16 l-height16 font-bold m-flex-0">
+                                                <div class="timer-countdown font-bold m-status-0">
+                                                    <div class="flex-center"><span class="text-center">13</span>:<span
+                                                            class="text-center">22</span></div>
+                                                </div><span>待转账，请向对方转账</span>
+                                                <div class="timer-countdown flex-center font-bold pc-timer-down"><span
+                                                        class="text-center">13</span>:<span
+                                                        class="text-center">22</span></div>
+                                                <!---->
+                                            </div>
+                                            <div class="font-green price-show m-price-show">
+                                                <div class="ivu-tooltip" style="margin-left: -2px;">
+                                                    <div class="ivu-tooltip-rel"><span data-clipboard-text="48000"
+                                                            class="font24 l-height24 font-bold-en btnCopy">48,000</span>
+                                                    </div>
+                                                    <div class="ivu-tooltip-popper ivu-tooltip-dark"
+                                                        style="display: none; position: absolute; will-change: top, left; top: 700px; left: 62px;"
+                                                        x-placement="top">
+                                                        <div class="ivu-tooltip-content">
+                                                            <div class="ivu-tooltip-arrow"></div>
+                                                            <div class="ivu-tooltip-inner">点击复制</div>
+                                                        </div>
+                                                    </div>
+                                                </div><span class="font12 price-space font-bold-en">CNY</span><span
+                                                    class="font12 font-gray amount-text l-12">肆万捌仟元整</span>
+                                            </div>
+                                            <!---->
+                                        </div>
+                                        <div class="right-btn-box column-align">
+                                            <div class="otc-btn-sytle fill"><button
+                                                    class="btn font12 cursor bigger default default-bg"><span
+                                                        class="icon-space"></span>我已完成转账，下一步
+                                                    <!----></button></div>
+                                            <!---->
+                                            <div class="text-right"><span
+                                                    class="font12 font-blue cursor spe-hover font-normal">联系客服</span><span
+                                                    class="font12 font-blue cursor spe-hover font-normal appeal-text">取消订单</span>
+                                                <!---->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </div>
+                            </section>
+                            <section
+                                class="remark orders-detail-remark-inner order-detail-remark font12 font-gray font-normal">
+                                <div>
+                                    <div>
+                                        <div class="remark-container flex">
+                                            <div>
+                                                <p>给卖方付款安全吗？</p>
+                                                <p>广告方在发布广告前已通过高级认证，并冻结一部分数字资产作为保证资产，您可放心交易。</p>
+                                            </div>
+                                        </div>
+                                        <div class="remark-container flex">
+                                            <div>
+                                                <p>法币交易会自动扣款吗？</p>
+                                                <p>法币交易不会自动扣款，您需要按照卖方（在此笔订单提供）的支付方式，通过网银、支付宝等自行转账给卖方，转账时，请务必认真核对卖方提供的收款方式。
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="remark-container flex">
+                                            <div>
+                                                <p>转款注意事项</p>
+                                                <p>请勿在转账时使用“比特币”、“BTC”、“USDT”等与虚拟货币相关的词汇，以免您的银行卡遭受冻结</p>
+                                            </div>
+                                        </div>
+                                        <div class="remark-container flex">
+                                            <div>
+                                                <p>转款注意事项</p>
+                                                <p>若交易金额大于50,000
+                                                    CNY，法定假日或工作日17:00点以后汇款到银行卡可能造成到账不及时，请分批支付保证及时到账，若未及时到账，卖方有权拒绝成交。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </div>
+                                <!---->
+                            </section>
+                        </div>
+                        <div class="mobile-chat-container">
+                            <div class="chat-modal-in-container order-modal-inner">
+                                <div class="chat-title">
+                                    <div class="chat-title-inner flex-between-center">
+                                        <div class="baseInfo flex-y-center">
+                                            <div class="avatar-container cursor chat-top-avatar large one zh-cn"><em
+                                                    class="name">蓝</em>
+                                                <div class="online-icon">
+                                                    <p class="online-status"></p>
+                                                </div>
+                                                <div class="avatar-hot-container font12">
+                                                    <div>
+                                                        <div class="avatar-triangle"></div>
+                                                        <div class="avatar-hover-content font-black">用户在线</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chat-user">
+                                                <div class="flex-y-center">
+                                                    <div class="chat-relative"><a href="/zh-cn/trader/147772801"
+                                                            class="cursor font-base font-bold name-hover font16">蓝蓝天空白白云</a>
+                                                        <div class="free-price-hover font12">
+                                                            <div class="s-relative">
+                                                                <div class="s-triangle">
+
+                                                                </div>
+                                                                <div class="chat-text-item com-padding">
+                                                                    <p class="font-gray font-normal">广告方保证资产</p>
+                                                                    <p class="font-bold">5000HT</p>
+                                                                </div>
+                                                                <div class="chat-text-item com-padding">
+                                                                    <p class="font-gray font-normal">总成单</p>
+                                                                    <div>
+                                                                        <div class="font-bold">2551
+                                                                            (<span class="font-green">买</span>
+                                                                            723<span> | </span>
+                                                                            <span class="font-red">卖</span>1828)
+                                                                            次
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="chat-text-item com-padding">
+                                                                    <p class="font-gray font-normal">平均放行</p>
+                                                                    <p class="font-bold">2.03分钟</p>
+                                                                </div>
+                                                                <div class="chat-text-item com-padding">
+                                                                    <p class="font-gray font-normal">30日成单</p>
+                                                                    <p class="font-bold">2478次</p>
+                                                                </div>
+                                                                <div class="chat-text-item com-padding">
+                                                                    <p class="font-gray font-normal">30日完成率</p>
+                                                                    <p class="font-bold">97%</p>
+                                                                </div>
+                                                                <div class="bg-chat-info font-gray">
+                                                                    <div class="chat-text-item time-box">
+                                                                        <i class="iconfont font18 icon-shijian">
+                                                                        </i>
+                                                                        <div class="padding-left10">
+                                                                            <span class="font-normal">注册时间</span>
+                                                                            <p class="font-bold font-base">2020-06-13
+                                                                                15:33:08</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="chat-text-item time-box last-time-box">
+                                                                        <i class="iconfont font18 icon-shijian">
+
+                                                                        </i>
+                                                                        <div class="padding-left10"><span
+                                                                                class="font-normal">首次访问法币交易</span>
+                                                                            <p class="font-bold font-base">2020-06-13
+                                                                                15:33:09</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="icon-tips-hover ivu-tooltip">
+                                                        <div class="ivu-tooltip-rel"><i
+                                                                class="merchant-level merchant-level2" style=""></i>
+                                                        </div>
+                                                        <div class="ivu-tooltip-popper ivu-tooltip-dark"
+                                                            style="display: none; position: absolute; will-change: top, left; top: 27px; left: 208px;"
+                                                            x-placement="top">
+                                                            <div class="ivu-tooltip-content">
+                                                                <div class="ivu-tooltip-arrow"></div>
+                                                                <div class="ivu-tooltip-inner">加V用户</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="font12 flex-y-center realname"><span
+                                                        class="font-black font-normal">刘丹丹</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="virtual-space chat-relative">
+                                            <div class="tel cursor"><i class="vir-phone"></i></div>
+                                            <!---->
+                                        </div>
+                                        <!---->
+                                    </div>
+                                </div>
+                                <div class="chat-relative">
+                                    <div class="modal-content">
+                                        <div class="chat-box">
+                                            <article>
+                                                <div class="text-center sys-space chat-in-message font-blue cursor"
+                                                    style="display: none;"><span>更多消息</span><i
+                                                        class="font-blue avatar-msg-space ivu-icon ivu-icon-ios-add-circle-outline"
+                                                        style="font-size: 14px;"></i></div>
+                                                <div class="message-inner">
+                                                    <h5 class="text-center sys-space">2020-07-10</h5>
+                                                    <p class="font-gray message-y-space font12 word-break text-center">
+                                                        您已成功下单，请及时支付。 10:14:12</p>
+                                                </div>
+                                                <div class="message-inner">
+                                                    <!---->
+                                                    <div class="text-left flex message-y-space">
+                                                        <div class="avatar-container cursor one"><em class="name">蓝</em>
+                                                            <!---->
+                                                            <!---->
+                                                        </div>
+                                                        <div class="font12">
+                                                            <p class="chat-content-inner avatar-msg-space">支付宝 郭根娥
+                                                                gge6985@163.com</p>
+                                                            <p class="avatar-msg-space font-gray">10:14:19</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    <div class="new-message-flag text-center font12 cursor" style="display: none;">更多消息
+                                    </div>
+                                </div>
+                                <div class="footer-inner flex-between-center">
+                                    <textarea placeholder="输入信息,回车发送" autocomplete="off" type="text" resize="none"
+                                        class="input-message font12"></textarea>
+                                    <div class="input-send-btn">
+                                        <div class="send-photo cursor">
+                                            <div class="upload-file-box flex-center" style="width: 20px; height: 30px;">
+                                                <!---->
+                                                <div class="flex-center">
+                                                    < i class="cursor font-gray ivu-icon iconfont icon-upload-btn"
+                                                        style="font-size: 12px;"></i>
+                                                </div>
+                                            </div>
+                                            <!---->
+                                            <div id="html5_1ecr81jd11dgj3ms2gs17321gcd3_container"
+                                                class="moxie-shim moxie-shim-html5"
+                                                style="position: absolute; top: 0px; left: 5px; width: 20px; height: 30px; overflow: hidden;">
+                                                <input id="html5_1ecr81jd11dgj3ms2gs17321gcd3" type="file"
+                                                    style="font-size: 999px; opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"
+                                                    accept=""></div>
+                                        </div><span class="hot-area cursor" style="display: none;"><i
+                                                class="font-blue ivu-icon ivu-icon-md-send"
+                                                style="font-size: 16px;"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                    <!---->
+                </div>
+            </div>
+            <div class="com-footer-space">
+                <footer data-locale="zh-cn" data-mobile="true" class="fedui-root fedui-footer" ssr="true">
+                    <div class="fedui-footer-inner">
+                        <div class="fedui-footer-left">
+                            <div class="fedui-footer-logo"><img width="84" height="23"
+                                    src="data:image/png;base64,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"
+                                    alt="Eth Global"></div>
+                            <div class="fedui-footer-copyright">
+                                © 2013-2020 Huobi
+                            </div>
+                            <div class="fedui-footer-link">
+                                <a rel="noopener noreferrer nofollow" target="_blank"
+                                    href="https://www.facebook.com/huobiglobalofficial">
+                                    <i class="fedui-icon-facebook"></i>
+                                </a>
+                                <a rel="noopener noreferrer nofollow" target="_blank"
+                                    href="https://twitter.com/HuobiGlobal">
+                                    <i class="fedui-icon-twitter"></i>
+                                </a>
+                                <a rel="noopener noreferrer nofollow" target="_blank"
+                                    href="https://www.youtube.com/HuobiGlobal">
+                                    <i class="fedui-icon-youtube"></i>
+                                </a>
+                                <a rel="noopener noreferrer nofollow" target="_blank"
+                                    href="https://www.huobichat.com/globalGroup">
+                                    <i class="fedui-icon-chat">
+
+                                    </i></a><a rel="noopener noreferrer nofollow" target="_blank"
+                                    href="https://medium.com/@huobiglobal">
+                                    <i class="fedui-icon-medium">
+
+                                    </i></a><a rel="noopener noreferrer nofollow" target="_blank"
+                                    href="https://www.instagram.com/huobiglobalofficial/">
+                                    <i class="fedui-icon-instagram"></i>
+                                </a>
+                                <a rel="noopener noreferrer nofollow" target="_blank" href="https://weibo.com/huobicom">
+                                    <i class="fedui-icon-weibo"></i>
+                                </a>
+                                <a rel="noopener noreferrer nofollow" target="_blank"
+                                    href="https://coinmarketcap.com/zh/exchanges/huobi-global/">
+                                    <i class="fedui-icon-coinmarketcap"></i>
+                                </a>
+                                <a rel="noopener noreferrer nofollow" target="_blank"
+                                    href="https://www.coingecko.com/zh/exchanges/huobi/">
+                                    <i class="fedui-icon-clingecko">
+
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="fedui-footer-right">
+                            <dl>
+                                <dt>工具</dt>
+                                <dd>
+                                    <a target="_blank" href="//www.huobi.me/zh-cn/download/#exchange">客户端下载</a>
+                                    <a rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiapi.github.io/docs/spot/v1/cn/#5ea2e0cde2">API文档</a>
+                                    <a target="_blank" href="//www.huobi.me/zh-cn/assetintro/">数字资产介绍</a>
+                                    <a target="_blank" href="//www.huobi.me/zh-cn/verification/">官方验证通道</a>
+                                    <!---->
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>服务</dt>
+                                <dd>
+                                    <!---->
+                                    <a target="_blank" href="//www.huobi.me/zh-cn/fee/">费率</a>
+                                    <a target="_blank" href="//www.huobi.me/zh-cn/ladder-lending/cross-margin/">借币额度</a>
+                                    <a rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/">帮助中心</a>
+                                    <a rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/categories/115000389432-%E6%96%B0%E6%89%8B%E5%B8%AE%E5%8A%A9/">新手指南</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/sections/360000063661">合约课堂</a><a
+                                        target="_blank" href="https://www.huobitoken.com/zh-cn/">HT介绍</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>支持</dt>
+                                <dd><a target="_blank" href="//www.huobi.me/zh-cn/application-center/">上币申请</a><a
+                                        href="//institution.huobi.me/zh-cn/" class="" target="_blank">机构服务</a><a
+                                        target="_blank" href="//www.huobi.me/zh-cn/topic/vip/">大客户权益</a><a
+                                        href="/zh-cn/business/" class="" rel="nofollow" target="_blank">法币广告权限申请</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://www.huobigroup.com/zh-cn/">火币集团</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>条款说明</dt>
+                                <dd><a rel="noopener noreferrer nofollow" target="_blank"
+                                        href="//www.huobi.me/zh-cn/agreement/">用户协议</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/articles/360000298601-%E9%9A%90%E7%A7%81%E6%9D%A1%E6%AC%BE">隐私条款</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/articles/360000298621-%E6%B3%95%E5%BE%8B%E5%A3%B0%E6%98%8E">法律声明</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/articles/360000672702">执法和监管查询</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/articles/360000301401-%E6%B3%95%E5%B8%81%E4%BA%A4%E6%98%93%E8%A7%84%E5%88%99">法币交易规则</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="fedui-footer-locales-center">
+                        <div data-mobile="true" class="fedui-footer-locales">
+                            <div class="fedui-footer-locales-text"><i class="fedui-icon-locale">
+
+                                </i><span>简体中文</span><i class="fedui-icon-xiajiantou"></i></div>
+                            <div class="fedui-footer-locales-down">
+                                <span>简体中文</span>
+                                <span>繁體中文</span><span>English</span><span>Tiếng
+                                    Việt</span><span>Русский</span><span>Türkçe</span><span>Português-BR</span>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+    </div>
+</body>
+
+</html>

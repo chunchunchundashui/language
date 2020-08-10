@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资产-Eth Global</title>
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.1/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/css/finance.css">
+    <link rel="stylesheet" href="../static/css/comment.css">
+    <link rel="stylesheet" href="../static/css/iconfont.css">
+    <script src="../static/js/auto-size.js"></script>
+</head>
+
+<body>
+    <header>
+        <img alt="ETH Global" src="/static/images/logo.png">
+    </header>
+    <main>
+        <section class="finance-tabs">
+            <button class="tab-exchange active">
+                <span>币币账户</span>
+            </button>
+            <button class="tab-otc">
+                <span>法币账户</span>
+            </button>
+            <!-- <button class="tab-margin">
+                <span>杠杆账户</span>
+            </button> -->
+        </section>
+        <section class="finance-card exchange">
+            <dl>
+                <dt>
+                    <h2>币币账户</h2>
+                    <!---->
+                    <!---->
+                    <em>总资产折合(USDT)</em>
+                </dt>
+                <em></em>
+                <dd>0.00000000 <em>≈¥0.00</em>
+                </dd>
+                <dd class="otc-ht" style="display: none;">
+                    <i class="mobile_icon_shield"></i>保证金 0 HT</dd>
+            </dl>
+            <!-- <button id="isShow">
+                <i class="mobile_icon_public"></i>
+            </button> -->
+        </section>
+        <section class="finance-list">
+        </section>
+        <div class="nav">
+            <a href="../index.html" data-cur>
+                <i class="mobile_icon_home"></i>首页
+            </a>
+            <a href="./market.html" data-cur="market">
+                <i class="mobile_icon_market"></i>行情
+            </a>
+            <a href="./trade.html" data-cur="trade">
+                <i class="mobile_icon_trade"></i>币币交易
+            </a>
+            <a href="./finance.html" data-cur="finance" class="cur">
+                <i class="mobile_icon_finance"></i>资产
+            </a>
+        </div>
+        <script src="../static/js/jquery-3.1.1.min.js"></script>
+        <script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+        <script src="../static/js/request.js"></script>
+        <script>
+            if (!localStorage.getItem("uid")) {
+                location.href = "../page/login.html";
+            }
+
+            let data = {
+                type: 1
+            }
+            $(".finance-tabs button").click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+                let index = $(this).index();
+                console.log(index, "这是下标");
+                accountMy(index);
+                $(this).addClass("active");
+                $(this).siblings().removeClass("active");
+            });
+            (function () {
+                accountMethod(data);
+            })(jQuery);
+            function accountMy(index) {
+                switch (index) {
+                    case 0:
+                        data.type = 1;
+                        accountMethod(data);
+                        break;
+                    case 1:
+                        data.type = 2;
+                        accountMethod(data);
+                        break;
+                }
+            }
+
+            function accountMethod(data) {
+                let accountResult = ajaxMethod('transGetAssets', data);
+                console.log(accountResult);
+                if (accountResult.return.length == 0) {
+                    let html =
+                        " <dl class='no-data'><dt><img alt='no record' src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTYxcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAxNjEgMTUwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA1My4yICg3MjY0MykgLSBodHRwczovL3NrZXRjaGFwcC5jb20gLS0+CiAgICA8dGl0bGU+5YiG57uEIDI8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz4KICAgICAgICA8bGluZWFyR3JhZGllbnQgeDE9IjUwJSIgeTE9IjEyNy42NzQ2NzQlIiB4Mj0iNTAlIiB5Mj0iMy4wNjE2MTdlLTE1JSIgaWQ9ImxpbmVhckdyYWRpZW50LTEiPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRjdGN0ZCIiBvZmZzZXQ9IjAlIj48L3N0b3A+CiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNERkUzRjMiIG9mZnNldD0iMTAwJSI+PC9zdG9wPgogICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IHgxPSI1MCUiIHkxPSIxMTMuNjcwNTU3JSIgeDI9IjUwJSIgeTI9IjMuMDYxNjE3ZS0xNSUiIGlkPSJsaW5lYXJHcmFkaWVudC0yIj4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0Y3RjdGQiIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRUNGMEZCIiBvZmZzZXQ9IjEwMCUiPjwvc3RvcD4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IuazleW4gei0puaIty1jb3B5LTEyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjk1LjAwMDAwMCwgLTc5OC4wMDAwMDApIj4KICAgICAgICAgICAgPGcgaWQ9IuWIhue7hC0zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyOTAuMDAwMDAwLCA3ODkuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0i5YiG57uELTIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQuMDAwMDAwLCA5LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSLliIbnu4QiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDA3NTMzLCAwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTIuNjY4OTA3NiwxMjYuOTY3OTc2IEMxMC4wNzYyMzg2LDEyNi45Njc5NzYgNy45NzM1MzcwNSwxMjQuODUxMTA5IDcuOTczNTM3MDUsMTIyLjIzOTg1MSBMNy45NzM1MzcwNSwyMC43NjEzMjg3IEM3Ljk3MzUzNzA1LDE4LjE1MDA3MDQgMTAuMDc2MjM4NiwxNi4wMzMyMDMxIDEyLjY2ODkwNzYsMTYuMDMzMjAzMSBMMTU3LjA1MDYxNiwxNi4wMzMyMDMxIEMxNTkuNjQzMjg1LDE2LjAzMzIwMzEgMTYxLjc0NTA4MiwxOC4xNTAwNzA0IDE2MS43NDUwODIsMjAuNzYxMzI4NyBMMTYxLjc0NTA4MiwxMjIuMjM5ODUxIEMxNjEuNzQ1MDgyLDEyNC44NTExMDkgMTU5LjY0MzI4NSwxMjYuOTY3OTc2IDE1Ny4wNTA2MTYsMTI2Ljk2Nzk3NiBMMTIuNjY4OTA3NiwxMjYuOTY3OTc2IFoiIGlkPSJGaWxsLTEiIGZpbGw9InVybCgjbGluZWFyR3JhZGllbnQtMSkiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICAgICAgPHJlY3QgaWQ9IuefqeW9oiIgZmlsbD0iI0RGRTNGMiIgZmlsbC1ydWxlPSJub256ZXJvIiB4PSI4MS45OTI0Njc0IiB5PSIxMSIgd2lkdGg9IjYiIGhlaWdodD0iNiI+PC9yZWN0PgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNODQuMzg5MzUzOSw2OC40NjQ0ODAyIEM2NS43MTgzMDA5LDY4LjQ2NDQ4MDIgNTAuNTgyODU5MSw1My4yNTc2OTc2IDUwLjU4Mjg1OTEsMzQuNDk4NjM4OCBDNTAuNTgyODU5MSwxNS43Mzk1ODAxIDY1LjcxODMwMDksMC41MzI3OTc1MTEgODQuMzg5MzUzOSwwLjUzMjc5NzUxMSBDMTAzLjA2MDQwNywwLjUzMjc5NzUxMSAxMTguMTk1ODQ5LDE1LjczOTU4MDEgMTE4LjE5NTg0OSwzNC40OTg2Mzg4IEMxMTguMTk1ODQ5LDUzLjI1NzY5NzYgMTAzLjA2MDQwNyw2OC40NjQ0ODAyIDg0LjM4OTM1MzksNjguNDY0NDgwMiBaIE04OS41NDM3MDczLDI1LjgyNzUyMzggQzg5LjU0MzcwNzMsMTkuNjIzOTc4NCA4Ni41MDY1MzQ1LDE0LjI4ODk0NzUgODQuMTk2NTk3OSwxMi41NTE5MTg0IEM4NC4xODY1MjI5LDEyLjU0NjQ1MDMgODQuMDE5ODI2NCwxMi40NTI1ODE0IDg0LjAzMzU2NTEsMTIuNzAwNDY4MSBDODQuMDMzNTY1MSwxMi43MDQxMTM1IDg0LjAzMDgxNzQsMTIuNzA1MDI0OCA4NC4wMzA4MTc0LDEyLjcwNzc1ODkgQzgzLjgzODQ3NTMsMjQuNjg2NTE2MSA3Ny42ODkwMjQ3LDI3LjkzMjczNzUgNzQuMzA3NDY4LDMyLjMwNTM4NDkgQzY2LjUwNTcwNzUsNDIuMzk3NjUxOSA3My43NjE1ODI5LDUzLjQ2MjMyNzIgODEuMTUwMjY2LDU1LjUwNjQ4MDcgQzg1LjI4NTYyMDQsNTYuNjUxMTMzNyA4MC4xOTU4ODMsNTMuNDgyMzc2OSA3OS41NDEwMDQsNDYuNzg4NTI2MyBDNzguNzQ3ODIyLDM4LjY5OTQwMiA4OS41NDM3MDczLDMyLjUyNDEwODQgODkuNTQzNzA3MywyNS44Mjc1MjM4IFogTTkyLjQxMjA3ODQsMzAuMDc1NTU0MiBDOTIuMzY0NjYxOSwzMC4wNDM4NjcxIDkyLjI5ODA5NjMsMzAuMDIxMjMzNSA5Mi4yNTE1OTE2LDMwLjA5NzI4MjUgQzkyLjEyNTc1NTQsMzEuNTk1NjI5NiA5MC41ODQ3MTcyLDM0Ljc5OTY0OCA4OC42MzE1MTk4LDM3Ljc0MjAyMTQgQzgyLjAwNTk2NzgsNDcuNzIxNjQ2OSA4NS43ODE5NjcxLDUyLjUzMTc0ODUgODcuOTA0NzY5OSw1NS4xMTU2MDUxIEM4OS4xMzY2ODg1LDU2LjYxNTc2MjkgODcuOTA0NzY5OSw1NS4xMTU2MDUxIDkwLjk4NTAyMjQsNTMuNTgyODU0OCBDOTEuMjI2NjY0NSw1My40NjMzNDkyIDk2Ljk5NTk4MjksNTAuMjUwMjc3NCA5Ny42MjE1MTY4LDQyLjkzMDU1NzUgQzk4LjIyNjA3NzksMzUuODQxNzAwOSA5My45Mzg1MjY4LDMxLjM3MzgxOTkgOTIuNDEyMDc4NCwzMC4wNzU1NTQyIFoiIGlkPSLlkIjlubblvaLnirYiIGZpbGw9IiMxODgyRDQiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTEyLjQ1NjY2OTUsMTQ5LjA3MzY5NyBDOS44NjQwMDA1MywxNDkuMDczNjk3IDcuNzYxMjk4OTYsMTQ2Ljk1MTkwNyA3Ljc2MTI5ODk2LDE0NC4zMzQ1NzUgTDcuNzYxMjk4OTYsNDkuNDI3NTEzMiBDNy43NjEyOTg5Niw0Ni44MDkyNjkyIDkuODY0MDAwNTMsNDQuNjg4MzkxMiAxMi40NTY2Njk1LDQ0LjY4ODM5MTIgTDE1Ni44MzgzNzgsNDQuNjg4MzkxMiBDMTU5LjQzMTA0Nyw0NC42ODgzOTEyIDE2MS41MzI4NDQsNDYuODA5MjY5MiAxNjEuNTMyODQ0LDQ5LjQyNzUxMzIgTDE2MS41MzI4NDQsMTQ0LjMzNDU3NSBDMTYxLjUzMjg0NCwxNDYuOTUxOTA3IDE1OS40MzEwNDcsMTQ5LjA3MzY5NyAxNTYuODM4Mzc4LDE0OS4wNzM2OTcgTDEyLjQ1NjY2OTUsMTQ5LjA3MzY5NyBaIiBpZD0iRmlsbC05IiBmaWxsPSJ1cmwoI2xpbmVhckdyYWRpZW50LTIpIj48L3BhdGg+CiAgICAgICAgICAgICAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEuMDAwMDAwLCA2NS44OTAzODcpIiBpZD0iQ2xpcC0xMiI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8cG9seWdvbiBwb2ludHM9IjAgMC40NzYzODgzMTcgNDUuOTMxODI3NiAwLjQ3NjM4ODMxNyA0NS45MzE4Mjc2IDMzLjQxMDc5MjIgMCAzMy40MTA3OTIyIj48L3BvbHlnb24+CiAgICAgICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTQyLjI4OTA2MTIsOTkuMzAxMTc5NCBMNS42NDMxMjQwMSw5OS4zMDExNzk0IEMzLjA3OTAwODA4LDk5LjMwMTE3OTQgMC45OTk0NjM1NzQsOTcuMTczMjIwMSAwLjk5OTQ2MzU3NCw5NC41NDgyNzkzIEwwLjk5OTQ2MzU3NCw3MS4xMTg3NjA1IEMwLjk5OTQ2MzU3NCw2OC40OTQ3MzQ5IDMuMDc5MDA4MDgsNjYuMzY2Nzc1NiA1LjY0MzEyNDAxLDY2LjM2Njc3NTYgTDQyLjI4OTA2MTIsNjYuMzY2Nzc1NiBDNDQuODUzMTc3MSw2Ni4zNjY3NzU2IDQ2LjkzMTgyNzYsNjguNDk0NzM0OSA0Ni45MzE4Mjc2LDcxLjExODc2MDUgTDQ2LjkzMTgyNzYsOTQuNTQ4Mjc5MyBDNDYuOTMxODI3Niw5Ny4xNzMyMjAxIDQ0Ljg1MzE3NzEsOTkuMzAxMTc5NCA0Mi4yODkwNjEyLDk5LjMwMTE3OTQiIGlkPSJGaWxsLTExIiBmaWxsPSIjRERFNEVGIj48L3BhdGg+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0yNy43MzE4OTIsODIuODIyNTM2OSBDMjcuNzMxODkyLDg3LjAxNDM5MzYgMjQuMzQ5NDE4LDkwLjQxMjgxMDggMjAuMTc3MjI2OSw5MC40MTI4MTA4IEMxNi4wMDUwMzU3LDkwLjQxMjgxMDggMTIuNjIyNTYxNyw4Ny4wMTQzOTM2IDEyLjYyMjU2MTcsODIuODIyNTM2OSBDMTIuNjIyNTYxNyw3OC42MzA2ODAxIDE2LjAwNTAzNTcsNzUuMjMyMjYyOSAyMC4xNzcyMjY5LDc1LjIzMjI2MjkgQzI0LjM0OTQxOCw3NS4yMzIyNjI5IDI3LjczMTg5Miw3OC42MzA2ODAxIDI3LjczMTg5Miw4Mi44MjI1MzY5IiBpZD0iRmlsbC0xMyIgZmlsbD0iI0ZGRkZGRiI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+'></dt><dd>暂无记录</dd></dl>";
+                    $(".finance-list").html(html);
+                } else {
+                    let html = '';
+                    for (let i = 0; i < accountResult.return.length; i++) {
+                        html += "<dl class='quote'><dt class='upper'>" + accountResult.return[i].coinname +
+                            "</dt><dd><em>可用</em>" + Math.floor(accountResult.return[i].total * 100) / 100 +
+                            "</dd><dd><em>冻结</em>" + Math.floor(accountResult.return[i].frozen * 100) / 100 +
+                            "</dd><dd><em>折合(CNY)</em>" + Math.floor(accountResult.return[i].frozen * 100) / 100 +
+                            "</dd><dd class='more'></dd></dl>"
+                    };
+                    $(".finance-list").html(html);
+                }
+            }
+            // $("#isShow").on('click', function () {
+
+            // })
+            // //查询小额币种
+            // let isShow = false;
+            // $("#hide0001").on("click", function () {
+            //     isShow = !isShow;
+            //     if (isShow) {
+            //         $("label i").removeClass('mobile_icon_checkbox');
+            //         $("label i").addClass('mobile_icon_checked');
+            //     } else {
+            //         $("label i").removeClass('mobile_icon_checked');
+            //         $("label i").addClass('mobile_icon_checkbox');
+            //     }
+            // })
+            //币币详情
+            $("#more").on("click",function(){
+                // onclick='window.location.href = './detail.html'
+
+            });
+        </script>
+        <script>
+            // --------------------------新加代码片段开始位置 2020-08-09------------------------------
+            //语言选中
+            $("#language").change(function(){
+                var multer=$(this).val();          //获取下拉选中值
+                console.log("multer",multer)
+                switch(multer)
+                {   //选择中文
+                    case "zh-cn":localStorage.setItem("yuyan_type","zh-cn");location.reload();//刷新页面//存储页面缓存
+                        break;
+                    //选择English
+                    case "en-us":localStorage.setItem("yuyan_type","en-us");location.reload();//刷新页面//存储页面缓存
+                        break;
+                    //选择한국어
+                    case "ko-kr":localStorage.setItem("yuyan_type","ko-kr");location.reload();//刷新页面//存储页面缓存
+                        break;
+                    default:localStorage.setItem("yuyan_type","zh-cn");location.reload();//刷新页面//存储页面缓存
+                }
+            })
+            // --------------------------新加代码片段结束位置------------------------------
+
+            $(function () {
+
+                // --------------------------新加代码片段开始位置 2020-08-09------------------------------
+                //获取选中的语言类型
+                var yuyan_type=localStorage.getItem("yuyan_type");
+                //设置下拉框语言的选中状态
+                var language=$("#language option");
+                for(var i=0;i<language.length;i++){
+                    var values=language.eq(i).val();
+                    if(values==yuyan_type){language.eq(i).prop("selected","selected")}
+                }
+                // 不同语言分段处理数据
+                if(yuyan_type=="zh-cn"){
+                    //中文的数据
+                    var China_data=["币币账户","法币账户","总资产折合(USDT)","保证金 0 HT","首页","行情","币币交易","资产","首页","行情","币币交易","资产","Home","Markets","Exchange","Balances"]
+                    versionKey(China_data);//翻译数据
+                }
+                if(yuyan_type=="en-us"){
+                    //英文的数据
+                    var English_data=["Buy","Sell","Limit","Market","Orders","Price","Amount","Available","All in","Total","Buy btc","Buy","More","Open Orders","Order History","No record","Home","Markets","Exchange","Balances"]
+                    versionKey(English_data);//翻译数据
+                }
+                if(yuyan_type=="ko-kr"){
+                    //韩语的数据
+                    var han_data=["코인간 마켓 계정","KRW 마켓 계정","총자산 환산(BTC)","보증금 0 HT","홈","시장","코인간 마켓","자산","홈","시장","코인간 마켓","자산"]
+                    versionKey(han_data);//翻译数据
+                }
+                // 需要翻译的公用方法  自助添加
+                function versionKey(datas){
+                    //币币账户
+                    $(".tab-exchange span").html(datas[0]);
+                    //法币账户
+                    $(".tab-otc span").html(datas[1]);
+                    //币币账户
+                    $(".finance-card h2").html(datas[0]);
+                    //总资产折合
+                    $(".finance-card em").html(datas[3]);
+                    //保证金
+                    $(".otc-ht").html("<i class=\"mobile_icon_shield\"></i>"+datas[4]+"</dd>");
+                    //首页最底层栏目
+                    $(".nav a").eq(0).html("<i class=\"mobile_icon_home\"></i>"+datas[16])
+                    $(".nav a").eq(1).html("<i class=\"mobile_icon_market\"></i>"+datas[17])
+                    $(".nav a").eq(2).html("<i class=\"mobile_icon_trade\"></i>"+datas[18])
+                    $(".nav a").eq(3).html("<i class=\"mobile_icon_finance\"></i>"+datas[19])
+                }
+                // --------------------------新加代码片段结束位置------------------------------
+            })
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>某某|火币OTC</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/iconfont.css">
+    <link rel="stylesheet" href="../static/css/conmentAdd.css">
+</head>
+
+<body>
+    <div id="app" class="">
+        <div class="left flex-y" style="padding-top: 104px;">
+            <div class="left-header-box headerBackgroundColor">
+                <div>
+                    <header data-mobile="true" data-locale="zh-cn" class="fedui-root fedui-header">
+                        <div class="fedui-header-vip-greeting">
+                            <!---->
+                        </div>
+                        <div class="fedui-header-m">
+                            <div class="fedui-header-m-head" data-dropdowns="">
+                                <div class="fedui-header-m-head-left"><i class="fedui-header-m-head-icon"></i></div>
+                                <div href="//www.huobi.me/zh-cn/" class="fedui-header-m-head-logo"><img width="18"
+                                        height="26"
+                                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMThweCIgaGVpZ2h0PSIyNnB4IiB2aWV3Qm94PSIwIDAgMTggMjYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUzLjIgKDcyNjQzKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT7nvJbnu4QgNOWkjeWItiAyPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IuS4u+WvvOiIqiIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9Ik9UQy1INSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQxMC4wMDAwMDAsIC00MTUuMDAwMDAwKSIgZmlsbC1ydWxlPSJub256ZXJvIj4KICAgICAgICAgICAgPGcgaWQ9Iue8lue7hC01IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMzEuMDAwMDAwLCA0MDMuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0i57yW57uELTTlpI3liLYtMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTc5LjAwMDAwMCwgMTIuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgPGcgaWQ9Iue8lue7hC0yIj4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTExLjIyMzEwOTMsNy45NTA2ODA5MyBDMTEuMjIzMTA5Myw0LjI0MTQ4MDk0IDkuMzkwMTYzNjMsMS4wNTE2ODA5NCA3Ljk5NTg3NTEzLDAuMDEzMDgwOTQzMSBDNy45OTAxOTQxMywwLjAwOTY4MDk0MzExIDcuODg5MTUyODMsLTAuMDQ2MTE5MDU3IDcuODk3Njc0MzgsMC4xMDIwODA5NDMgQzcuODk3ODc3MywwLjEwNDA4MDk0MyA3Ljg5NjA1MTIzLDAuMTA0NjgwOTQzIDcuODk2MDUxMjMsMC4xMDY0ODA5NDMgQzcuNzc5OTk1NzgsNy4yNjgyODA5NCA0LjA2ODQ1MzM3LDkuMjA5MjgwOTUgMi4wMjc5NDcwNSwxMS44MjQwODA5IEMtMi42ODEwMjI5NCwxNy44NTgwODA5IDEuNjk4NDQ2OTcsMjQuNDczNjgwOSA2LjE1Nzg1NzE3LDI1LjY5NjI4MSBDOC42NTMyNTIxNywyNi4zODA0ODA5IDUuNTgxNjM3ODQsMjQuNDg1NjgwOSA1LjE4NTk5NDI3LDIwLjQ4Mzg4MSBDNC43MDc3NzI3OCwxNS42NDY4ODEgMTEuMjIzMTA5MywxMS45NTQ4ODEgMTEuMjIzMTA5Myw3Ljk1MDY4MDkzIiBpZD0iRmlsbC0zIiBmaWxsPSIjRDdFMkYyIj48L3BhdGg+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMy42Njk2NDczLDEwLjM4ODg2MSBDMTMuNjM5MjEzMiwxMC4zNjk2NjEgMTMuNTk1OTk2OCwxMC4zNTY0NjA5IDEzLjU2NTk2ODQsMTAuNDAyMjYwOSBDMTMuNDgzOTk5MiwxMS4zMDQwNjEgMTIuNDg2OTc3NCwxMy4yMzIyNjEgMTEuMjIzMTQ5OCwxNS4wMDMwNjA5IEM2LjkzNjgwODM1LDIxLjAwOTY2MDkgOS4zNzk0NTA4MywyMy45MDQ4NjA5IDEwLjc1MzA0NDEsMjUuNDYwMDYxIEMxMS41NTA0MTgxLDI2LjM2Mjg2MDkgMTAuNzUzMDQ0MSwyNS40NjAwNjEgMTIuNzQ2Mjc2MSwyNC41Mzc0NjEgQzEyLjkwMjcwNzUsMjQuNDY1MjYxIDE2LjYzNTc1NjcsMjIuNTMxNDYwOSAxNy4wNDAxMjQ3LDE4LjEyNTY2MDkgQzE3LjQzMTUwNzUsMTMuODU5NDYwOSAxNC42NTcxMzMxLDExLjE3MDI2MDkgMTMuNjY5NjQ3MywxMC4zODg4NjEiIGlkPSJGaWxsLTUiIGZpbGw9IiMzQzdBRDIiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg=="
+                                        alt="火币合约"></div>
+                                <div class="fedui-header-m-head-info fedui-theme-text"><i class="fedui-icon-info"></i>
+                                </div>
+                            </div>
+                            <nav class="fedui-header-m-nav">
+                                <div class="fedui-header-m-menu">
+                                    <!---->
+                                    <!----><a href="//www.huobi.me/zh-cn/markets/"
+                                        class="fedui-theme-text fedui-nav-markets">行情</a><a rel="nofollow"
+                                        href="/zh-cn/" class="fedui-theme-text fedui-nav-otc fedui-active">买币</a><a
+                                        href="//www.huobi.me/zh-cn/exchange/"
+                                        class="fedui-theme-text fedui-nav-exchange">币币交易</a><a target="_blank"
+                                        href="//www.huobi.me/zh-cn/guide/"
+                                        class="fedui-theme-text fedui-nav-guide">成长学院</a></div>
+                            </nav>
+                            <nav class="fedui-header-m-nav fedui-header-m-nologin"><a href="/zh-cn/login/">登录</a><a
+                                    href="/zh-cn/register/" class="fedui-header-m-nologin-register">注册</a></nav>
+                            <nav class="fedui-header-m-nav fedui-header-m-user">
+                                <div class="fedui-header-m-vip-bd" data-level="0">
+                                    <div class="fedui-header-m-vip" data-level="0">
+                                        <p class="fedui-header-m-vip-name fedui-line-1">Hi，兰枭 </p>
+                                        <div class="fedui-flex-space-between">
+                                            <p class="fedui-header-m-vip-uid fedui-line-1">UID:149732642</p><a
+                                                target="_blank" href="//www.huobi.me/zh-cn/topic/vip/">了解VIP</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fedui-header-m-menu">
+                                    <dl>
+                                        <dt>资产</dt>
+                                        <dd><a href="//www.huobi.me/zh-cn/finance/">币币账户（充币&amp;提币）</a>
+                                            <!----><a href="//www.huobi.me/zh-cn/finance/cross-margin/">杠杆账户</a><a
+                                                href="/zh-cn/user-center/balances/">法币账户</a><a
+                                                href="//futures.huobi.me/zh-cn/contract/assets/">合约账户</a><a
+                                                href="https://www.hpt.com/usercenter/?lang=cn" rel="noopener noreferrer"
+                                                data-type="pow" target="_blank">矿池账户</a><a
+                                                href="//www.huobi.me/zh-cn/finance/hb10/">HB10</a><a
+                                                href="//www.huobi.me/zh-cn/ht/points/my_points/">我的点卡</a>
+                                            <!---->
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>订单</dt>
+                                        <dd><a href="//www.huobi.me/zh-cn/transac/">币币&amp;杠杆订单</a><a
+                                                href="/zh-cn/user-center/orders/">法币订单</a><a
+                                                href="//futures.huobi.me/zh-cn/contract/orders/">合约订单</a>
+                                            <!---->
+                                        </dd>
+                                    </dl><a href="//account.huobi.me/zh-cn/user-center/security/">账户&amp;安全</a><a
+                                        href="//www.huobi.me/zh-cn/user_auth/">身份认证</a><a
+                                        href="/zh-cn/user-center/">法币设置</a><a href="//www.huobi.me/zh-cn/fee/"
+                                        class="fedui-header-m-info-fee"><span>费率设置</span><em>专业费率重磅升级</em></a><a
+                                        href="//www.huobi.me/zh-cn/invite/"><span>我的奖励</span></a><a
+                                        href="//www.huobi.me/zh-cn/apikey/">API管理</a><a
+                                        href="//account.huobi.me/zh-cn/subaccount/management/">子账号</a><a href="#"
+                                        class="fedui-header-m-menu-logout">退出</a>
+                                </div>
+                            </nav>
+                        </div>
+                        <!---->
+                    </header>
+                    <div class="">
+                        <div class="mobile-header-container" tutorialinfo="[object Object]">
+                            <div class="mobile-nav-l flex-y-center"
+                                style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a
+                                    href="./one-trade.html" class="text-center" rel="noopener noreferrer">一键买卖</a><a
+                                    href="./buy-usdt.html" class="text-center" rel="noopener noreferrer">自选交易</a><a
+                                    href="./sell-usdt.html" class="text-center"
+                                    rel="noopener noreferrer">大宗交易</a></div>
+                            <div class="mobile-nav-r flex-y-center">
+                                <div class="flex-y-center spe-nav-r">
+                                    <div class="order fix-item text-center"><i class="ivu-icon iconfont icon-nav-order"
+                                            style="font-size: 20px;"></i>
+                                        <!---->
+                                    </div><span class="splite"></span>
+                                    <div class="publish-ad"><span class="more-btn"><i
+                                                class="ios-more ivu-icon ivu-icon-ios-more"
+                                                style="font-size: 30px;"></i></span>
+                                        <ul class="mobile-publish">
+                                            <li><a href="javascript:void(0)">发布广告</a></li>
+                                            <!---->
+                                            <!---->
+                                            <li><a href="/zh-cn/user-center/ads/" class="" rel="noopener noreferrer">
+                                                    我的广告
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!---->
+                            <div style="display: none;">
+                                <div class="content-in common-content-in-wrapper order-info ping-order-info">
+                                    <div class="scroll-container">
+                                        <div class="order-list-inner cursor flex-y-center">
+                                            <div class="order-avatar-in">
+                                                <div class="avatar-container cursor large one"><em class="name">蓝</em>
+                                                    <!---->
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                            <div class="order-content-in flex-between-center">
+                                                <div class="order-content">
+                                                    <div class="order-num">
+                                                        <!----><span>
+                                                            购买USDT
+                                                        </span>
+                                                        <!----><span>
+                                                            &nbsp;总价: 48000&nbsp;CNY
+                                                        </span></div>
+                                                    <div class="order-desc"><span>请付款</span>
+                                                        <!----><span>- 00:01:07</span></div>
+                                                </div><i class="flag" style="display: none;">0</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer order-footer"><a href="/zh-cn/user-center/orders/" class=""
+                                            rel="noopener noreferrer">
+                                            查询所有订单
+                                            <i class="ivu-icon ivu-icon-ios-arrow-right"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="empty-header-box" style="display:none;"></div>
+                </div>
+            </div>
+            <div class="check-user-wrapper flex-auto">
+                <div class="check-user common-layout-container">
+                    <div class="mobile-check-user">
+                        <div class="m-wrapper">
+                            <div class="base-info">
+                                <div class="avatar">
+                                    <div class="avatar-container cursor large one"><em class="name">蓝</em>
+                                        <div class="online-icon">
+                                            <p class="online-status"></p>
+                                        </div>
+                                        <!---->
+                                    </div>
+                                    <div class="flag-box"><span class="font-bold">蓝蓝天空白白云</span><i
+                                            class="merchant-level font-normal merchant-level2"></i></div>
+                                </div>
+                                <div class="user-credit-info">
+                                    <div class="baseInfo-container">
+                                        <div class="baseInfo-in">
+                                            <div class="mobile-check-inner"><span class="text-box">广告方保证资产:</span><span
+                                                    class="font-bold">5000 HT</span></div>
+                                            <div class="mobile-check-inner"><span class="text-box">总成单:</span>
+                                                <div class="intert font-bold">
+                                                    2567 (<span class="font-green">买</span>728 | <span
+                                                        class="buy-time">卖</span>1839)
+                                                    <span>次</span></div>
+                                            </div>
+                                            <div class="mobile-check-inner"><span class="text-box">30日成单:</span><span
+                                                    class="font-bold">2494次</span></div>
+                                            <div class="mobile-check-inner"><span class="text-box">30日总完成率:</span><span
+                                                    class="font-bold">97%</span>&nbsp;
+                                                <span class="font-bold">(<span class="font-green">买</span>90.77%)</span>
+                                            </div>
+                                            <div class="mobile-check-inner"><span class="text-box">30日平均取消:</span><span
+                                                    class="font-bold">13.31分钟</span></div>
+                                            <div class="mobile-check-inner"><span class="text-box">平均放行:</span><span
+                                                    class="font-bold">2.03分钟</span></div>
+                                        </div>
+                                        <div class="bindInfo-in">
+                                            <div class="bindInfo-list">
+                                                <div class="mobile-bindInfo bindInfo-one"><span>邮箱认证</span><i
+                                                        class="iconfont icon-done"></i></div>
+                                                <div class="mobile-bindInfo certified"><span>手机认证</span><i
+                                                        class="iconfont icon-done"></i></div>
+                                            </div>
+                                            <div class="bindInfo-list">
+                                                <div class="mobile-bindInfo certified"><span>实名认证</span><i
+                                                        class="iconfont icon-done"></i></div>
+                                                <div class="mobile-bindInfo certified"><span>高级认证</span><i
+                                                        class="iconfont icon-done"></i></div>
+                                            </div>
+                                        </div>
+                                        <p class="font-gray m-register-time">注册时间：2020-06-13</p>
+                                        <p class="font-gray">首次访问法币交易：2020-06-13 15:33:09</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="a_d-list-wrapper">
+                                <div>
+                                    <p class="title font16">在线出售</p>
+                                    <div class="a_d-list">
+                                        <div class="m-trade-list" modifytradeitemid="1">
+                                            <div class="trade-list-in">
+                                                <div class="trade-avatar">
+                                                    <div><i class="iconfont coin-size icon-coin-2"></i></div><a
+                                                        href="/zh-cn/trader/147772801"
+                                                        class="router-link-exact-active router-link-active"
+                                                        rel="noopener noreferrer"><span class="username"><span
+                                                                class="font-base">USDT</span><i
+                                                                class="merchant-level merchant-levelnull"
+                                                                style="display: none;"></i></span></a>
+                                                    <div class="icon-tips-hover ivu-poptip" style="display: none;">
+                                                        <div class="ivu-poptip-rel"><i
+                                                                class="merchant-level compensate"></i></div>
+                                                        <div class="ivu-poptip-popper"
+                                                            style="display: none; position: absolute; will-change: top, left; top: 0px; left: 5px;"
+                                                            x-placement="right" x-out-of-boundaries="">
+                                                            <div class="ivu-poptip-content">
+                                                                <div class="ivu-poptip-arrow"></div>
+                                                                <!---->
+                                                                <div class="ivu-poptip-inner">
+                                                                    <!---->
+                                                                    <div class="ivu-poptip-body">
+                                                                        <div class="ivu-poptip-body-content">
+                                                                            <div><b class="no-normal">蓝盾服务，</b><a
+                                                                                    target="_blank"
+                                                                                    rel="noopener noreferrer"
+                                                                                    href="https://huobiglobal.zendesk.com/hc/zh-cn/articles/360000348762"
+                                                                                    class="font-blue">了解详情</a></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list"><span class="price">数量：</span>
+                                                    <p class="spe-price">66860.793108 USDT</p>
+                                                </div>
+                                                <div class="list"><span class="price">限额：</span><span
+                                                        class="spe-price">50,000-150,000 CNY</span></div>
+                                                <div class="list"><span class="price">单价：</span><span
+                                                        class="price-amount">6.96 CNY</span></div>
+                                                <div class="pay-box flex-between-center">
+                                                    <div class="icon"><img
+                                                            src="https://file.eiijo.cn/common/images/pay-icon/alipay-cn.svg"
+                                                            class="pay-iconfont"></div>
+                                                    <div class="m-trade-control">
+                                                        <div class="m-flex-shrink">
+                                                            <div class="otc-btn-sytle"><button
+                                                                    class="btn font12 cursor default default default-bg"><span
+                                                                        class="icon-space"></span>
+                                                                    出售USDT
+                                                                    <!----></button></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!---->
+                                            </div>
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="title font16 down">在线购买</p>
+                                    <div class="a_d-list">
+                                        <div class="m-trade-list" modifytradeitemid="1">
+                                            <div class="trade-list-in">
+                                                <div class="trade-avatar">
+                                                    <div><i class="iconfont coin-size icon-coin-2"></i></div><a
+                                                        href="/zh-cn/trader/147772801"
+                                                        class="router-link-exact-active router-link-active"
+                                                        rel="noopener noreferrer"><span class="username"><span
+                                                                class="font-base">USDT</span><i
+                                                                class="merchant-level merchant-levelnull"
+                                                                style="display: none;"></i></span></a>
+                                                    <div class="icon-tips-hover ivu-poptip" style="display: none;">
+                                                        <div class="ivu-poptip-rel"><i
+                                                                class="merchant-level compensate"></i></div>
+                                                        <div class="ivu-poptip-popper"
+                                                            style="display: none; position: absolute; will-change: top, left; top: 0px; left: 5px;"
+                                                            x-placement="right" x-out-of-boundaries="">
+                                                            <div class="ivu-poptip-content">
+                                                                <div class="ivu-poptip-arrow"></div>
+                                                                <!---->
+                                                                <div class="ivu-poptip-inner">
+                                                                    <!---->
+                                                                    <div class="ivu-poptip-body">
+                                                                        <div class="ivu-poptip-body-content">
+                                                                            <div><b class="no-normal">蓝盾服务，</b><a
+                                                                                    target="_blank"
+                                                                                    rel="noopener noreferrer"
+                                                                                    href="https://huobiglobal.zendesk.com/hc/zh-cn/articles/360000348762"
+                                                                                    class="font-blue">了解详情</a></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list"><span class="price">数量：</span>
+                                                    <p class="spe-price">52083.958674 USDT</p>
+                                                </div>
+                                                <div class="list"><span class="price">限额：</span><span
+                                                        class="spe-price">10,000-48,800 CNY</span></div>
+                                                <div class="list"><span class="price">单价：</span><span
+                                                        class="price-amount">6.98 CNY</span></div>
+                                                <div class="pay-box flex-between-center">
+                                                    <div class="icon"><img
+                                                            src="https://file.eiijo.cn/common/images/pay-icon/alipay-cn.svg"
+                                                            class="pay-iconfont"></div>
+                                                    <div class="m-trade-control">
+                                                        <div class="m-flex-shrink">
+                                                            <div class="otc-btn-sytle"><button
+                                                                    class="btn font12 cursor default default default-bg"><span
+                                                                        class="icon-space"></span>
+                                                                    购买USDT
+                                                                    <!----></button></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!---->
+                                            </div>
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!---->
+                                <div>
+                                    <p class="shield-desc font12 font-gray">不想对方访问您的信息？<a>屏蔽该用户</a></p>
+                                    <!---->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="com-footer-space">
+                <footer data-locale="zh-cn" data-mobile="true" class="fedui-root fedui-footer" ssr="true">
+                    <div class="fedui-footer-inner">
+                        <div class="fedui-footer-left">
+                            <div class="fedui-footer-logo"><img width="84" height="23"
+                                    src="data:image/png;base64,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"
+                                    alt="Eth Global"></div>
+                            <div class="fedui-footer-copyright">
+                                © 2013-2020 Huobi
+                            </div>
+                            <div class="fedui-footer-link"><a rel="noopener noreferrer nofollow" target="_blank"
+                                    href="https://www.facebook.com/huobiglobalofficial"><i
+                                        class="fedui-icon-facebook"></i></a><a rel="noopener noreferrer nofollow"
+                                    target="_blank" href="https://twitter.com/HuobiGlobal"><i
+                                        class="fedui-icon-twitter"></i></a><a rel="noopener noreferrer nofollow"
+                                    target="_blank" href="https://www.youtube.com/HuobiGlobal"><i
+                                        class="fedui-icon-youtube"></i></a><a rel="noopener noreferrer nofollow"
+                                    target="_blank" href="https://www.huobichat.com/globalGroup"><i
+                                        class="fedui-icon-chat"></i></a><a rel="noopener noreferrer nofollow"
+                                    target="_blank" href="https://medium.com/@huobiglobal"><i
+                                        class="fedui-icon-medium"></i></a><a rel="noopener noreferrer nofollow"
+                                    target="_blank" href="https://www.instagram.com/huobiglobalofficial/"><i
+                                        class="fedui-icon-instagram"></i></a><a rel="noopener noreferrer nofollow"
+                                    target="_blank" href="https://weibo.com/huobicom"><i
+                                        class="fedui-icon-weibo"></i></a><a rel="noopener noreferrer nofollow"
+                                    target="_blank" href="https://coinmarketcap.com/zh/exchanges/huobi-global/"><i
+                                        class="fedui-icon-coinmarketcap"></i></a><a rel="noopener noreferrer nofollow"
+                                    target="_blank" href="https://www.coingecko.com/zh/exchanges/huobi/"><i
+                                        class="fedui-icon-clingecko"></i></a></div>
+                        </div>
+                        <div class="fedui-footer-right">
+                            <dl>
+                                <dt>工具</dt>
+                                <dd><a target="_blank" href="//www.huobi.me/zh-cn/download/#exchange">客户端下载</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiapi.github.io/docs/spot/v1/cn/#5ea2e0cde2">API文档</a><a
+                                        target="_blank" href="//www.huobi.me/zh-cn/assetintro/">数字资产介绍</a><a
+                                        target="_blank" href="//www.huobi.me/zh-cn/verification/">官方验证通道</a>
+                                    <!---->
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>服务</dt>
+                                <dd>
+                                    <!----><a target="_blank" href="//www.huobi.me/zh-cn/fee/">费率</a><a target="_blank"
+                                        href="//www.huobi.me/zh-cn/ladder-lending/cross-margin/">借币额度</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/">帮助中心</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/categories/115000389432-%E6%96%B0%E6%89%8B%E5%B8%AE%E5%8A%A9/">新手指南</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/sections/360000063661">合约课堂</a><a
+                                        target="_blank" href="https://www.huobitoken.com/zh-cn/">HT介绍</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>支持</dt>
+                                <dd><a target="_blank" href="//www.huobi.me/zh-cn/application-center/">上币申请</a><a
+                                        href="//institution.huobi.me/zh-cn/" class="" target="_blank">机构服务</a><a
+                                        target="_blank" href="//www.huobi.me/zh-cn/topic/vip/">大客户权益</a><a
+                                        href="/zh-cn/business/" class="" rel="nofollow" target="_blank">法币广告权限申请</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://www.huobigroup.com/zh-cn/">火币集团</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>条款说明</dt>
+                                <dd><a rel="noopener noreferrer nofollow" target="_blank"
+                                        href="//www.huobi.me/zh-cn/agreement/">用户协议</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/articles/360000298601-%E9%9A%90%E7%A7%81%E6%9D%A1%E6%AC%BE">隐私条款</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/articles/360000298621-%E6%B3%95%E5%BE%8B%E5%A3%B0%E6%98%8E">法律声明</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/articles/360000672702">执法和监管查询</a><a
+                                        rel="noopener noreferrer nofollow" target="_blank"
+                                        href="https://huobiglobal.zendesk.com/hc/zh-cn/articles/360000301401-%E6%B3%95%E5%B8%81%E4%BA%A4%E6%98%93%E8%A7%84%E5%88%99">法币交易规则</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="fedui-footer-locales-center">
+                        <div data-mobile="true" class="fedui-footer-locales">
+                            <div class="fedui-footer-locales-text"><i class="fedui-icon-locale"></i><span>简体中文</span><i
+                                    class="fedui-icon-xiajiantou"></i></div>
+                            <div class="fedui-footer-locales-down">
+                                <span>简体中文</span><span>繁體中文</span><span>English</span><span>Tiếng
+                                    Việt</span><span>Русский</span><span>Türkçe</span><span>Português-BR</span></div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+    </div>
+</body>
+
+</html>

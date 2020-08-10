@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册-Eth Global</title>
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.1/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/css/comment.css">
+    <link rel="stylesheet" href="../static/css/authCode.css">
+    <link rel="stylesheet" href="../static/css/iconfont.css">
+    <script src="../static/js/auto-size.js"></script>
+</head>
+
+<body>
+    <div class="page-register">
+        <nav class="page-nav"><a class="fl" href="javascript:history.go(-1);"><i class="mobile_icon_back"></i></a></nav>
+        <div class="page-title" data-name="phone" style="">
+            <h1>邮箱验证码</h1>
+            <h2>请输入您的邮箱验证码</h2>
+        </div>
+        <!-- <div class="page-title" data-name="email" style="display:none">
+            <h1>邮箱</h1>
+            <h2>若未收到邮件，请检查邮箱垃圾箱</h2>
+        </div> -->
+        <div class="auth-code-form">
+            <input autocomplate="new-password" growing-ignore="true" maxlength="6" name="auth_code" placeholder="请输入验证码"
+                type="number">
+            <p class="get-code" data-text="%s秒后重新获取|重新获取验证码"></p>
+            <button class="submit" disabled="">下一步</button>
+        </div>
+    </div>
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script> -->
+    <script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+    <script src="../static/js/request.js"></script>
+    <script src="../static/js/authCode.js"></script>
+</body>
+
+</html>

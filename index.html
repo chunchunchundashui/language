@@ -313,7 +313,38 @@
                         '</dd></dl><em class="'+(arryExe[i].quotation.rate<0 ? 'down':'up')+'" growing-ignore="true">' + (arryExe[i].quotation.rate>0 ? '+':'')+(!arryExe[i].quotation ? "0.000000" : arryExe[i].quotation.rate || "0.00")+'%' +
                         '</em> </dd>'
                 };
-                $("#increase").html(htmlList);
+                // --------------------------新加代码片段开始位置 2020-08-09------------------------------
+                //获取选中的语言类型
+                var yuyan_type=localStorage.getItem("yuyan_type");
+                //设置下拉框语言的选中状态
+                var language=$("#language option");
+                for(var i=0;i<language.length;i++){
+                    var values=language.eq(i).val();
+                    if(values==yuyan_type){language.eq(i).prop("selected","selected")}
+                }
+                // 不同语言分段处理数据
+                if(yuyan_type=="zh-cn"){
+                    //中文的数据
+                    var China_data=["涨幅榜"]
+                    versionKey(China_data);//翻译数据
+                }
+                if(yuyan_type=="en-us"){
+                    //英文的数据
+                    var English_data=["Top Gainers"]
+                    versionKey(English_data);//翻译数据
+                }
+                if(yuyan_type=="ko-kr"){
+                    //韩语的数据
+                    var han_data=["상승폭 랭킹"]
+                    versionKey(han_data);//翻译数据
+                }
+                // 需要翻译的公用方法  自助添加
+                function versionKey(datas){
+                    //
+                    $("#increase").html('<dt class="amount">'+datas[0]+'</dt>'+htmlList);
+
+                }
+                // --------------------------新加代码片段结束位置------------------------------
                 htmlList = "";
             }
 
